@@ -647,7 +647,7 @@
       </ul>
 
     </div>
-    <a class="international" id="international" href="javascript:void(0);">繁體中文</a>
+    <a class="international" id="international" href="javascript:void(0);">English</a>
   </header>
   <!-- Navigation bar END -->
 
@@ -682,7 +682,7 @@
               </ul>
           </li>
           <li>
-            <a href="#t-marketdata" class="toc-h1 toc-link" data-title="Market Data Endpoints">Market Data Endpoints</a>
+            <a href="#t-marketdata" class="toc-h1 toc-link" data-title="Market Data">Market Data</a>
               <ul class="toc-list-h2">
                   <li>
                     <a href="#t-dv_orderbook" class="toc-h2 toc-link" data-title="Get Order Book">Get Order Book</a>
@@ -691,7 +691,7 @@
                     <a href="#t-dv_querykline" class="toc-h2 toc-link" data-title="Get Kline">Get Kline</a>
                   </li>
                   <li>
-                    <a href="#t-dv_tickerhead" class="toc-h2 toc-link" data-title="Get Latest Information For Symbol">Get Latest Information For Symbol</a>
+                    <a href="#t-dv_tickerhead" class="toc-h2 toc-link" data-title="Ticker Info For Symbol">Ticker Info For Symbol</a>
                   </li>
                   <li>
                     <a href="#t-dv_instrhead" class="toc-h2 toc-link" data-title="Get Instrument Info">Get Instrument Info</a>
@@ -711,7 +711,7 @@
                     <a href="#t-trade" class="toc-h2 toc-link" data-title="Trade">Trade</a>
                       <ul class="toc-list-h3">
                           <li>
-                            <a href="#t-dv_placeorder" class="toc-h3 toc-link" data-title="Place Order">Place Order</a>
+                            <a href="#t-dv_placeorder" class="toc-h3 toc-link" data-title="Create Order">Create Order</a>
                           </li>
                           <li>
                             <a href="#t-dv_batchplaceorder" class="toc-h3 toc-link" data-title="Batch Create Order">Batch Create Order</a>
@@ -956,25 +956,18 @@ clipboard.on('error', function(e) {
 </script>
 <h1 id='t-authentication'>Authentication</h1>
 <aside class="notice">
-Please visit Mufex's <a href="https://testnet.mufex.com/app/user/api-management"> <b>testnet</b></a> or <a href="https://www.mufex.com/app/user/api-management"> <b>mainnet</b></a> to generate an API key
+Please visit Mufex's testnet </a> or mainnet</a> to generate an API key
 </aside>
 
 <aside class="notice">
 REST Base Endpoint:
  <ul>
   <p>
-    <li>Testnet:<br/>
-      <span id="testnet">https:xxxxx</span>
-      <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#testnet"><img src="../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button>
+    <li>Mainnet:<br/>
+      <span id="mainnet">https://api.mufex.finance</span>
     </li>
-  </p>
-  <p>
-    <li>Mainnet(both endpoints are available):<br/>
-      <span id="mainnet_1">xxxxxx</span>
-      <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#mainnet_1"><img src="../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button>
-      <br/>
-      <span id="mainnet_2">xxxxx</span>
-      <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#mainnet_2"><img src="../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button>
+    <li>Testnet:<br/>
+      <span id="testnet">https://api.testnet.mufex.finance</span>
     </li>
   </p>
  </ul>
@@ -991,8 +984,7 @@ The following parameters must be used for authentication:
   <li><b>sign</b> - a signature derived from the request's parameters</li>
 </ul>
 
-Please make sure that the timestamp parameter adheres to the following rule: server_time - recv_window <= timestamp < server_time + 1000; server_time stands for Mufex server time, which can be queried via the <a href="#t-servertime">Server Time</a> endpoint.
-</p>
+<p>Please make sure that the timestamp parameter adheres to the following rule , server_time - recv_window <= timestamp < server_time + 1000; server_time stands for Mufex server time.</p></p>
 
 <p><p>1. timestamp + api-key + [recv_window] + [queryString(order not needed) | jsonBodyString]</p>
 
@@ -1059,7 +1051,7 @@ function copyStringToClipboard (endpoint) {
   document.body.removeChild(el);
 }
 </script>
-<h1 id='t-marketdata'>Market Data Endpoints</h1><h3 id='t-dv_orderbook'>Get Order Book</h3>
+<h1 id='t-marketdata'>Market Data</h1><h3 id='t-dv_orderbook'>Get Order Book</h3>
 <blockquote>
 <p>Request Example</p>
 </blockquote>
@@ -1102,7 +1094,7 @@ function copyStringToClipboard (endpoint) {
 <span class="p">}</span>
 </code></pre></div>
 <p>Get the orderbook. Each side has a depth of 25.<br><br>
-Enable 500 orders for orderbook API</p>
+Enable 200 orders for orderbook API</p>
 
 <aside class="notice">
 The response is in the snapshot format.
@@ -1134,7 +1126,7 @@ The response is in the snapshot format.
 <td style="text-align: left">limit</td>
 <td style="text-align: left">false</td>
 <td style="text-align: left">int</td>
-<td>25 by default, 500 is max. If <b>option</b>, only 25 is available</td>
+<td>25 by default, 200 is max. If <b>option</b>, only 25 is available</td>
 </tr>
 </tbody></table>
 
@@ -1286,7 +1278,7 @@ The response is in the snapshot format.
 <td>an array of individual candles, Sort in reverse order by <code>start</code>, The default collation within the array is <code>start</code>, <code>open</code>, <code>high</code>, <code>low</code>, <code>close</code>, <code>volume</code>, <code>turnover</code></td>
 </tr>
 </tbody></table>
-<h3 id='t-dv_tickerhead'>Get Latest Information For Symbol</h3>
+<h3 id='t-dv_tickerhead'>Ticker Info For Symbol</h3>
 <blockquote>
 <p>Request Example</p>
 </blockquote>
@@ -1351,13 +1343,13 @@ The response is in the snapshot format.
 <td style="text-align: left">category</td>
 <td style="text-align: left"><b>true</b></td>
 <td style="text-align: left">string</td>
-<td>Derivatives products category. If category is not passed, then return <code>""</code>For now, <code>linear</code> <code>inverse</code> <code>option</code> are available</td>
+<td>If category is not passed, then return <code>""</code>For now, <code>default:linear</code></td>
 </tr>
 <tr>
 <td style="text-align: left">symbol</td>
 <td style="text-align: left">false</td>
 <td style="text-align: left">string</td>
-<td>Symbol name. If category is <code>option</code> REQUIRED, and if symbol belongs to option, category=option is REQUIRED</td>
+<td>Symbol name.</td>
 </tr>
 </tbody></table>
 
@@ -1373,7 +1365,7 @@ The response is in the snapshot format.
 <tr>
 <td style="text-align: left">category</td>
 <td style="text-align: left">string</td>
-<td>Derivatives products category. If category is not passed, then return <code>""</code></td>
+<td>If category is not passed, then return <code>""</code></td>
 </tr>
 <tr>
 <td style="text-align: left">price24hPcnt</td>
@@ -1428,7 +1420,7 @@ The response is in the snapshot format.
 <tr>
 <td style="text-align: left">turnover24h</td>
 <td style="text-align: left">string</td>
-<td><a href="#t-faq_turnover">Turnover</a> for 24h</td>
+<td>Turnover in the last 24 hours</td>
 </tr>
 <tr>
 <td style="text-align: left">askPrice</td>
@@ -1438,7 +1430,7 @@ The response is in the snapshot format.
 <tr>
 <td style="text-align: left">fundingRate</td>
 <td style="text-align: left">string</td>
-<td><a href="https://help.mufex.com/hc/en-us/articles/360039261114-What-is-funding-rate-and-predicted-rate-">Funding rate</a></td>
+<td>Funding rate</td>
 </tr>
 <tr>
 <td style="text-align: left">highPrice24h</td>
@@ -1537,7 +1529,7 @@ The response is in the snapshot format.
 <td style="text-align: left">category</td>
 <td style="text-align: left"><b>true</b></td>
 <td style="text-align: left">string</td>
-<td>Derivatives products category. If category is not passed, then return <code>""</code>For now, <code>linear</code> <code>inverse</code> <code>option</code> are available</td>
+<td>If category is not passed, then return <code>""</code>For now, <code>default:linear</code></td>
 </tr>
 <tr>
 <td style="text-align: left">symbol</td>
@@ -1549,7 +1541,7 @@ The response is in the snapshot format.
 <td style="text-align: left">limit</td>
 <td style="text-align: left">false</td>
 <td style="text-align: left">string</td>
-<td>Limit for data size per page, max size is 1000. Default as showing 500 pieces of data per page</td>
+<td>Limit for data size per page, max size is 1000. Default as showing 500 pieces of data per page.It's not sorted by time.</td>
 </tr>
 <tr>
 <td style="text-align: left">cursor</td>
@@ -1731,7 +1723,7 @@ The response is in the snapshot format.
 <td style="text-align: left">category</td>
 <td style="text-align: left"><b>true</b></td>
 <td style="text-align: left">string</td>
-<td>Derivatives products category. If category is not passed, then return <code>""</code>For now, <code>linear</code> <code>inverse</code> including inverse futures are available</td>
+<td>If category is not passed, then return <code>""</code>For now, <code>default:linear</code></td>
 </tr>
 <tr>
 <td style="text-align: left">symbol</td>
@@ -1753,7 +1745,7 @@ The response is in the snapshot format.
 <tr>
 <td style="text-align: left">category</td>
 <td style="text-align: left">string</td>
-<td>Derivatives products category. If category is not passed, then return <code>""</code>For now, <code>linear</code> <code>inverse</code> including inverse futures are available</td>
+<td>If category is not passed, then return <code>""</code>For now, <code>default:linear</code></td>
 </tr>
 <tr>
 <td style="text-align: left">id</td>
@@ -1827,7 +1819,7 @@ The response is in the snapshot format.
     <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1669802294719</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Get recent trades. You can find a complete history of trades on Mufex <a href="https://public.mufex.com">here</a>.</p>
+<p>Get recent trades.</p>
 
 <p class="fake_header">HTTP Request</p>
 
@@ -1849,7 +1841,7 @@ The response is in the snapshot format.
 <td style="text-align: left">category</td>
 <td style="text-align: left"><b>true</b></td>
 <td style="text-align: left">string</td>
-<td>Derivatives products category. If category is not passed, then return <code>""</code>For now, <code>linear</code> <code>inverse</code> including inverse futures are available</td>
+<td>If category is not passed, then return <code>""</code>For now, <code>default:linear</code></td>
 </tr>
 <tr>
 <td style="text-align: left">symbol</td>
@@ -1861,7 +1853,7 @@ The response is in the snapshot format.
 <td style="text-align: left">limit</td>
 <td style="text-align: left">false</td>
 <td style="text-align: left">int</td>
-<td>Limit for data size per page, max size is 1000. Default as showing 500 pieces of data per page</td>
+<td>Limit for data size per page, max size is 1000. Default as showing 500 pieces of data per page.It's not sorted by time.</td>
 </tr>
 </tbody></table>
 
@@ -1877,7 +1869,7 @@ The response is in the snapshot format.
 <tr>
 <td style="text-align: left">category</td>
 <td style="text-align: left">string</td>
-<td>Derivatives products category. If category is not passed, then return <code>""</code>For now, <code>linear</code> <code>inverse</code> including inverse futures are available</td>
+<td>If category is not passed, then return <code>""</code>For now, <code>default:linear</code></td>
 </tr>
 <tr>
 <td style="text-align: left">execId</td>
@@ -1897,7 +1889,7 @@ The response is in the snapshot format.
 <tr>
 <td style="text-align: left">size</td>
 <td style="text-align: left">number</td>
-<td>Order quantity in USD</td>
+<td>Order quantity</td>
 </tr>
 <tr>
 <td style="text-align: left"><a href="#side-side">side</a></td>
@@ -1912,7 +1904,7 @@ The response is in the snapshot format.
 </tbody></table>
 <h1 id='t-accountdata'>Account Data Endpoints</h1>
 <p>The following account data endpoints require authentication.</p>
-<h2 id='t-trade'>Trade</h2><h3 id='t-dv_placeorder'>Place Order</h3>
+<h2 id='t-trade'>Trade</h2><h3 id='t-dv_placeorder'>Create Order</h3>
 <blockquote>
 <p>Request Example</p>
 </blockquote>
@@ -2010,7 +2002,7 @@ The response is in the snapshot format.
 <td style="text-align: left">qty</td>
 <td style="text-align: left"><b>true</b></td>
 <td style="text-align: left">string</td>
-<td>Quantity. If <b>USDT perp</b>, qty is in cryptocurrency, else like <b>Inverse perp/futures</b>, qty is in USD.</td>
+<td>Quantity. If <b>USDT perp</b>, qty is in cryptocurrency.</td>
 </tr>
 <tr>
 <td style="text-align: left">price</td>
@@ -2185,7 +2177,7 @@ The response is in the snapshot format.
 </p>
 
 <aside class="notice">
-Please note that <b>positionIdx</b> must be required in the hedge mode in contractV3, and must be required in the one-way mode in v2
+Please note that <b>positionIdx</b> must be required in the hedge mode
 </aside>
 
 <p class="fake_header">HTTP Request</p>
@@ -2239,7 +2231,7 @@ Please note that <b>positionIdx</b> must be required in the hedge mode in contra
 <td style="text-align: left">&gt;qty</td>
 <td style="text-align: left"><b>true</b></td>
 <td style="text-align: left">string</td>
-<td>Quantity. If <b>USDT perp</b>, qty is in cryptocurrency, else like <b>Inverse perp/futures</b>, qty is in USD.</td>
+<td>Quantity. If <b>USDT perp</b>, qty is in cryptocurrency.</td>
 </tr>
 <tr>
 <td style="text-align: left">&gt;price</td>
@@ -2298,7 +2290,7 @@ Please note that <b>positionIdx</b> must be required in the hedge mode in contra
 <tr>
 <td style="text-align: left">&gt;category</td>
 <td style="text-align: left">string</td>
-<td>Type of derivatives product: linear or option.
+<td>Type of derivatives product: linear .
 </td>
 </tr>
 <tr>
@@ -2466,7 +2458,7 @@ Please note that <b>positionIdx</b> must be required in the hedge mode in contra
 <tr>
 <td style="text-align: left">list&gt; qty</td>
 <td style="text-align: left">string</td>
-<td>Quantity. If <b>USDT perp</b>, qty is in cryptocurrency, else like <b>Inverse perp/futures</b>, qty is in USD.</td>
+<td>Quantity. If <b>USDT perp</b>, qty is in cryptocurrency.</td>
 </tr>
 <tr>
 <td style="text-align: left">list&gt; reduceOnly</td>
@@ -2631,7 +2623,7 @@ Please note that <b>positionIdx</b> must be required in the hedge mode in contra
 <p><p><b>Interface:</b></p>
 <p>Cancel order. <code>orderId</code> or <code>orderLinkId</code> is required. </p>
 <p>orderId - Once you have successfully created an order, the system will send you the unique 36-character order ID.</p>
-<p>You can cancel only cancel the order not filled or not completely filled. You cannot cancel orders that are completely filled.</p>
+<p>You can cancel  the order not filled or not completely filled. You cannot cancel orders that are completely filled.</p>
 </p>
 
 <p class="fake_header">HTTP Request</p>
@@ -2753,7 +2745,7 @@ Please note that <b>positionIdx</b> must be required in the hedge mode in contra
 </p>
 
 <aside class="notice">
-Please note that <b>positionIdx</b> must be required in the hedge mode in contractV3, and must be required in the one-way mode in v2
+Please note that <b>positionIdx</b> must be required in the hedge mode
 </aside>
 
 <p class="fake_header">HTTP Request</p>
@@ -3099,7 +3091,7 @@ Please note that only orders that are unfilled or partially filled can be modifi
 <tr>
 <td style="text-align: left">&gt; qty</td>
 <td style="text-align: left">string</td>
-<td>Quantity. If <b>USDT perp</b>, qty is in cryptocurrency, else like <b>Inverse perp/futures</b>, qty is in USD.</td>
+<td>Quantity. If <b>USDT perp</b>, qty is in cryptocurrency.</td>
 </tr>
 <tr>
 <td style="text-align: left">&gt; timeInForce</td>
@@ -3651,7 +3643,7 @@ Please note that zero position will be displayed only if the symbol is passed in
 <tr>
 <td style="text-align: left">sessionAvgPrice</td>
 <td style="text-align: left">string</td>
-<td>Settlement price, for USDC only</td>
+<td>Settlement price</td>
 </tr>
 <tr>
 <td style="text-align: left">takeProfit</td>
@@ -3828,7 +3820,7 @@ Please note that zero position will be displayed only if the symbol is passed in
     <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1658909271272</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>It supports to switch the position mode for <b>USDT perpetual</b> and <b>Inverse futures</b>. If you are in One-Way Mode, you can only open one position on <code>Buy</code> or <code>Sell</code> side. If you are in Hedge Mode, you can open both <code>Buy</code> and <code>Sell</code> side positions simultaneously.
+<p>It supports to switch the position mode for <b>USDT perpetual</b>. If you are in One-Way Mode, you can only open one position on <code>Buy</code> or <code>Sell</code> side. If you are in Hedge Mode, you can open both <code>Buy</code> and <code>Sell</code> side positions simultaneously.
 <br/>
 <b>Rule:</b>
 <ul>
@@ -3871,10 +3863,10 @@ Example:
     <td><b>Change 3</b></td><td>-</td><td>-</td><td>Set ASXUSDT to one-mode</td>
   </tr>
   <tr>
-    <td>Take effect result</td><td colspan="3">AXSUSDT is one-way mode, other trading pairs have no change</td>
+    <td>Take effect result</td><td colspan="3">BTCUSDT is one-way mode, other trading pairs have no change</td>
   </tr>
   <tr>
-    <td>list new symbol BITUSDT</td><td colspan="3">BITUSDT is hedge-mode (Inherit coin rule)</td>
+    <td>list new symbol BTCUSDT</td><td colspan="3">USDT is hedge-mode (Inherit coin rule)</td>
   </tr>
 </table>
 
@@ -3963,7 +3955,7 @@ Example:
 <p>Set risk limit.</p>
 
 <aside class="notice">
-Read more about the risk limit <a href="https://www.mufex.com/en-US/help-center/HelpCenterKnowledge/bybitHC_Article?language=en_US&id=000001164">here</a>.
+Read more about the risk limit .
 </aside>
 
 <p class="fake_header">HTTP Request</p>
@@ -4470,8 +4462,7 @@ Read more about the risk limit <a href="https://www.mufex.com/en-US/help-center/
     <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1658737209400</span>
 <span class="p">}</span>
 </code></pre></div>
-<p><p>Get wallet fund records. This endpoint also shows exchanges from the <a href="https://testnet.mufex.com/app/assets/assets-exchange">Asset Exchange</a>, where the <code>type</code>s for the exchange are <code>ExchangeOrderWithdraw</code> and <code>ExchangeOrderDeposit</code>.</p>
-<p>This endpoint returns incomplete information for transfers involving the derivatives wallet. Use the <a href="https://mufex-exchange.github.io/docs-legacy/account_asset/v3/#t-transfer_api">account asset API</a> for creating and querying internal transfers.
+<p><p>Get wallet fund records.</p>
 </p>
 
 <p class="fake_header">HTTP Request</p>
@@ -4500,7 +4491,7 @@ Read more about the risk limit <a href="https://www.mufex.com/en-US/help-center/
 <td style="text-align: left">endTime</td>
 <td style="text-align: left">false</td>
 <td style="text-align: left">string</td>
-<td>End timestamp in milliseconds. <b>The past year records ONLY</b></td>
+<td>End timestamp in milliseconds.</td>
 </tr>
 <tr>
 <td style="text-align: left"><a href="#currency-currency-coin">coin</a></td>
@@ -4609,7 +4600,7 @@ MF-ACCESS-Limit-Reset-Timestamp: 1665397625986
 </p>
 <h2 id='t-raisemylimit'>How to Increase API Limits</h2>
 <p><ul>
-Please email <a href="mailto:api@mufex.com">api@mufex.com</a> with the following information. We will reply within 1-4 working days:
+Please email <a href="mailto:github@mufex.finance">github@mufex.finance</a> with the following information. We will reply within 1-4 working days:
   <ol>
     <li>Your name and your company details</li>
     <li>Your Mufex UID or registered email, and the assets you are trading</li>
@@ -4663,7 +4654,7 @@ Please email <a href="mailto:api@mufex.com">api@mufex.com</a> with the following
 <ul>
 <p>
 <li><b>Mainnet</b>:<br/>
-    USDT contract: <span id="usdt_mainnet_address">wss://fstream.betterbitfinance.com/public/v1</span>
+    Public: <span id="usdt_mainnet_address">wss://ws.mufex.finance/realtime_public</span>
     <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#usdt_mainnet_address"><img src="../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button>
     <br/>
  </p>
@@ -4672,23 +4663,9 @@ Please email <a href="mailto:api@mufex.com">api@mufex.com</a> with the following
 <ul>
 <p>
 <li><b>Mainnet</b>:<br/>
-    Unified margin account: <span id="uma_mainnet_address">wss://fstream.betterbitfinance.com/private/v1</span>
+    Private: <span id="uma_mainnet_address">wss://ws.mufex.finance/contract/private</span>
     <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#uma_mainnet_address"><img src="../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button>
 </li>
-</p>
-</ul>
-<p><b>WebSocket private channel</b>:</p>
-<ul>
-<p>
-<li><b>Mainnet</b>:<br/>
-    Contract account: <span id="ca_mainnet_address">wss://stream.mufex.com/contract/private</span>
-    <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#ca_mainnet_address"><img src="../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button>
-</li>
-<li><b>Testnet</b>:<br/>
-    Contract account: <span id="ca_testnet_address">wss://stream-testnet.mufex.com/contract/private</span>
-    <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#ca_testnet_address"><img src="../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button>
-</li>
- </p>
 </ul>
 </p>
 
@@ -4785,7 +4762,7 @@ To avoid networks or program issues, we recommend that you send the <code>ping</
 <p>Each subscription will have a response. You can determine whether the subscription is successful based on the response.</p>
 <h2 id='t-publictopics'>Public Topics</h2><h3 id='t-websocketorderbookdepth'>orderbook</h3>
 <aside class="notice">
-Linear & inverse level 1 data：if 3 seconds have elapsed without a change in the orderbook, a snapshot message will be pushed again.
+Linear  level 1 data：if 3 seconds have elapsed without a change in the orderbook, a snapshot message will be pushed again.
 </aside>
 
 <blockquote>
@@ -4983,7 +4960,7 @@ If there is a problem in mufex end, it will re-send a snapshot, which is promise
 </code></pre></div>
 <p><b>instruction:</b><br>
 After subscription, you will be pushed delta trade message in real-time once there is an order filled.<br><br>
-Push frequency: <b>real-time</b><br><br>
+Push frequency: <b>100ms</b><br><br>
 <b>Topic:</b><br>
 <code>trades-100.{symbol}</code>
 </p>
@@ -5128,9 +5105,10 @@ Push frequency: <b>real-time</b><br><br>
 <span class="p">}</span>
 </code></pre></div>
 <p><p>Get latest information for symbol.</p>
-<p>Push frequency: <b>100ms</b></p>
+<p>Push frequency: <b>100ms,100ms</b></p>
 <p><b>Topic:</b></p>
 <p><code>tickers-100.{symbol}</code></p>
+<p><code>tickers-1000.{symbol}</code></p>
 </p>
 
 <aside class="warning">
@@ -5229,7 +5207,7 @@ This topic will utilises the <code>snapshot</code> field and  <code>delta</code>
 <tr>
 <td style="text-align: left">turnover24h</td>
 <td style="text-align: left">string</td>
-<td><a href="#t-faq_turnover">Turnover</a> for 24h</td>
+<td>Turnover in the last 24 hours</td>
 <td style="text-align: left">to</td>
 </tr>
 <tr>
@@ -5935,7 +5913,7 @@ If <code>confirm</code> is <code>True</code>, the data is the final tick for the
 </ul>
 <h2 id='category-category'>Category(<code>category</code>)</h2>
 <ul>
-<li><code>linear</code> Linear perpetual, including USDC perp.</li>
+<li><code>linear</code> Linear perpetual</li>
 </ul>
 <h2 id='symbol-symbol'>Symbol (<code>symbol</code>)</h2>
 <ul>
@@ -5989,9 +5967,9 @@ If <code>confirm</code> is <code>True</code>, the data is the final tick for the
 </ul>
 <h2 id='quantity-qty'>Quantity (<code>qty</code>)</h2>
 <p><ul>
-<li>The maximum qty for an order (<code>max_trading_qty</code>) can be queried with the <a href="#t-querysymbol">Query Symbol endpoint</a>.</li>
+<li>The maximum qty for an order (<code>max_trading_qty</code>) can be queried with the  <a href="#t-dv_instrhead">Query Symbol endpoint</a>.</li>
 <li>Must be a positive integer
-<li>Must conform to the symbol's <code>qty_step</code>. For example, for the inverse perpetual BTCUSD market:</li>
+<li>Must conform to the symbol's <code>qty_step</code>.</li>
 <ul>
 <li><code>40</code> - allowed</li>
 <li><code>30.5</code> - not allowed</li>
