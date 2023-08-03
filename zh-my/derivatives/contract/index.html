@@ -2,15 +2,6 @@
 <!doctype html>
 <html>
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158616893-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-158616893-1');
-    </script>
 
     <link href="../../../images/favicon-3d8a6b23.ico" rel="icon" type="image/ico" />
     <meta charset="utf-8">
@@ -273,7 +264,7 @@
 
       .con a.selected {
         border-bottom: 2px solid transparent;
-        border-color: #FFB11A;
+        border-color: #1a86ff;
         color: #fff;
       }
 
@@ -290,12 +281,7 @@
         word-break: keep-all;
       }
 
-      /* Environment dropdown list */
-      /* The dropdown container */
-      .dropdown {
-        float: left;
-        overflow: hidden;
-      }
+
 
       /* Dropdown button */
       .dropdown .dropbtn {
@@ -636,7 +622,7 @@
   color: #859900;
 }
     </style>
-    <link href="../../../stylesheets/screen-995a21da.css" rel="stylesheet" media="screen" />
+    <link href="../../../stylesheets/screen-f40d628b.css" rel="stylesheet" media="screen" />
     <link href="../../../stylesheets/print-41ffbffc.css" rel="stylesheet" media="print" />
       <script src="../../../javascripts/all-52d563e0.js"></script>
     <script>
@@ -655,37 +641,9 @@
 
       <ul class="con">
 
-        <!-- Derivatives V3 -->
-          <li>
-            <div class="dropdown">
-              <button class="dropbtn">translation missing: zh-my.derivatives
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
-                  <a href="/docs-legacy/zh-my/derivatives/contract" class="dropdown-content-selected">合約</a>
-              </div>
-            </div>
-          </li>
 
 
-        <!-- Environment dropdown (Testnet, Mainnet) -->
-        <!-- It's very long because each button needs its own logic to link to testnet or mainnet depending on if the website is on testnet or mainnet. -->
-        <li>
-          <div class="dropdown">
-            <button class="dropbtn">Environment
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-                  <span class="dropdown-content-selected"><a href=/docs-legacy/zh-my/derivativesV3/contract>Mainnet</a></span>
-                  <a href=/docs-legacy/zh-my/testnet/derivativesV3/contract>Testnet</a>
 
-              <!-- it's for spot testnet switch to spot mainnet -->
-
-        
-
-            </div>
-          </div>
-        </li>
       </ul>
 
     </div>
@@ -713,20 +671,6 @@
         <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#t-introduction" class="toc-h1 toc-link" data-title="中文社區和參考資料">中文社區和參考資料</a>
-          </li>
-          <li>
-            <a href="#t-changelog" class="toc-h1 toc-link" data-title="更新日誌">更新日誌</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#changelog" class="toc-h2 toc-link" data-title="Changelog">Changelog</a>
-                  </li>
-              </ul>
-          </li>
-          <li>
-            <a href="#t-faq" class="toc-h1 toc-link" data-title="translation missing: zh-my.faq">translation missing: zh-my.faq</a>
-          </li>
-          <li>
             <a href="#t-authentication" class="toc-h1 toc-link" data-title="鑒權/認證">鑒權/認證</a>
               <ul class="toc-list-h2">
                   <li>
@@ -753,22 +697,10 @@
                     <a href="#t-dv_instrhead" class="toc-h2 toc-link" data-title="查询衍生品交易规格">查询衍生品交易规格</a>
                   </li>
                   <li>
-                    <a href="#t-dv_markpricekline" class="toc-h2 toc-link" data-title="查詢標記價格K線">查詢標記價格K線</a>
-                  </li>
-                  <li>
-                    <a href="#t-dv_indexpricekline" class="toc-h2 toc-link" data-title="查詢指數價格K線數據">查詢指數價格K線數據</a>
-                  </li>
-                  <li>
-                    <a href="#t-dv_historyfundingratehead" class="toc-h2 toc-link" data-title="查詢歷史資金費率">查詢歷史資金費率</a>
-                  </li>
-                  <li>
                     <a href="#t-dv_risklimithead" class="toc-h2 toc-link" data-title="查詢風險限額表">查詢風險限額表</a>
                   </li>
                   <li>
                     <a href="#t-dv_publictradingrecords" class="toc-h2 toc-link" data-title="平臺交易歷史數據">平臺交易歷史數據</a>
-                  </li>
-                  <li>
-                    <a href="#t-dv_marketopeninterest" class="toc-h2 toc-link" data-title="未平合約持倉數量">未平合約持倉數量</a>
                   </li>
               </ul>
           </li>
@@ -794,9 +726,6 @@
                             <a href="#t-dv_batchcancelorders" class="toc-h3 toc-link" data-title="批量撤銷訂單">批量撤銷訂單</a>
                           </li>
                           <li>
-                            <a href="#t-contract_cancelallorders" class="toc-h3 toc-link" data-title="撤銷所有委託單">撤銷所有委託單</a>
-                          </li>
-                          <li>
                             <a href="#t-contract_replaceorder" class="toc-h3 toc-link" data-title="修改委托單信息">修改委托單信息</a>
                           </li>
                           <li>
@@ -814,22 +743,10 @@
                             <a href="#t-dv_myposition" class="toc-h3 toc-link" data-title="獲取持倉（實時）">獲取持倉（實時）</a>
                           </li>
                           <li>
-                            <a href="#t-setautoaddmargin" class="toc-h3 toc-link" data-title="自動追加保證金">自動追加保證金</a>
-                          </li>
-                          <li>
                             <a href="#t-dv_marginswitch" class="toc-h3 toc-link" data-title="全倉/逐倉切換">全倉/逐倉切換</a>
                           </li>
                           <li>
                             <a href="#t-dv_switchpositionmode" class="toc-h3 toc-link" data-title="切換倉位模式">切換倉位模式</a>
-                          </li>
-                          <li>
-                            <a href="#t-dv_switchmode" class="toc-h3 toc-link" data-title="切換止盈止損模式">切換止盈止損模式</a>
-                          </li>
-                          <li>
-                            <a href="#t-setleverage" class="toc-h3 toc-link" data-title="修改杠桿">修改杠桿</a>
-                          </li>
-                          <li>
-                            <a href="#t-tradingstop" class="toc-h3 toc-link" data-title="設置止盈止損">設置止盈止損</a>
                           </li>
                           <li>
                             <a href="#t-setrisklimit" class="toc-h3 toc-link" data-title="設置風險限額">設置風險限額</a>
@@ -882,9 +799,6 @@
                           <li>
                             <a href="#t-websocketunsubfilters" class="toc-h3 toc-link" data-title="Websocket取消訂閱方式">Websocket取消訂閱方式</a>
                           </li>
-                          <li>
-                            <a href="#t-intervals" class="toc-h3 toc-link" data-title="推送周期">推送周期</a>
-                          </li>
                       </ul>
                   </li>
                   <li>
@@ -904,9 +818,6 @@
                           </li>
                           <li>
                             <a href="#t-websocketkline" class="toc-h3 toc-link" data-title="K線">K線</a>
-                          </li>
-                          <li>
-                            <a href="#t-websocketliquidation" class="toc-h3 toc-link" data-title="平臺強平推送">平臺強平推送</a>
                           </li>
                       </ul>
                   </li>
@@ -955,9 +866,6 @@
                   </li>
                   <li>
                     <a href="#wallet-fund-type-walletfundtype-type" class="toc-h2 toc-link" data-title="Wallet fund type (walletFundType / type)">Wallet fund type (<code>walletFundType</code> / <code>type</code>)</a>
-                  </li>
-                  <li>
-                    <a href="#withdraw-status-status" class="toc-h2 toc-link" data-title="Withdraw status (status)">Withdraw status (<code>status</code>)</a>
                   </li>
                   <li>
                     <a href="#order-type-ordertype" class="toc-h2 toc-link" data-title="Order type (orderType)">Order type (<code>orderType</code>)</a>
@@ -1020,257 +928,6 @@
           </li>
           <li>
             <a href="#t-errors" class="toc-h1 toc-link" data-title="錯誤碼">錯誤碼</a>
-              <ul class="toc-list-h2">
-                  <li>
-                    <a href="#10001" class="toc-h2 toc-link" data-title="10001">10001</a>
-                  </li>
-                  <li>
-                    <a href="#10002" class="toc-h2 toc-link" data-title="10002">10002</a>
-                  </li>
-                  <li>
-                    <a href="#10003" class="toc-h2 toc-link" data-title="10003">10003</a>
-                  </li>
-                  <li>
-                    <a href="#10004" class="toc-h2 toc-link" data-title="10004">10004</a>
-                  </li>
-                  <li>
-                    <a href="#10005" class="toc-h2 toc-link" data-title="10005">10005</a>
-                  </li>
-                  <li>
-                    <a href="#10006" class="toc-h2 toc-link" data-title="10006">10006</a>
-                  </li>
-                  <li>
-                    <a href="#10008" class="toc-h2 toc-link" data-title="10008">10008</a>
-                  </li>
-                  <li>
-                    <a href="#10009" class="toc-h2 toc-link" data-title="10009">10009</a>
-                  </li>
-                  <li>
-                    <a href="#10000" class="toc-h2 toc-link" data-title="10000">10000</a>
-                  </li>
-                  <li>
-                    <a href="#10010" class="toc-h2 toc-link" data-title="10010">10010</a>
-                  </li>
-                  <li>
-                    <a href="#10016" class="toc-h2 toc-link" data-title="10016">10016</a>
-                  </li>
-                  <li>
-                    <a href="#10018" class="toc-h2 toc-link" data-title="10018">10018</a>
-                  </li>
-                  <li>
-                    <a href="#10027" class="toc-h2 toc-link" data-title="10027">10027</a>
-                  </li>
-                  <li>
-                    <a href="#10014" class="toc-h2 toc-link" data-title="10014">10014</a>
-                  </li>
-                  <li>
-                    <a href="#140001" class="toc-h2 toc-link" data-title="140001">140001</a>
-                  </li>
-                  <li>
-                    <a href="#140003" class="toc-h2 toc-link" data-title="140003">140003</a>
-                  </li>
-                  <li>
-                    <a href="#140004" class="toc-h2 toc-link" data-title="140004">140004</a>
-                  </li>
-                  <li>
-                    <a href="#140005" class="toc-h2 toc-link" data-title="140005">140005</a>
-                  </li>
-                  <li>
-                    <a href="#140006" class="toc-h2 toc-link" data-title="140006">140006</a>
-                  </li>
-                  <li>
-                    <a href="#140007" class="toc-h2 toc-link" data-title="140007">140007</a>
-                  </li>
-                  <li>
-                    <a href="#140008" class="toc-h2 toc-link" data-title="140008">140008</a>
-                  </li>
-                  <li>
-                    <a href="#140009" class="toc-h2 toc-link" data-title="140009">140009</a>
-                  </li>
-                  <li>
-                    <a href="#140010" class="toc-h2 toc-link" data-title="140010">140010</a>
-                  </li>
-                  <li>
-                    <a href="#140011" class="toc-h2 toc-link" data-title="140011">140011</a>
-                  </li>
-                  <li>
-                    <a href="#140012" class="toc-h2 toc-link" data-title="140012">140012</a>
-                  </li>
-                  <li>
-                    <a href="#140013" class="toc-h2 toc-link" data-title="140013">140013</a>
-                  </li>
-                  <li>
-                    <a href="#140014" class="toc-h2 toc-link" data-title="140014">140014</a>
-                  </li>
-                  <li>
-                    <a href="#140015" class="toc-h2 toc-link" data-title="140015">140015</a>
-                  </li>
-                  <li>
-                    <a href="#140016" class="toc-h2 toc-link" data-title="140016">140016</a>
-                  </li>
-                  <li>
-                    <a href="#140017" class="toc-h2 toc-link" data-title="140017">140017</a>
-                  </li>
-                  <li>
-                    <a href="#140018" class="toc-h2 toc-link" data-title="140018">140018</a>
-                  </li>
-                  <li>
-                    <a href="#140019" class="toc-h2 toc-link" data-title="140019">140019</a>
-                  </li>
-                  <li>
-                    <a href="#140020" class="toc-h2 toc-link" data-title="140020">140020</a>
-                  </li>
-                  <li>
-                    <a href="#140021" class="toc-h2 toc-link" data-title="140021">140021</a>
-                  </li>
-                  <li>
-                    <a href="#140022" class="toc-h2 toc-link" data-title="140022">140022</a>
-                  </li>
-                  <li>
-                    <a href="#140023" class="toc-h2 toc-link" data-title="140023">140023</a>
-                  </li>
-                  <li>
-                    <a href="#140024" class="toc-h2 toc-link" data-title="140024">140024</a>
-                  </li>
-                  <li>
-                    <a href="#140025" class="toc-h2 toc-link" data-title="140025">140025</a>
-                  </li>
-                  <li>
-                    <a href="#140026" class="toc-h2 toc-link" data-title="140026">140026</a>
-                  </li>
-                  <li>
-                    <a href="#140027" class="toc-h2 toc-link" data-title="140027">140027</a>
-                  </li>
-                  <li>
-                    <a href="#140028" class="toc-h2 toc-link" data-title="140028">140028</a>
-                  </li>
-                  <li>
-                    <a href="#140029" class="toc-h2 toc-link" data-title="140029">140029</a>
-                  </li>
-                  <li>
-                    <a href="#140030" class="toc-h2 toc-link" data-title="140030">140030</a>
-                  </li>
-                  <li>
-                    <a href="#140031" class="toc-h2 toc-link" data-title="140031">140031</a>
-                  </li>
-                  <li>
-                    <a href="#140032" class="toc-h2 toc-link" data-title="140032">140032</a>
-                  </li>
-                  <li>
-                    <a href="#140033" class="toc-h2 toc-link" data-title="140033">140033</a>
-                  </li>
-                  <li>
-                    <a href="#140034" class="toc-h2 toc-link" data-title="140034">140034</a>
-                  </li>
-                  <li>
-                    <a href="#140035" class="toc-h2 toc-link" data-title="140035">140035</a>
-                  </li>
-                  <li>
-                    <a href="#140036" class="toc-h2 toc-link" data-title="140036">140036</a>
-                  </li>
-                  <li>
-                    <a href="#140037" class="toc-h2 toc-link" data-title="140037">140037</a>
-                  </li>
-                  <li>
-                    <a href="#140038" class="toc-h2 toc-link" data-title="140038">140038</a>
-                  </li>
-                  <li>
-                    <a href="#140039" class="toc-h2 toc-link" data-title="140039">140039</a>
-                  </li>
-                  <li>
-                    <a href="#140040" class="toc-h2 toc-link" data-title="140040">140040</a>
-                  </li>
-                  <li>
-                    <a href="#140041" class="toc-h2 toc-link" data-title="140041">140041</a>
-                  </li>
-                  <li>
-                    <a href="#140042" class="toc-h2 toc-link" data-title="140042">140042</a>
-                  </li>
-                  <li>
-                    <a href="#140043" class="toc-h2 toc-link" data-title="140043">140043</a>
-                  </li>
-                  <li>
-                    <a href="#140044" class="toc-h2 toc-link" data-title="140044">140044</a>
-                  </li>
-                  <li>
-                    <a href="#140045" class="toc-h2 toc-link" data-title="140045">140045</a>
-                  </li>
-                  <li>
-                    <a href="#140046" class="toc-h2 toc-link" data-title="140046">140046</a>
-                  </li>
-                  <li>
-                    <a href="#140047" class="toc-h2 toc-link" data-title="140047">140047</a>
-                  </li>
-                  <li>
-                    <a href="#140048" class="toc-h2 toc-link" data-title="140048">140048</a>
-                  </li>
-                  <li>
-                    <a href="#140049" class="toc-h2 toc-link" data-title="140049">140049</a>
-                  </li>
-                  <li>
-                    <a href="#140050" class="toc-h2 toc-link" data-title="140050">140050</a>
-                  </li>
-                  <li>
-                    <a href="#140051" class="toc-h2 toc-link" data-title="140051">140051</a>
-                  </li>
-                  <li>
-                    <a href="#140052" class="toc-h2 toc-link" data-title="140052">140052</a>
-                  </li>
-                  <li>
-                    <a href="#140053" class="toc-h2 toc-link" data-title="140053">140053</a>
-                  </li>
-                  <li>
-                    <a href="#140054" class="toc-h2 toc-link" data-title="140054">140054</a>
-                  </li>
-                  <li>
-                    <a href="#140055" class="toc-h2 toc-link" data-title="140055">140055</a>
-                  </li>
-                  <li>
-                    <a href="#140056" class="toc-h2 toc-link" data-title="140056">140056</a>
-                  </li>
-                  <li>
-                    <a href="#140057" class="toc-h2 toc-link" data-title="140057">140057</a>
-                  </li>
-                  <li>
-                    <a href="#140058" class="toc-h2 toc-link" data-title="140058">140058</a>
-                  </li>
-                  <li>
-                    <a href="#140059" class="toc-h2 toc-link" data-title="140059">140059</a>
-                  </li>
-                  <li>
-                    <a href="#140060" class="toc-h2 toc-link" data-title="140060">140060</a>
-                  </li>
-                  <li>
-                    <a href="#140061" class="toc-h2 toc-link" data-title="140061">140061</a>
-                  </li>
-                  <li>
-                    <a href="#140062" class="toc-h2 toc-link" data-title="140062">140062</a>
-                  </li>
-                  <li>
-                    <a href="#140063" class="toc-h2 toc-link" data-title="140063">140063</a>
-                  </li>
-                  <li>
-                    <a href="#140064" class="toc-h2 toc-link" data-title="140064">140064</a>
-                  </li>
-                  <li>
-                    <a href="#140065" class="toc-h2 toc-link" data-title="140065">140065</a>
-                  </li>
-                  <li>
-                    <a href="#140066" class="toc-h2 toc-link" data-title="140066">140066</a>
-                  </li>
-                  <li>
-                    <a href="#140067" class="toc-h2 toc-link" data-title="140067">140067</a>
-                  </li>
-                  <li>
-                    <a href="#140068" class="toc-h2 toc-link" data-title="140068">140068</a>
-                  </li>
-                  <li>
-                    <a href="#140069" class="toc-h2 toc-link" data-title="140069">140069</a>
-                  </li>
-                  <li>
-                    <a href="#140070" class="toc-h2 toc-link" data-title="140070">140070</a>
-                  </li>
-              </ul>
           </li>
       </ul>
         <ul class="toc-footer">
@@ -1297,9 +954,7 @@ clipboard.on('error', function(e) {
     console.log(e);
 });
 </script>
-<h1 id='t-introduction'>中文社區和參考資料</h1>
-<p><p>歡迎使用 <a href="https://www.mufex.com/">Mufex</a> APIs 和 Websocket官方文檔！</p> <p>如果您在使用API的過程中遇到問題需要幫助，請加入我們的 <a href="https://t.me/Bybitapi">官方Telegram API討論群</a>！</p></p>
-<h1 id='t-changelog'>更新日誌</h1><h2 id='changelog'>Changelog</h2><h1 id='t-faq'>translation missing: zh-my.faq</h1><h1 id='t-authentication'>鑒權/認證</h1>
+<h1 id='t-authentication'>鑒權/認證</h1>
 <aside class="notice">
 請先生成<a href="https://testnet.mufex.com/app/user/api-management"><b>測試網</b></a> 或 <a href="https://www.mufex.com/app/user/api-management"<b>主網</b></a>API KEY。
 </aside>
@@ -1327,12 +982,27 @@ REST接口根URL:
 </aside>
 
 <p><p>所有<b>private</b>接口都需要認證，<b>public</b> 接口不需要認證。</p></p>
-<h2 id='t-authenticationparameters'>公共參數</h2><h2 id='t-constructingtherequest'>構建請求</h2>
+<h2 id='t-authenticationparameters'>公共參數</h2>
+<p>為了幫助診斷高級網絡問題，您可以考慮將 <code>cdn-request-id</code> 添加到您的請求標頭中。對於每個請求，它的值應該是唯一的。
+需要簽名的接口必須包含以下參數:
+<ul>
+  <li><b>api_key</b></li>
+  <li><b>timestamp</b> - UTC<b>毫秒</b>時間戳</li>
+  <li><b>sign</b> - 請求參數簽名</li>
+</ul>
+
+註意，timestamp參數必須符合如下規則: <b>server_time - recv_window <= timestamp < server_time + 1000</b>，其中server_time是Bybit服務器時間，您可以通過<a href="#t-servertime">服務器時間接口</a>獲取。
+</p>
+
+<p><p>1. 時間戳 + api-key + [recv_window]+ [queryString(無需排序) | jsonBodyString]</p>
+
+<p>2. 使用<code>HMAC_SHA256</code>算法對第1步中拼接的query string簽名，並轉換為16進製字符串，得出<code>sign</code>參數。</p></p>
+<h2 id='t-constructingtherequest'>構建請求</h2>
 <blockquote>
 <p>拼接參數示例：</p>
 </blockquote>
-<div class="highlight"><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">/private/v1/trade/orders?category=option&amp;symbol=BTC-29JUL22-25000-C</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-testnet.mufex.com</span>
+<div class="highlight"><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">/private/v1/trade/orders?symbol=BTCUSDT</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mufex.finance</span>
 <span class="s">-H 'MF-ACCESS-SIGN-TYPE: 2' \</span>
 <span class="s">-H 'MF-ACCESS-SIGN: eb431d99a1a203a434a82ac3ea8e107b5f94a967e9aaf922c41e84fb3ec9df78' \</span>
 <span class="s">-H 'MF-ACCESS-API-KEY: {api key}' \</span>
@@ -1344,7 +1014,7 @@ REST接口根URL:
 </p>
 </blockquote>
 <div class="highlight"><pre class="highlight http tab-http"><code><span class="nf">POST</span> <span class="nn">/private/v1/trade/cancel</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
-<span class="na">Host</span><span class="p">:</span> <span class="s">api-testnet.mufex.com</span>
+<span class="na">Host</span><span class="p">:</span> <span class="s">api.mufex.finance</span>
 <span class="s">-H 'MF-ACCESS-SIGN-TYPE: 2' \</span>
 <span class="s">-H 'MF-ACCESS-SIGN: c822337e76e30505e41b87a55af291e074f59f9496ba12ca2a57dc04fe65a178' \</span>
 <span class="s">-H 'MF-ACCESS-API-KEY: {api key}' \</span>
@@ -1356,10 +1026,6 @@ REST接口根URL:
 <span class="s">}'</span>
 </code></pre></div>
 <p><p>3. 將<code>sign</code>參數加到請求頭中即可；註意<code>GET</code>和<code>POST</code>請求參數格式不同，詳見右邊示例。</p></p>
-
-<aside class="notice">
-<a href="https://github.com/mufex-exchange/api-usage-examples">簽名計算示例</a>.
-</aside>
 
 <!--
 ### Examples of the Signature Algorithm
@@ -1392,13 +1058,11 @@ function copyStringToClipboard (endpoint) {
   document.body.removeChild(el);
 }
 </script>
-<h1 id='t-marketdata'>行情接口</h1>
-<p><ul><li>以下市場行情接口不區分<b>普通帳戶</b>和<b>統一保證金帳戶</b></li><li>以下市場行情數據接口不需要驗權.</li></ul></p>
-<h3 id='t-dv_orderbook'>查詢Order Book</h3>
+<h1 id='t-marketdata'>行情接口</h1><h3 id='t-dv_orderbook'>查詢Order Book</h3>
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl GET 'https://api-testnet.betterbitfinance.com/public/v1/market/order-book?symbol=BTCUSDT'
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl GET 'https://api.mufex.finance/public/v1/market/order-book?symbol=BTCUSDT'
 </span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
 </code></pre></div>
 <blockquote>
@@ -1430,7 +1094,7 @@ function copyStringToClipboard (endpoint) {
             <span class="p">]</span>
         <span class="p">],</span>
         <span class="dl">"</span><span class="s2">ts</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1653638043149</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">u</span><span class="dl">"</span><span class="p">:</span> <span class="mi">4912426</span>
+        <span class="dl">"</span><span class="s2">u</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span>
     <span class="p">},</span>
     <span class="dl">"</span><span class="s2">ext_info</span><span class="dl">"</span><span class="p">:</span> <span class="p">{},</span>
     <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1679034720118</span>
@@ -1505,14 +1169,14 @@ function copyStringToClipboard (endpoint) {
 <tr>
 <td style="text-align: left">u</td>
 <td style="text-align: left">string</td>
-<td>表示數據連續性的id. 與wss中200檔的orderbook中的"u"對應</td>
+<td>0</td>
 </tr>
 </tbody></table>
 <h3 id='t-dv_querykline'>查詢K線數據</h3>
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl GET 'https://api-testnet.betterbitfinance.com/public/v1/market/kline?category=linear&amp;symbol=BTCUSDT&amp;interval=D&amp;start=1652112000000&amp;end=1652544000000'
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl GET 'https://api.mufex.finance/public/v1/market/kline?category=linear&amp;symbol=BTCUSDT&amp;interval=D&amp;start=1652112000000&amp;end=1652544000000'
 </span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
 </code></pre></div>
 <blockquote>
@@ -1561,7 +1225,7 @@ function copyStringToClipboard (endpoint) {
 <td style="text-align: left">category</td>
 <td style="text-align: left"><b>true</b></td>
 <td style="text-align: left">string</td>
-<td>衍生品產品類型. 若category不传，则返回<code>""</code>目前支持正向合約：linear; 反向合約：inverse(包含inverse futures)</td>
+<td>default:linear</td>
 </tr>
 <tr>
 <td style="text-align: left">symbol</td>
@@ -1607,7 +1271,7 @@ function copyStringToClipboard (endpoint) {
 <tr>
 <td style="text-align: left">category</td>
 <td style="text-align: left">string</td>
-<td>衍生品產品類型. 若category不传，则返回<code>""</code>目前支持正向合約：linear; 反向合約：inverse(包含inverse futures)</td>
+<td>default:linear</td>
 </tr>
 <tr>
 <td style="text-align: left">symbol</td>
@@ -1624,7 +1288,7 @@ function copyStringToClipboard (endpoint) {
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl GET 'https://api-testnet.betterbitfinance.com/public/v1/market/tickers?category=linear&amp;symbol=BTCUSDT'
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl GET 'https://api.mufex.finance/public/v1/market/tickers?category=linear&amp;symbol=BTCUSDT'
 </span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
 </code></pre></div>
 <blockquote>
@@ -1735,11 +1399,6 @@ function copyStringToClipboard (endpoint) {
 <td>未平倉合約數量</td>
 </tr>
 <tr>
-<td style="text-align: left">underlyingPrice</td>
-<td style="text-align: left">string</td>
-<td>底層資產</td>
-</tr>
-<tr>
 <td style="text-align: left">volume24h</td>
 <td style="text-align: left">string</td>
 <td>最近 24 小時成交量</td>
@@ -1760,19 +1419,9 @@ function copyStringToClipboard (endpoint) {
 <td>最新成交價</td>
 </tr>
 <tr>
-<td style="text-align: left">totalVolume</td>
-<td style="text-align: left">string</td>
-<td>總交易量</td>
-</tr>
-<tr>
 <td style="text-align: left">bidPrice</td>
 <td style="text-align: left">string</td>
 <td>買一價</td>
-</tr>
-<tr>
-<td style="text-align: left">totalTurnover</td>
-<td style="text-align: left">string</td>
-<td>總<a href="#t-faq_turnover">成交金額</a></td>
 </tr>
 <tr>
 <td style="text-align: left">turnover24h</td>
@@ -1790,19 +1439,9 @@ function copyStringToClipboard (endpoint) {
 <td>資金費率</td>
 </tr>
 <tr>
-<td style="text-align: left">bidSize</td>
-<td style="text-align: left">string</td>
-<td>買一價對應的數量</td>
-</tr>
-<tr>
 <td style="text-align: left">highPrice24h</td>
 <td style="text-align: left">string</td>
 <td>最近 24 小時最高價</td>
-</tr>
-<tr>
-<td style="text-align: left">askSize</td>
-<td style="text-align: left">string</td>
-<td>賣一價對應的數量</td>
 </tr>
 <tr>
 <td style="text-align: left">prevPrice1h</td>
@@ -1824,7 +1463,7 @@ function copyStringToClipboard (endpoint) {
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl GET 'https://api-testnet.betterbitfinance.com/public/v1/instruments?category=linear&amp;symbol=BTCUSDT'
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl GET 'https://api.mufex.finance/public/v1/instruments?category=linear&amp;symbol=BTCUSDT'
 </span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
 </code></pre></div>
 <blockquote>
@@ -1928,11 +1567,6 @@ function copyStringToClipboard (endpoint) {
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left">category</td>
-<td style="text-align: left">string</td>
-<td>衍生品產品類型. 若category不传，则返回<code>""</code>目前支持正向合約：linear; 反向合約：inverse; 期權：option</td>
-</tr>
-<tr>
 <td style="text-align: left">symbol</td>
 <td style="text-align: left">string</td>
 <td>合約類型</td>
@@ -1963,24 +1597,9 @@ function copyStringToClipboard (endpoint) {
 <td>盈虧結算和保證金幣種, 如BTCUSD的結算幣種為BTC</td>
 </tr>
 <tr>
-<td style="text-align: left">optionsType</td>
-<td style="text-align: left">string</td>
-<td>期權類型. Call/Put</td>
-</tr>
-<tr>
 <td style="text-align: left">launchTime</td>
 <td style="text-align: left">string</td>
 <td>上線時間</td>
-</tr>
-<tr>
-<td style="text-align: left">deliveryTime</td>
-<td style="text-align: left">string</td>
-<td>到期日/交割/行權時間. 永續合約返回<code>"0"</code></td>
-</tr>
-<tr>
-<td style="text-align: left">deliveryFeeRate</td>
-<td style="text-align: left">string</td>
-<td>交割費率</td>
 </tr>
 <tr>
 <td style="text-align: left">priceScale</td>
@@ -1988,59 +1607,54 @@ function copyStringToClipboard (endpoint) {
 <td>價格範圍</td>
 </tr>
 <tr>
-<td style="text-align: left">leverageFilter&gt; minLeverage</td>
+<td style="text-align: left">&gt;leverageFilter minLeverage</td>
 <td style="text-align: left">string</td>
 <td>最小槓桿數</td>
 </tr>
 <tr>
-<td style="text-align: left">leverageFilter&gt; maxLeverage</td>
+<td style="text-align: left">&gt;leverageFilter maxLeverage</td>
 <td style="text-align: left">string</td>
 <td>最大槓桿數</td>
 </tr>
 <tr>
-<td style="text-align: left">leverageFilter&gt; leverageStep</td>
+<td style="text-align: left">&gt;leverageFilter leverageStep</td>
 <td style="text-align: left">string</td>
 <td>槓桿增加或減少數量</td>
 </tr>
 <tr>
-<td style="text-align: left">priceFilter&gt; minPrice</td>
+<td style="text-align: left">&gt;priceFilter    minPrice</td>
 <td style="text-align: left">string</td>
 <td>最小委託價格</td>
 </tr>
 <tr>
-<td style="text-align: left">priceFilter&gt; maxPrice</td>
+<td style="text-align: left">&gt;priceFilter    maxPrice</td>
 <td style="text-align: left">string</td>
 <td>最大委託價格</td>
 </tr>
 <tr>
-<td style="text-align: left">priceFilter&gt; tickSize</td>
+<td style="text-align: left">&gt;priceFilter   tickSize</td>
 <td style="text-align: left">string</td>
 <td>價格最小變動單位</td>
 </tr>
 <tr>
-<td style="text-align: left">lotSizeFilter&gt; maxOrderQty</td>
+<td style="text-align: left">&gt;lotSizeFilter maxOrderQty</td>
 <td style="text-align: left">string</td>
 <td>單筆訂單最大交易數量</td>
 </tr>
 <tr>
-<td style="text-align: left">lotSizeFilter&gt; minOrderQty</td>
+<td style="text-align: left">&gt;lotSizeFilter minOrderQty</td>
 <td style="text-align: left">string</td>
 <td>單筆訂單最小交易數量</td>
 </tr>
 <tr>
-<td style="text-align: left">lotSizeFilter&gt; qtyStep</td>
+<td style="text-align: left">&gt;lotSizeFilter qtyStep</td>
 <td style="text-align: left">string</td>
 <td>合約數量最小單位</td>
 </tr>
 <tr>
-<td style="text-align: left">lotSizeFilter&gt; postOnlyMaxOrderQty</td>
+<td style="text-align: left">&gt;lotSizeFilter postOnlyMaxOrderQty</td>
 <td style="text-align: left">string</td>
 <td>timeInforce=PostOnly時允許的最大訂單數量</td>
-</tr>
-<tr>
-<td style="text-align: left">unifiedMarginTrade</td>
-<td style="text-align: left">boolean</td>
-<td>是否支持統一保證金交易. 該字段僅存在於合約數據中</td>
 </tr>
 <tr>
 <td style="text-align: left">fundingInterval</td>
@@ -2053,345 +1667,11 @@ function copyStringToClipboard (endpoint) {
 <td>API pass-through</td>
 </tr>
 </tbody></table>
-<h3 id='t-dv_markpricekline'>查詢標記價格K線</h3>
-<blockquote>
-<p>請求示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request GET 'https://api-testnet.betterbitfinance.com/public/v1/market/mark-price-kline?category=linear&amp;symbol=BTCUSDT&amp;interval=D&amp;start=1652112000000&amp;end=1652544000000'
-</span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
-</code></pre></div>
-<blockquote>
-<p>響應示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
-    <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="dl">"</span><span class="s2">category</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">linear</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">symbol</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">BTCUSDT</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">interval</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">1</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">list</span><span class="dl">"</span><span class="p">:[</span>
-      <span class="dl">"</span><span class="s2">1621162800</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">49592.43</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">49644.91</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">49342.37</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">49349.42</span><span class="dl">"</span><span class="p">,</span>
-    <span class="p">]</span>
-    <span class="p">},</span>
-    <span class="dl">"</span><span class="s2">ext_info</span><span class="dl">"</span><span class="p">:</span> <span class="p">{},</span>
-    <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1669802294719</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>查詢標記價格K線</p>
-
-<p class="fake_header">HTTP 請求</p>
-
-<p>GET
-<code><span id=dvmarkkline>/public/v1/market/mark-price-kline</span></code>
-<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#dvmarkkline"><img src="../../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button></p>
-
-<p class="fake_header">請求參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">parameter</th>
-<th style="text-align: left">是否必須</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">category</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td>衍生品產品類型. 若category不传，则返回<code>""</code>目前支持正向合約：linear; 反向合約：inverse(包含inverse futures)</td>
-</tr>
-<tr>
-<td style="text-align: left">symbol</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td>合約類型</td>
-</tr>
-<tr>
-<td style="text-align: left"><a href="#kline-interval-interval">interval</a></td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td>K線時間粒度. 枚舉值： 1 3 5 15 30 60 120 240 360 720 "D" "M" "W"</td>
-</tr>
-<tr>
-<td style="text-align: left">start</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">integer</td>
-<td>開始時間戳（毫秒)</td>
-</tr>
-<tr>
-<td style="text-align: left">end</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">integer</td>
-<td>結束時間戳（毫秒</td>
-</tr>
-<tr>
-<td style="text-align: left">limit</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">integer</td>
-<td>每頁數量, 最大200. 默認每頁200條</td>
-</tr>
-</tbody></table>
-
-<p class="fake_header">返回參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">參數</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">category</td>
-<td style="text-align: left">string</td>
-<td>衍生品產品類型. 若category不传，则返回<code>""</code>目前支持正向合約：linear; 反向合約：inverse(包含inverse futures)</td>
-</tr>
-<tr>
-<td style="text-align: left">symbol</td>
-<td style="text-align: left">string</td>
-<td>合約類型</td>
-</tr>
-<tr>
-<td style="text-align: left">list</td>
-<td style="text-align: left">string[]</td>
-<td>元素為單個蠟燭的數組，以<code>start</code>倒序排列, 數組內默認排序規則為<code>start</code>，<code>open</code>，<code>high</code>，<code>low</code>，<code>close</code></td>
-</tr>
-</tbody></table>
-<h3 id='t-dv_indexpricekline'>查詢指數價格K線數據</h3>
-<blockquote>
-<p>請求示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request GET 'https://api-testnet.betterbitfinance.com/public/v1/market/index-price-kline?category=linear&amp;symbol=BTCUSDT&amp;interval=D&amp;start=1652112000000&amp;end=1652544000000'
-</span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
-</code></pre></div>
-<blockquote>
-<p>響應示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
-    <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
-      <span class="dl">"</span><span class="s2">category</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">linear</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">symbol</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">BTCUSDT</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">interval</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">1</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">list</span><span class="dl">"</span><span class="p">:[</span>
-      <span class="dl">"</span><span class="s2">1621162800</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">49592.43</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">49644.91</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">49342.37</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">49349.42</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">1451.59</span><span class="dl">"</span><span class="p">,</span>
-      <span class="dl">"</span><span class="s2">2.4343353100000003</span><span class="dl">"</span>
-    <span class="p">]</span>
-  <span class="p">},</span>
-  <span class="dl">"</span><span class="s2">ext_info</span><span class="dl">"</span><span class="p">:</span> <span class="p">{},</span>
-  <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1679025663662</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>查詢指數價格K線數據</p>
-
-<p class="fake_header">HTTP 請求</p>
-
-<p>GET
-<code><span id=dvindexkline>/public/v1/market/index-price-kline</span></code>
-<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#dvindexkline"><img src="../../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button></p>
-
-<p class="fake_header">請求參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">parameter</th>
-<th style="text-align: left">是否必須</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">category</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td>衍生品產品類型. 若category不传，则返回<code>""</code>目前支持正向合約：linear; 反向合約：inverse(包含inverse futures)</td>
-</tr>
-<tr>
-<td style="text-align: left">symbol</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td>合約類型</td>
-</tr>
-<tr>
-<td style="text-align: left"><a href="#kline-interval-interval">interval</a></td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td>K線時間粒度. 枚舉值： 1 3 5 15 30 60 120 240 360 720 "D" "M" "W"</td>
-</tr>
-<tr>
-<td style="text-align: left">start</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">integer</td>
-<td>開始時間戳（毫秒)</td>
-</tr>
-<tr>
-<td style="text-align: left">end</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">integer</td>
-<td>結束時間戳（毫秒</td>
-</tr>
-<tr>
-<td style="text-align: left">limit</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">integer</td>
-<td>每頁數量, 最大200. 默認每頁200條</td>
-</tr>
-</tbody></table>
-
-<p class="fake_header">返回參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">參數</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">category</td>
-<td style="text-align: left">string</td>
-<td>衍生品產品類型. 若category不传，则返回<code>""</code>目前支持正向合約：linear; 反向合約：inverse(包含inverse futures)</td>
-</tr>
-<tr>
-<td style="text-align: left">symbol</td>
-<td style="text-align: left">string</td>
-<td>合約類型</td>
-</tr>
-<tr>
-<td style="text-align: left">list</td>
-<td style="text-align: left">string[]</td>
-<td>元素為單個蠟燭的數組，以<code>start</code>倒序排列, 數組內默認排序規則為<code>start</code>，<code>open</code>，<code>high</code>，<code>low</code>，<code>close</code>，<code>volume</code>，<code>turnover</code></td>
-</tr>
-</tbody></table>
-<h3 id='t-dv_historyfundingratehead'>查詢歷史資金費率</h3>
-<blockquote>
-<p>請求示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl GET 'https://api-testnet.mufex.com//public/v1/funding-rate-history?category=linear&amp;symbol=BTCUSDT&amp;startTime=1652112000000&amp;endTime=1652198400000'
-</span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
-</code></pre></div>
-<blockquote>
-<p>響應示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
-    <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span>  <span class="p">{</span>
-        <span class="dl">"</span><span class="s2">category</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">linear</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">list</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="dl">"</span><span class="s2">symbol</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">BTCUSDT</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">fundingRate</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.0001</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">fundingRateTimestamp</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1657728000000</span><span class="dl">"</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="dl">"</span><span class="s2">symbol</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">BTCUSDT</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">fundingRate</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.0001</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">fundingRateTimestamp</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1657699200000</span><span class="dl">"</span>
-            <span class="p">}</span>
-        <span class="p">]</span>
-    <span class="p">},</span>
-    <span class="dl">"</span><span class="s2">ext_info</span><span class="dl">"</span><span class="p">:</span> <span class="p">{},</span>
-    <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1657782323371</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>UTC時間每天0點、8點、16點產生一個資金費率。 假設當前時間是UTC12點，則返回的是上一次結算即UTC8點產生的資金費率。</p>
-
-<p class="fake_header">HTTP 請求</p>
-
-<p>GET
-<code><span id=dvhistfundrate>/public/v1/funding-rate-history</span></code>
-<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#dvhistfundrate"><img src="../../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button></p>
-
-<p class="fake_header">請求參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">parameter</th>
-<th style="text-align: left">是否必須</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">category</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td>衍生品產品類型. 若category不传，则返回<code>""</code>目前支持正向合約：linear; 反向合約：inverse</td>
-</tr>
-<tr>
-<td style="text-align: left">symbol</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td>合約類型</td>
-</tr>
-<tr>
-<td style="text-align: left">startTime</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">integer</td>
-<td>開始時間戳（毫秒)</td>
-</tr>
-<tr>
-<td style="text-align: left">endTime</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">integer</td>
-<td>結束時間戳（毫秒</td>
-</tr>
-<tr>
-<td style="text-align: left">limit</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">integer</td>
-<td>每頁數量, 最大200. 默認每頁200條</td>
-</tr>
-</tbody></table>
-
-<p class="fake_header">返回參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">參數</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">category</td>
-<td style="text-align: left">string</td>
-<td>衍生品產品類型. 若category不传，则返回<code>""</code>目前支持正向合約：linear; 反向合約：inverse</td>
-</tr>
-<tr>
-<td style="text-align: left">symbol</td>
-<td style="text-align: left">string</td>
-<td>合約類型</td>
-</tr>
-<tr>
-<td style="text-align: left">fundingRate</td>
-<td style="text-align: left">string</td>
-<td>資金費率</td>
-</tr>
-<tr>
-<td style="text-align: left">fundingRateTimestamp</td>
-<td style="text-align: left">string</td>
-<td>資金費率時間戳</td>
-</tr>
-</tbody></table>
 <h3 id='t-dv_risklimithead'>查詢風險限額表</h3>
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl GET 'https://api-testnet.betterbitfinance.com/public/v1/position-risk?category=linear&amp;symbol=BTCUSDT'
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl GET 'https://api.mufex.finance/public/v1/position-risk?category=linear&amp;symbol=BTCUSDT'
 </span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
 </code></pre></div>
 <blockquote>
@@ -2518,7 +1798,7 @@ function copyStringToClipboard (endpoint) {
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl GET 'https://api-testnet.betterbitfinance.com/public/v1/market/trades?category=linear&amp;symbol=BTCUSDT&amp;limit=1'
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl GET 'https://api.mufex.finance/public/v1/market/trades?category=linear&amp;symbol=BTCUSDT&amp;limit=1'
 </span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
 </code></pre></div>
 <blockquote>
@@ -2627,130 +1907,13 @@ function copyStringToClipboard (endpoint) {
 <td>成交時間戳(單位毫秒)</td>
 </tr>
 </tbody></table>
-<h3 id='t-dv_marketopeninterest'>未平合約持倉數量</h3>
-<blockquote>
-<p>請求示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl GET 'https://api-testnet.betterbitfinance.com/public/v1/open-interest?category=linear&amp;symbol=BTCUSDT&amp;interval=1h&amp;startTime=1657555200000&amp;endTime=1657641600000'
-</span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
-</code></pre></div>
-<blockquote>
-<p>響應示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
-    <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span>  <span class="p">{</span>
-        <span class="dl">"</span><span class="s2">symbol</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">BTCUSDT</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">category</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">linear</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">list</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="dl">"</span><span class="s2">openInterest</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">15350.60700000</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">timestamp</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1657641600000</span><span class="dl">"</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="dl">"</span><span class="s2">openInterest</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">15605.74100000</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">timestamp</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1657638000000</span><span class="dl">"</span>
-            <span class="p">}</span>
-        <span class="p">]</span>
-    <span class="p">},</span>
-    <span class="dl">"</span><span class="s2">ext_info</span><span class="dl">"</span><span class="p">:</span> <span class="p">{},</span>
-    <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1669802294719</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>獲取Bybit各個合約的持倉數量</p>
-
-<p class="fake_header">HTTP 請求</p>
-
-<p>GET
-<code><span id=dvopeninterest>/public/v1/open-interest</span></code>
-<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#dvopeninterest"><img src="../../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button></p>
-
-<p class="fake_header">請求參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">parameter</th>
-<th style="text-align: left">是否必須</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">category</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td>衍生品產品類型. 若category不传，则返回<code>""</code>目前支持正向合約：linear; 反向合約：inverse(包含inverse futures)</td>
-</tr>
-<tr>
-<td style="text-align: left">symbol</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td>合約類型</td>
-</tr>
-<tr>
-<td style="text-align: left">interval</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td>數據紀錄週期. 5min 15min 30min 1h 4h 1d</td>
-</tr>
-<tr>
-<td style="text-align: left">startTime</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">integer</td>
-<td>開始時間戳（毫秒)</td>
-</tr>
-<tr>
-<td style="text-align: left">endTime</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">integer</td>
-<td>結束時間戳（毫秒</td>
-</tr>
-<tr>
-<td style="text-align: left">limit</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">integer</td>
-<td>返回數據最大200條. 默認返回50條</td>
-</tr>
-</tbody></table>
-
-<p class="fake_header">返回參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">參數</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">category</td>
-<td style="text-align: left">string</td>
-<td>衍生品產品類型. 若category不传，则返回<code>""</code>目前支持正向合約：linear; 反向合約：inverse(包含inverse futures)</td>
-</tr>
-<tr>
-<td style="text-align: left">symbol</td>
-<td style="text-align: left">string</td>
-<td>合約類型</td>
-</tr>
-<tr>
-<td style="text-align: left">openInterest</td>
-<td style="text-align: left">string</td>
-<td>未平倉合約數量</td>
-</tr>
-<tr>
-<td style="text-align: left">timestamp</td>
-<td style="text-align: left">string</td>
-<td>數據產生時間, 精確到毫秒</td>
-</tr>
-</tbody></table>
 <h1 id='t-accountdata'>賬戶/交易接口</h1>
 <p>以下賬戶/交易接口都需要鑒權.</p>
 <h2 id='t-trade'>交易</h2><h3 id='t-dv_placeorder'>創建委托訂單</h3>
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/trade/create' \
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api.mufex.finance/private/v1/trade/create' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: f02a18137c25c40d64b2c474f575c01a62ba076124946d38619238e19c86a2f2' \
 --header 'MF-ACCESS-API-KEY: XXXXXXXXXX' \
@@ -2784,7 +1947,7 @@ function copyStringToClipboard (endpoint) {
         <span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span><span class="p">,</span>
         <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
         <span class="dl">"</span><span class="s2">orderId</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">a09a43f1-7a65-4255-8758-034103447a4e</span><span class="dl">"</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">orderLinkId</span><span class="dl">"</span><span class="p">:</span><span class="dl">""</span>
+        <span class="dl">"</span><span class="s2">orderLinkId</span><span class="dl">"</span><span class="p">:</span><span class="dl">""</span>
     <span class="p">},</span>
     <span class="dl">"</span><span class="s2">ext_info</span><span class="dl">"</span><span class="p">:</span><span class="kc">null</span><span class="p">,</span>
         <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span><span class="mi">1658850321861</span>
@@ -2799,10 +1962,6 @@ function copyStringToClipboard (endpoint) {
 <p><b>每個賬戶最多可同時持有500個活動訂單。這是針對合約的，因此可以允許出現例如：賬戶同時持有300個BTCUSDT的活動單、280個ETHUSDT合約的活動單。</b></p>
 <p><b>當您達到訂單上限的時候的時候，仍然可以下單設置了參數<code>reduceOnly</code> 或 <code>closeOnTrigger</code>的訂單。</b></p>
 </p>
-
-<aside class="notice">
-請註意，<b>positionIdx</b> 在contractV3中雙倉模式是必傳的，在v2中單倉模式是必傳的
-</aside>
 
 <p class="fake_header">HTTP 請求</p>
 
@@ -2834,7 +1993,7 @@ function copyStringToClipboard (endpoint) {
 </tr>
 <tr>
 <td style="text-align: left">positionIdx</td>
-<td style="text-align: left">false</td>
+<td style="text-align: left">true</td>
 <td style="text-align: left">integer</td>
 <td>Position idx, 用於在不同倉位模式下標識倉位。 如果是<b>雙向持倉</b>模式， 該參數為<b>必填</b><span>:</span> <br/>0-單向持倉 <br/>1-雙向持倉Buy<br/> 2-雙向持倉Sell
 </td>
@@ -2949,7 +2108,7 @@ function copyStringToClipboard (endpoint) {
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/trade/batch-orders' \
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api.mufex.finance/private/v1/trade/batch-orders' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: f02a18137c25c40d64b2c474f575c01a62ba076124946d38619238e19c86a2f2' \
 --header 'MF-ACCESS-API-KEY: XXXXXXXXXX' \
@@ -3095,18 +2254,6 @@ function copyStringToClipboard (endpoint) {
 <td style="text-align: left">string</td>
 <td>機構自定義訂單ID, 最大長度36位，且同一機構下自定義ID不可重復</td>
 </tr>
-<tr>
-<td style="text-align: left">&gt;reduceOnly</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">bool</td>
-<td><a href="https://help.mufex.com/hc/zh-cn/articles/360039260574-%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AA%E5%87%8F%E4%BB%93-"> 什麽是 reduce-only order?</a>,true-平倉 false-開倉,ture時止盈止損設置不生效</td>
-</tr>
-<tr>
-<td style="text-align: left">&gt;closeOnTrigger</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">bool</td>
-<td><a href="https://help.mufex.com/hc/zh-cn/articles/360039260534-%E4%BB%80%E4%B9%88%E6%98%AF%E8%A7%A6%E5%8F%91%E5%90%8E%E5%B9%B3%E4%BB%93-"> 什麽是 close on trigger order?</a>只會減少您的倉位而不會增加您的倉位。如果當平倉委托被觸發時，賬戶上的余額不足，那麽該合約的其他委托將被取消或者降低委托數量。使用此選項可以確保您的止損單被用於減倉而非加倉。</td>
-</tr>
 </tbody></table>
 
 <p class="fake_header">返回參數</p>
@@ -3127,6 +2274,11 @@ function copyStringToClipboard (endpoint) {
 <td style="text-align: left">batchResp</td>
 <td style="text-align: left">array</td>
 <td>Object</td>
+</tr>
+<tr>
+<td style="text-align: left">&gt;symbol</td>
+<td style="text-align: left">string</td>
+<td>symbol</td>
 </tr>
 <tr>
 <td style="text-align: left">&gt;orderId</td>
@@ -3159,7 +2311,7 @@ function copyStringToClipboard (endpoint) {
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/v1/trade/orders?symbol=DOGEUSDT&amp;orderStatus=Filled' \
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request GET 'https://api.mufex.finance/private/v1/trade/orders?symbol=BTCUSDT&amp;orderStatus=Filled' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: 61df2c2de39cfce40fe334e503de4a61e26a95aebec690b9b482e4feb31cb088' \
 --header 'MF-ACCESS-API-KEY: {api key}' \
@@ -3176,7 +2328,7 @@ function copyStringToClipboard (endpoint) {
     <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span>  <span class="p">{</span>
         <span class="dl">"</span><span class="s2">list</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="dl">"</span><span class="s2">symbol</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">XRPUSDT</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">symbol</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">BTCUSDT</span><span class="dl">"</span><span class="p">,</span>
                 <span class="dl">"</span><span class="s2">side</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Buy</span><span class="dl">"</span><span class="p">,</span>
                 <span class="dl">"</span><span class="s2">orderType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Market</span><span class="dl">"</span><span class="p">,</span>
                 <span class="dl">"</span><span class="s2">price</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.3431</span><span class="dl">"</span><span class="p">,</span>
@@ -3416,6 +2568,11 @@ function copyStringToClipboard (endpoint) {
 <td>止損激活價格類型. 默認為<code>LastPrice</code>. 若為USDC單, 則是<code>MarkPrice</code></td>
 </tr>
 <tr>
+<td style="text-align: left">list&gt; triggerBy</td>
+<td style="text-align: left">string</td>
+<td>The price type of trigger price</td>
+</tr>
+<tr>
 <td style="text-align: left">list&gt; triggerPrice</td>
 <td style="text-align: left">string</td>
 <td>若<code>stopOrderType</code>為<b>TrailingProfit</b>, 則表示為激活價格, 否則是觸發價格</td>
@@ -3435,7 +2592,7 @@ function copyStringToClipboard (endpoint) {
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/trade/cancel' \
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api.mufex.finance/private/v1/trade/cancel' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: c9f2c118e40040fc3a12c9400816a26e475ce2f7995248a3625d92be3454b9f1' \
 --header 'MF-ACCESS-API-KEY: {api key}' \
@@ -3527,7 +2684,7 @@ function copyStringToClipboard (endpoint) {
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/trade/batch-cancel-orders' \
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api.mufex.finance/private/v1/trade/batch-cancel-orders' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: f02a18137c25c40d64b2c474f575c01a62ba076124946d38619238e19c86a2f2' \
 --header 'MF-ACCESS-API-KEY: XXXXXXXXXX' \
@@ -3538,13 +2695,13 @@ function copyStringToClipboard (endpoint) {
   "cancels": [
         {
             "symbol": "BTCUSDT",
-            "orderId": "",
-            "orderLinkId": "test001"
+            "orderId": "dc4e0e85-b510-47f1-a2bb-df02b544eafc",
+            "orderLinkId": "test062604"
         },
         {
             "symbol": "BTCUSDT",
-            "orderId": "dc4e0e85-b510-47f1-a2bb-df02b544eafc",
-            "orderLinkId": ""
+            "orderId": "bc8005cf-6d88-448b-a05f-8a1a4e923435",
+            "orderLinkId": "test062603"
         }
     ]
 }'
@@ -3560,13 +2717,13 @@ function copyStringToClipboard (endpoint) {
         <span class="dl">"</span><span class="s2">batchResp</span><span class="dl">"</span><span class="p">:[</span>
             <span class="p">{</span>
                 <span class="dl">"</span><span class="s2">orderId</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">bc8005cf-6d88-448b-a05f-8a1a4e923435</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">orderLinkId</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">delly062603</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">orderLinkId</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">test062603</span><span class="dl">"</span><span class="p">,</span>
                 <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
                 <span class="dl">"</span><span class="s2">msg</span><span class="dl">"</span><span class="p">:</span><span class="dl">""</span>
             <span class="p">},</span>
             <span class="p">{</span>
                 <span class="dl">"</span><span class="s2">orderId</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">dc4e0e85-b510-47f1-a2bb-df02b544eafc</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">orderLinkId</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">delly062604</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">orderLinkId</span><span class="dl">"</span><span class="p">:</span><span class="dl">"</span><span class="s2">test062604</span><span class="dl">"</span><span class="p">,</span>
                 <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span><span class="mi">0</span><span class="p">,</span>
                 <span class="dl">"</span><span class="s2">msg</span><span class="dl">"</span><span class="p">:</span><span class="dl">""</span>
             <span class="p">}</span>
@@ -3666,99 +2823,11 @@ function copyStringToClipboard (endpoint) {
 <td>错误码，0代表成功</td>
 </tr>
 </tbody></table>
-<h3 id='t-contract_cancelallorders'>撤銷所有委託單</h3>
-<blockquote>
-<p>請求示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/trade/cancel-all' \
---header 'MF-ACCESS-SIGN-TYPE: 2' \
---header 'MF-ACCESS-SIGN: ee5af51734abed24925af73badbce8ef06f0dd34a3b35fcd5a829c892f565aed' \
---header 'MF-ACCESS-API-KEY: {api key}' \
---header 'MF-ACCESS-TIMESTAMP: 1658901358435' \
---header 'MF-ACCESS-RECV-WINDOW: 5000' \
---header 'Content-Type: application/json' \
---data-raw '{
-  "symbol": "XRPUSDT"
-}'
-</span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
-</code></pre></div>
-<blockquote>
-<p>響應示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
-    <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span>  <span class="p">{</span>
-        <span class="dl">"</span><span class="s2">list</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="dl">"</span><span class="s2">orderId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">4030430d-1dba-4134-ac77-3d81c14aaa00</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">orderLinkId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">x001</span><span class="dl">"</span>
-            <span class="p">}</span>
-        <span class="p">]</span>
-    <span class="p">},</span>
-    <span class="dl">"</span><span class="s2">ext_info</span><span class="dl">"</span><span class="p">:</span> <span class="p">{},</span>
-    <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1658901359225</span>
-<span class="p">}</span>
-</code></pre></div>
-<p><p>撤銷所有未成交、部分成交的委托單。但全部成交的委托單不可取消。</p>
-</p>
-
-<p class="fake_header">HTTP 請求</p>
-
-<p>POST
-<code><span id=vpoCancelAll>/private/v1/trade/cancel-all</span></code>
-<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#vpoCancelAll"><img src="../../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button></p>
-
-<p class="fake_header">請求參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">參數</th>
-<th style="text-align: left">是否必須</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">symbol</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">string</td>
-<td>合約類型</td>
-</tr>
-<tr>
-<td style="text-align: left">settleCoin</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">string</td>
-<td>按照結算幣種取消訂單. <li>若<code>settleCoin</code>=USDT, 則取消所有USDT永續訂單</li><li>若<code>settleCoin</code>=BTC, 則取消所有BTCUSD這種反向合約
-</td>
-</tr>
-</tbody></table>
-
-<p class="fake_header">返回參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">參數</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">list&gt; orderId</td>
-<td style="text-align: left">string</td>
-<td>訂單ID</td>
-</tr>
-<tr>
-<td style="text-align: left">list&gt; orderLinkId</td>
-<td style="text-align: left">false</td>
-<td>string</td>
-</tr>
-</tbody></table>
 <h3 id='t-contract_replaceorder'>修改委托單信息</h3>
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/trade/replace' \
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api.mufex.finance/private/v1/trade/replace' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: 78c358649d431bb30dfc35e5a3cd99128b5f23faf04c15765b3d894f2930e8f5' \
 --header 'MF-ACCESS-API-KEY: {api key}' \
@@ -3770,9 +2839,7 @@ function copyStringToClipboard (endpoint) {
     "orderId":"db8b74b3-72d3-4264-bf3f-52d39b41956e",
     "orderLinkId": null,
     "qty": "15",
-    "price": "0.4",
-    "takeProfit": "0.2",
-    "stopLoss": "1.6"
+    "price": "0.4"
 }'
 </span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
 </code></pre></div>
@@ -3843,43 +2910,6 @@ function copyStringToClipboard (endpoint) {
 <td style="text-align: left">string</td>
 <td>修改後的訂單價格。如果不修改這個字段，請不要傳這個參數。</td>
 </tr>
-<tr>
-<td style="text-align: left">takeProfit</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">string</td>
-<td>修改後的止盈價格。如果不修改這個字段，請不要傳這個參數。</td>
-</tr>
-<tr>
-<td style="text-align: left">stopLoss</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">string</td>
-<td>修改後的止損價格。如果不修改這個字段，請不要傳這個參數。</td>
-</tr>
-<tr>
-<td style="text-align: left">tpTriggerBy</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">string</td>
-<td>止盈激活價格類型，默認為<code>LastPrice</code></td>
-</tr>
-<tr>
-<td style="text-align: left">slTriggerBy</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">string</td>
-<td>止損激活價格類型，默認為<code>LastPrice</code></td>
-</tr>
-<tr>
-<td style="text-align: left">triggerPrice</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">string</td>
-<td>修改條件單的觸發價格。如果不修改這個字段，請不要傳這個參數。</td>
-</tr>
-<tr>
-<td style="text-align: left">triggerBy</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">string</td>
-<td>觸發價格類型：市價/標記價格
-</td>
-</tr>
 </tbody></table>
 
 <p class="fake_header">返回參數</p>
@@ -3906,7 +2936,7 @@ function copyStringToClipboard (endpoint) {
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/v1/trade/activity-orders?symbol=XRPUSDT' \
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request GET 'https://api.mufex.finance/private/v1/trade/activity-orders?symbol=XRPUSDT' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: e3a1e4b88dfc2730c987fb3253dd3e09bc05cf68ae4d9d9d71a8235c44cb1f02' \
 --header 'MF-ACCESS-API-KEY: {api key}' \
@@ -3996,12 +3026,6 @@ function copyStringToClipboard (endpoint) {
 <td>自定義機構ID</td>
 </tr>
 <tr>
-<td style="text-align: left">settleCoin</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">string</td>
-<td>結算幣種. <code>symbol</code>和<code>settleCoin</code>字段必須傳一個. 都傳的話，以<code>symbol</code>為準.</td>
-</tr>
-<tr>
 <td style="text-align: left"><a href="#order-filter-orderfilter">orderFilter</a></td>
 <td style="text-align: left">false</td>
 <td style="text-align: left">string</td>
@@ -4032,122 +3056,122 @@ function copyStringToClipboard (endpoint) {
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left">list&gt; symbol</td>
+<td style="text-align: left">&gt; symbol</td>
 <td style="text-align: left">string</td>
 <td>合約類型</td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; orderId</td>
+<td style="text-align: left">&gt; orderId</td>
 <td style="text-align: left">string</td>
 <td>訂單ID</td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; side</td>
+<td style="text-align: left">&gt; side</td>
 <td style="text-align: left">string</td>
 <td>方向</td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; orderType</td>
+<td style="text-align: left">&gt; orderType</td>
 <td style="text-align: left">string</td>
 <td>交易記錄類型</td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; triggerDirection</td>
+<td style="text-align: left">&gt; triggerDirection</td>
 <td style="text-align: left">integer</td>
 <td>用於當前條件委託是看空到triggerPrice時觸發還是看多到triggerPrice觸發。主要是用來標識當前條件單預期的方向：<b>1</b>：行情價格上漲到triggerPrice時觸發，<b>2</b>：行情價格下跌到triggerPrice時觸發，</td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; price</td>
+<td style="text-align: left">&gt; price</td>
 <td style="text-align: left">string</td>
 <td>委托價格</td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; qty</td>
+<td style="text-align: left">&gt; qty</td>
 <td style="text-align: left">string</td>
 <td>委託數量. 如果是下<b>USDT永續</b>，則是幣種數量；如果是下<b>反向永續/交割</b>，則是USD數量</td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; timeInForce</td>
+<td style="text-align: left">&gt; timeInForce</td>
 <td style="text-align: left">string</td>
 <td><a href="https://www.mufex.com/zh-TW/help-center/bybitHC_Article?language=zh_TW&id=000001044">執行策略</a></td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; orderStatus</td>
+<td style="text-align: left">&gt; orderStatus</td>
 <td style="text-align: left">string</td>
 <td>訂單狀態</td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; triggerPrice</td>
+<td style="text-align: left">&gt; triggerPrice</td>
 <td style="text-align: left">string</td>
 <td>觸發價格</td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; triggerBy</td>
+<td style="text-align: left">&gt; triggerBy</td>
 <td style="text-align: left">string</td>
 <td>觸發價格類型</td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; tpTriggerBy</td>
+<td style="text-align: left">&gt; tpTriggerBy</td>
 <td style="text-align: left">string</td>
 <td>止盈激活價格類型，默認為<code>LastPrice</code></td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; slTriggerBy</td>
+<td style="text-align: left">&gt; slTriggerBy</td>
 <td style="text-align: left">string</td>
 <td>止損激活價格類型，默認為<code>LastPrice</code></td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; orderLinkId</td>
+<td style="text-align: left">&gt; orderLinkId</td>
 <td style="text-align: left">string</td>
 <td>機構自定義訂單ID, 最大長度36位，且同一機構下自定義ID不可重復</td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; createdTime</td>
+<td style="text-align: left">&gt; createdTime</td>
 <td style="text-align: left">string</td>
 <td>創建時間</td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; updatedTime</td>
+<td style="text-align: left">&gt; updatedTime</td>
 <td style="text-align: left">string</td>
 <td>更新時間</td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; takeProfit</td>
+<td style="text-align: left">&gt; takeProfit</td>
 <td style="text-align: left">string</td>
 <td>止盈價格</td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; stopLoss</td>
+<td style="text-align: left">&gt; stopLoss</td>
 <td style="text-align: left">string</td>
 <td>止損價格</td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; reduce_only</td>
+<td style="text-align: left">&gt; reduce_only</td>
 <td style="text-align: left">bool</td>
 <td>是否平倉單 true-平倉 false-開倉</td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; cumExecQty</td>
+<td style="text-align: left">&gt; cumExecQty</td>
 <td style="text-align: left">string</td>
 <td>累計成交數量</td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; cumExecValue</td>
+<td style="text-align: left">&gt; cumExecValue</td>
 <td style="text-align: left">string</td>
 <td>累計成交價值</td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; cumExecFee</td>
+<td style="text-align: left">&gt; cumExecFee</td>
 <td style="text-align: left">string</td>
 <td>累計成交手續費</td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; leavesQty</td>
+<td style="text-align: left">&gt; leavesQty</td>
 <td style="text-align: left">string</td>
 <td>剩余委托數量</td>
 </tr>
 <tr>
-<td style="text-align: left">list&gt; leavesValue</td>
+<td style="text-align: left">&gt; leavesValue</td>
 <td style="text-align: left">string</td>
 <td>剩余掛單數量對應的預估價值</td>
 </tr>
@@ -4161,7 +3185,7 @@ function copyStringToClipboard (endpoint) {
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/v1/trade/fills?symbol=XRPUSDT' \
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request GET 'https://api.mufex.finance/private/v1/trade/fills?symbol=BTCUSDT' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: a7358fb068bf66570e7ecf063e39a6dbd11f1d5572ba79a63d5996221d864585' \
 --header 'MF-ACCESS-API-KEY: XXXXXXXXXXXX' \
@@ -4178,46 +3202,48 @@ function copyStringToClipboard (endpoint) {
         <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span>  <span class="p">{</span>
         <span class="dl">"</span><span class="s2">list</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>
-                <span class="dl">"</span><span class="s2">symbol</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">BITUSDT</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">execFee</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.001356</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">execId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">499e1a2a-c664-55db-bbf0-78ad31b7b033</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">execPrice</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.452</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">execQty</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">5.0</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">execType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Trade</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">execValue</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2.26</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">feeRate</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.0006</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">lastLiquidityInd</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">RemovedLiquidity</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">leavesQty</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.0</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">orderId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1d40db82-b1f6-4340-9190-650eeddd440b</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">symbol</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">BTCUSDT</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">execFee</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.00293025</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">execId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">16bff97b-0e04-4303-82b5-1b1134f15695</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">execPrice</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.00</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">execQty</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.001</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">execType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Funding</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">execValue</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">29.30248</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">feeRate</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.0001</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">lastLiquidityInd</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">UNKNOWN</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">leavesQty</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.000</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">orderId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1690588800-BTCUSDT-139688-Buy</span><span class="dl">"</span><span class="p">,</span>
                 <span class="dl">"</span><span class="s2">orderLinkId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">orderPrice</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.430</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">orderQty</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">5.0</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">orderType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Market</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">orderPrice</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.00</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">orderQty</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.000</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">orderType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">UNKNOWN</span><span class="dl">"</span><span class="p">,</span>
                 <span class="dl">"</span><span class="s2">stopOrderType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">UNKNOWN</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">side</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Sell</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">execTime</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1657269236943</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">closedSize</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">5.0</span><span class="dl">"</span>
+                <span class="dl">"</span><span class="s2">side</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Buy</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">execTime</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1690588800000</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">closedSize</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.000</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">crossSeq</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">41019846</span><span class="dl">"</span>
             <span class="p">},</span>
             <span class="p">{</span>
-                <span class="dl">"</span><span class="s2">symbol</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">BITUSDT</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">execFee</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.004068</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">execId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">ed090e6a-afc0-5cb5-b51d-039592a44ec5</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">execPrice</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.452</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">execQty</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">15.0</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">execType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Trade</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">execValue</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">6.78</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">feeRate</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.0006</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">lastLiquidityInd</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">RemovedLiquidity</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">leavesQty</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.0</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">orderId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">d34d40a1-2475-4552-9e54-347a27282ec0</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">symbol</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">BTCUSDT</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">execFee</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.00293787</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">execId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">d9439111-d9ee-4cf3-90e1-85e8f148b6a3</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">execPrice</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.00</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">execQty</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.001</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">execType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Funding</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">execValue</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">29.3787</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">feeRate</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.0001</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">lastLiquidityInd</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">UNKNOWN</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">leavesQty</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.000</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">orderId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1690560000-BTCUSDT-139688-Buy</span><span class="dl">"</span><span class="p">,</span>
                 <span class="dl">"</span><span class="s2">orderLinkId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">orderPrice</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.429</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">orderQty</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">15.0</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">orderType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Market</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">orderPrice</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.00</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">orderQty</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.000</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">orderType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">UNKNOWN</span><span class="dl">"</span><span class="p">,</span>
                 <span class="dl">"</span><span class="s2">stopOrderType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">UNKNOWN</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">side</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Sell</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">execTime</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1657268340170</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">closedSize</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">15.0</span><span class="dl">"</span>
+                <span class="dl">"</span><span class="s2">side</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Buy</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">execTime</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1690560000000</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">closedSize</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.000</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">crossSeq</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">40849025</span><span class="dl">"</span>
             <span class="p">}</span>
         <span class="p">],</span>
             <span class="dl">"</span><span class="s2">nextPageCursor</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span>
@@ -4411,7 +3437,7 @@ function copyStringToClipboard (endpoint) {
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/v1/account/positions?symbol=XRPUSDT' \
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request GET 'https://api.mufex.finance/private/v1/account/positions?symbol=ETHUSDT' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: b0818cb2f91264ffd712db0c8f8648041b2c5eed643200aa63e4141c7aa12500' \
 --header 'MF-ACCESS-API-KEY: {api key}' \
@@ -4672,95 +3698,11 @@ function copyStringToClipboard (endpoint) {
 <td>翻頁游標</td>
 </tr>
 </tbody></table>
-<h3 id='t-setautoaddmargin'>自動追加保證金</h3>
-<blockquote>
-<p>請求示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/account/set-auto-add-margin' \
---header 'MF-ACCESS-SIGN-TYPE: 2' \
---header 'MF-ACCESS-SIGN: 504e85b59fb0ee7c2c70d7cf2d82fc717258d67a3c3cdf631b4c4c68b43843b3' \
---header 'MF-ACCESS-API-KEY: {api key}' \
---header 'MF-ACCESS-TIMESTAMP: 1658908220837' \
---header 'MF-ACCESS-RECV-WINDOW: 5000' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "symbol": "XRPUSDT",
-    "side": "Sell",
-    "autoAddMargin": 1,
-    "positionIdx": 2
-}'
-</span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
-</code></pre></div>
-<blockquote>
-<p>響應示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
-    <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span>  <span class="p">{},</span>
-    <span class="dl">"</span><span class="s2">ext_info</span><span class="dl">"</span><span class="p">:</span> <span class="p">{},</span>
-    <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1658908221642</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>設置自動追加保證金。</p>
-
-<p class="fake_header">HTTP 請求</p>
-
-<p>POST
-<code><span id=pSetAutoAddMargin>/private/v1/account/set-auto-add-margin</span></code>
-<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#pSetAutoAddMargin"><img src="../../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button></p>
-
-<p class="fake_header">請求參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">參數</th>
-<th style="text-align: left">是否必須</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">translation missing: zh-my.row_parameter_symbol</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td>合約類型</td>
-</tr>
-<tr>
-<td style="text-align: left"><a href="#side-side">side</a></td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td>方向</td>
-</tr>
-<tr>
-<td style="text-align: left">autoAddMargin</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">integer</td>
-<td>自動追加保證金開關. <code>0</code>：關閉. <code>1</code>：開啟</td>
-</tr>
-<tr>
-<td style="text-align: left">positionIdx</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">integer</td>
-<td>Position idx, 用於在不同倉位模式下標識倉位：<br/>0-單向持倉 <br/>1-雙向持倉Buy<br/> 2-雙向持倉Sell</td>
-</tr>
-</tbody></table>
-
-<p class="fake_header">返回參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">參數</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-</tbody></table>
 <h3 id='t-dv_marginswitch'>全倉/逐倉切換</h3>
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/account/set-isolated' \
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api.mufex.finance/private/v1/account/set-isolated' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: f178bda84f8a3fa971338b7424cce2204824c0114f196650b2516962371e3902' \
 --header 'MF-ACCESS-API-KEY: XXXXXXXXXX' \
@@ -4844,7 +3786,7 @@ function copyStringToClipboard (endpoint) {
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/account/set-position-mode' \
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api.mufex.finance/private/v1/account/set-position-mode' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: b07d38c9719187a8a9a0cee739f465edd05a1c7a30618e02a1f1dc9fc3639d97' \
 --header 'MF-ACCESS-API-KEY: XXXXXXXXXX' \
@@ -4927,15 +3869,6 @@ function copyStringToClipboard (endpoint) {
   <tr>
     <td>USDT永續合約</td><td><b>支持單雙向持倉</b></td><td>僅支持單向持倉</td>
   </tr>
-  <tr>
-    <td>USDC永續合約</td><td>僅支持單向持倉</td><td>僅支持單向持倉</td>
-  </tr>
-  <tr>
-    <td>反向永續合約</td><td>僅支持單向持倉</td><td>不支持該模式下交易該合約</td>
-  </tr>
-  <tr>
-    <td>反向交割合約</td><td><b>支持單雙向持倉</b></td><td>不支持該模式下交易該合約</td>
-  </tr>
 </table></p>
 
 <p class="fake_header">HTTP 請求</p>
@@ -4984,292 +3917,11 @@ function copyStringToClipboard (endpoint) {
 </tr>
 </thead><tbody>
 </tbody></table>
-<h3 id='t-dv_switchmode'>切換止盈止損模式</h3>
-<blockquote>
-<p>請求示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/account/switch-tpsl-mode' \
---header 'MF-ACCESS-SIGN-TYPE: 2' \
---header 'MF-ACCESS-SIGN: 018fd4ae872bdb5a90e849dc324eeab4157a047de05250bb74efb7c3434d0597' \
---header 'MF-ACCESS-API-KEY: XXXXXXXXXX' \
---header 'MF-ACCESS-TIMESTAMP: 1658909568597' \
---header 'MF-ACCESS-RECV-WINDOW: 5000' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "symbol":"XRPUSDT",
-    "tpSlMode":"Partial"
-}'
-</span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
-</code></pre></div>
-<blockquote>
-<p>響應示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
-    <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span>  <span class="p">{},</span>
-    <span class="dl">"</span><span class="s2">ext_info</span><span class="dl">"</span><span class="p">:</span> <span class="p">{},</span>
-    <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1658909569340</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>切換止盈止損模式至全倉或部分</p>
-
-<aside class="notice">
-當設置部分止盈止損模式時，止盈或者止損的訂單數量可以小於倉位大小, 請使用<a href="#t-tradingstop">Trading-Stop endpoint</a>。
-</aside>
-
-<p class="fake_header">HTTP 請求</p>
-
-<p>POST
-<code><span id=pltcList>/private/v1/account/switch-tpsl-mode</span></code>
-<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#pltcList"><img src="../../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button></p>
-
-<p class="fake_header">請求參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">參數</th>
-<th style="text-align: left">是否必須</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">translation missing: zh-my.row_parameter_symbol</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td>合約類型</td>
-</tr>
-<tr>
-<td style="text-align: left">tpSlMode</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td>止盈止損模式. <code>Full</code>：設置止盈止損為全倉; <code>Partial</code>：設置止盈止損為部分倉位</td>
-</tr>
-</tbody></table>
-
-<p class="fake_header">返回參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">參數</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-</tbody></table>
-<h3 id='t-setleverage'>修改杠桿</h3>
-<blockquote>
-<p>請求示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/account/set-leverage' \
---header 'MF-ACCESS-SIGN-TYPE: 2' \
---header 'MF-ACCESS-SIGN: 6d17e6aa3a7c362b05071c737dc0904bd731fea1d04e9b46ee188749d17a7ce6' \
---header 'MF-ACCESS-API-KEY: {api key}' \
---header 'MF-ACCESS-TIMESTAMP: 1658910157065' \
---header 'MF-ACCESS-RECV-WINDOW: 5000' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "symbol":"XRPUSDT",
-    "buyLeverage":"5",
-    "sellLeverage":"10"
-}'
-</span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
-</code></pre></div>
-<blockquote>
-<p>響應示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
-    <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span>  <span class="p">{},</span>
-    <span class="dl">"</span><span class="s2">ext_info</span><span class="dl">"</span><span class="p">:</span> <span class="p">{},</span>
-    <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1658910157755</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>設置杠桿</p>
-
-<p class="fake_header">HTTP 請求</p>
-
-<p>POST
-<code><span id=pSetLeverage>/private/v1/account/set-leverage</span></code>
-<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#pSetLeverage"><img src="../../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button></p>
-
-<p class="fake_header">請求參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">參數</th>
-<th style="text-align: left">是否必須</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">translation missing: zh-my.row_parameter_symbol</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td>合約類型</td>
-</tr>
-<tr>
-<td style="text-align: left">buyLeverage</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td><code>杠桿大於0，小於風險限額對應的杠桿</code></td>
-</tr>
-<tr>
-<td style="text-align: left">sellLeverage</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td><code>杠桿大於0，小於風險限額對應的杠桿</code></td>
-</tr>
-</tbody></table>
-
-<p class="fake_header">返回參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">參數</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-</tbody></table>
-<h3 id='t-tradingstop'>設置止盈止損</h3>
-<blockquote>
-<p>請求示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/account/trading-stop' \
---header 'MF-ACCESS-SIGN-TYPE: 2' \
---header 'MF-ACCESS-SIGN: 4c0406d6e31e30f5c37295627abefa980c248bc25170fa7158e47d8a46425d74' \
---header 'MF-ACCESS-API-KEY: {api key}' \
---header 'MF-ACCESS-TIMESTAMP: 1658910815488' \
---header 'MF-ACCESS-RECV-WINDOW: 5000' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "symbol": "XRPUSDT",
-    "takeProfit": "0.1",
-    "stopLoss": "0.7",
-    "activePrice": null,
-    "trailingStop": null,
-    "tpTriggerBy": "LastPrice",
-    "slTriggerBy": "MarkPrice",
-    "slSize": null,
-    "tpSize": null,
-    "positionIdx": 2
-}'
-</span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
-</code></pre></div>
-<blockquote>
-<p>響應示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
-    <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span>  <span class="p">{},</span>
-    <span class="dl">"</span><span class="s2">ext_info</span><span class="dl">"</span><span class="p">:</span> <span class="p">{},</span>
-    <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1658910815936</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>設置倉位止盈止損、部分止盈止損、追蹤止損。處於<a href="#t-switchmode">partial mode</a>模式，設置部分止盈止損單，不會覆蓋其他部分止盈止損設置</p>
-
-<aside class="notice">
-傳遞以下參數後將會由系統創建條件單。如果倉位關閉，系統將會取消這些訂單，同時調整開倉的倉位數量。
-</aside>
-
-<p class="fake_header">HTTP 請求</p>
-
-<p>POST
-<code><span id=pSetTpSlTs>/private/v1/account/trading-stop</span></code>
-<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#pSetTpSlTs"><img src="../../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button></p>
-
-<p class="fake_header">請求參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">參數</th>
-<th style="text-align: left">是否必須</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">translation missing: zh-my.row_parameter_symbol</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td>合約類型</td>
-</tr>
-<tr>
-<td style="text-align: left">takeProfit</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">string</td>
-<td>不小於0,如果等於0則是取消止盈(TP) (在<a href="#t-switchmode">partial mode</a>部分模式下無效)</td>
-</tr>
-<tr>
-<td style="text-align: left">stopLoss</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">string</td>
-<td>不小於0,如果等於0則是取消止損(SL) (在<a href="#t-switchmode">partial mode</a>部分模式下無效)</td>
-</tr>
-<tr>
-<td style="text-align: left">activePrice</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">string</td>
-<td>追蹤止損觸發價格。追蹤止損會在到達該價格後才會觸發（追蹤止損默認立即觸發）。</td>
-</tr>
-<tr>
-<td style="text-align: left">trailingStop</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">string</td>
-<td>不小於0,如果等於0則是取消追蹤止損(TS) (在<a href="#t-switchmode">partial mode</a>部分模式下無效)</td>
-</tr>
-<tr>
-<td style="text-align: left">tpTriggerBy</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">string</td>
-<td>止盈激活價格類型，默認為<code>LastPrice</code></td>
-</tr>
-<tr>
-<td style="text-align: left">slTriggerBy</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">string</td>
-<td>止損激活價格類型，默認為<code>LastPrice</code></td>
-</tr>
-<tr>
-<td style="text-align: left">slSize</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">string</td>
-<td>在部分止盈止損模式下，止損合約數量</td>
-</tr>
-<tr>
-<td style="text-align: left">tpSize</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">string</td>
-<td>在部分止盈止損模式下，止盈合約數量</td>
-</tr>
-<tr>
-<td style="text-align: left">positionIdx</td>
-<td style="text-align: left">false</td>
-<td style="text-align: left">integer</td>
-<td>Position idx, 用於在不同倉位模式下標識倉位：<br/>0-單向持倉 <br/>1-雙向持倉Buy<br/> 2-雙向持倉Sell</td>
-</tr>
-</tbody></table>
-
-<p class="fake_header">返回參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">參數</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-</tbody></table>
 <h3 id='t-setrisklimit'>設置風險限額</h3>
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/account/set-position-risk' \
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api.mufex.finance/private/v1/account/set-position-risk' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: 82904cc14df4bb278722d4212bdb76dc7e1ec7a77e0e761d2e09b3361059a25c' \
 --header 'MF-ACCESS-API-KEY: XXXXXXXXXX' \
@@ -5322,7 +3974,7 @@ function copyStringToClipboard (endpoint) {
 <td style="text-align: left">riskId</td>
 <td style="text-align: left"><b>true</b></td>
 <td style="text-align: left">integer</td>
-<td><a href="#t-getrisklimit">風險限額ID</a></td>
+<td>Risk ID</td>
 </tr>
 <tr>
 <td style="text-align: left">positionIdx</td>
@@ -5346,7 +3998,7 @@ function copyStringToClipboard (endpoint) {
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/v1/account/closed-pnl?symbol=XRPUSDT&amp;startTime=1658764800000&amp;endTime=1658937600000' \
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request GET 'https://api.mufex.finance/private/v1/account/closed-pnl?symbol=XRPUSDT&amp;startTime=1658764800000&amp;endTime=1658937600000' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: eb16a696924a92a3a47d769caf44d7373eca9ed6a644384ff6e8cd729ee9f7b1' \
 --header 'MF-ACCESS-API-KEY: XXXXXXXXXXXX' \
@@ -5536,7 +4188,7 @@ function copyStringToClipboard (endpoint) {
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/v1/account/balance?coin=BTC' \
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request GET 'https://api.mufex.finance/private/v1/account/balance?coin=BTC' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: f8f516355e0c59b28d429b13b4ea6a350d02f9c96e2f9fd1be235863e8c1834c' \
 --header 'MF-ACCESS-API-KEY: {api key}' \
@@ -5573,12 +4225,6 @@ function copyStringToClipboard (endpoint) {
 <span class="p">}</span>
 </code></pre></div>
 <p>獲取錢包余額</p>
-
-<aside class="notice">
-接口返回值中的<code>position_margin</code> 不同於 <a href="https://www.mufex.com/app/wallet/money">網站上的倉位保證金</a>
-<p>網站倉位保證金計算公式: <code>position_margin</code> + <code>occ_funding_fee</code> + loss(當你的可用余額不足時)</p>
-
-</aside>
 
 <p class="fake_header">HTTP 請求</p>
 
@@ -5682,7 +4328,7 @@ function copyStringToClipboard (endpoint) {
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/v1/account/trade-fee?symbol=ETHUSDT' \
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request GET 'https://api.mufex.finance/private/v1/account/trade-fee?symbol=ETHUSDT' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: e65aad8dd5459774ad21aaca77420947332fdbfe433bef959c6507ce2379999f' \
 --header 'MF-ACCESS-API-KEY: XXXXXXXXXXXX' \
@@ -5700,8 +4346,8 @@ function copyStringToClipboard (endpoint) {
         <span class="dl">"</span><span class="s2">list</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="dl">"</span><span class="s2">symbol</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">ETHUSDT</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">takerFeeRate</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.0006</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">makerFeeRate</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.0001</span><span class="dl">"</span>
+                <span class="dl">"</span><span class="s2">takerFeeRate</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.0009</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">makerFeeRate</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.0003</span><span class="dl">"</span>
             <span class="p">}</span>
         <span class="p">]</span>
     <span class="p">},</span>
@@ -5762,7 +4408,7 @@ function copyStringToClipboard (endpoint) {
 <blockquote>
 <p>請求示例</p>
 </blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/v1/account/bills?coin=USDT&amp;walletFundType=AccountTransfer&amp;limit=1' \
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request GET 'https://api.mufex.finance/private/v1/account/bills?coin=USDT&amp;walletFundType=RealisedPNL&amp;limit=1' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: 591a44021fff458a6dfbba517755e1105066864d94c38a0ce84619ae51cf2313' \
 --header 'MF-ACCESS-API-KEY: {api key}' \
@@ -5780,7 +4426,7 @@ function copyStringToClipboard (endpoint) {
         <span class="dl">"</span><span class="s2">list</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="dl">"</span><span class="s2">coin</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">USDT</span><span class="dl">"</span><span class="p">,</span>
-                <span class="dl">"</span><span class="s2">type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">AccountTransfer</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">RealisedPNL</span><span class="dl">"</span><span class="p">,</span>
                 <span class="dl">"</span><span class="s2">amount</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">500</span><span class="dl">"</span><span class="p">,</span>
                 <span class="dl">"</span><span class="s2">walletBalance</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2731.63599033</span><span class="dl">"</span><span class="p">,</span>
                 <span class="dl">"</span><span class="s2">execTime</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1658215763731</span><span class="dl">"</span>
@@ -5795,18 +4441,6 @@ function copyStringToClipboard (endpoint) {
 <p><p>查詢資金記錄。這個接口還展示來自網頁上<a href="https://testnet.mufex.com/app/assets/assets-exchange">資產兌換</a>下的兌換紀錄, 其中對應的<code>type</code>兌換類型是<code>ExchangeOrderWithdraw</code>和<code>ExchangeOrderDeposit</code>。</p>
 <p>這個接口返回的關於衍生品帳戶下的劃轉紀錄的內容是不完整的。推薦使用<a href="https://mufex-exchange.github.io/docs-legacy/zh-my/account_asset/v3/#t-transfer_api">帳戶資產API</a>完成資產劃轉的操作和紀錄檢索。
 </p>
-
-<aside class="notice">
-關於<code>Withdraw</code>和<code>Refund</code>類型數據的說明，請參考<a href="#t-withdrawrecords">提幣記錄</a>接口
-</aside>
-
-<aside class="notice">
-如果用戶不通過<code>coin</code>傳入<code>USDT</code>，USDT記錄將不會被返回給用戶。
-</aside>
-
-<aside class="warning">
-該接口不顯示2021-07-15之後發生的充值提現記錄。要在此日期之後獲取記錄，您應該調用 <a href="https://mufex-exchange.github.io/docs-legacy/zh-my/account_asset/v3/#t-depositsrecordquery">查詢充值記錄</a> 和 <a href="https://mufex-exchange.github.io/docs-legacy/zh-my/account_asset/v3/#t-withdrawrecordquery">查詢提現記錄</a>端點。這是由於此時引入了現貨錢包。
-</aside>
 
 <p class="fake_header">HTTP 請求</p>
 
@@ -5909,14 +4543,14 @@ function copyStringToClipboard (endpoint) {
 
 Content-Type: application/json; charset=utf-8
 Content-Length: 957
-X-Bapi-Limit: 5
-X-Bapi-Limit-Status: 4
-X-Bapi-Limit-Reset-Timestamp: 1665397625986
+MF-ACCESS-Limit: 5
+MF-ACCESS-Limit-Status: 4
+MF-ACCESS-Limit-Reset-Timestamp: 1665397625986
 </code></pre></div>
 <ul>
-<li><code>X-Bapi-Limit-Status</code> - 該接口當前時間窗口剩余可用請求數</li>
-<li><code>X-Bapi-Limit</code> - 該接口當前頻率限製上限</li>
-<li><code>X-Bapi-Limit-Reset-Timestamp</code> - 如果您已超過該接口當前窗口頻率限製，該字段表示下個可用時間窗口的時間戳（毫秒），即什麽時候可以恢復訪問；如果您未超過該接口當前窗口頻率限製，該字段表示返回的是當前服務器時間（毫秒).</li>
+<li><code>MF-ACCESS-Limit-Status</code> - 該接口當前時間窗口剩余可用請求數</li>
+<li><code>MF-ACCESS-Limit</code> - 該接口當前頻率限製上限</li>
+<li><code>MF-ACCESS-Limit-Reset-Timestamp</code> - 如果您已超過該接口當前窗口頻率限製，該字段表示下個可用時間窗口的時間戳（毫秒），即什麽時候可以恢復訪問；如果您未超過該接口當前窗口頻率限製，該字段表示返回的是當前服務器時間（毫秒).</li>
 </ul>
 <h3 id='t-perendpoint'>接口頻率限製表</h3>
 <table class="custom_table">
@@ -5968,22 +4602,20 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
 <span class="n">ws_url</span> <span class="o">=</span> <span class="s">"wss://stream.mufex.com/realtime"</span>
 
 <span class="n">api_key</span> <span class="o">=</span> <span class="s">""</span>
-<span class="n">api_secret</span> <span class="o">=</span> <span class="s">""</span>
-
-<span class="c1"># Generate expires.
-</span><span class="n">expires</span> <span class="o">=</span> <span class="nb">int</span><span class="p">((</span><span class="n">time</span><span class="p">.</span><span class="n">time</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">)</span>
-
-<span class="c1"># Generate signature.
-</span><span class="n">signature</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">hmac</span><span class="p">.</span><span class="n">new</span><span class="p">(</span>
-    <span class="nb">bytes</span><span class="p">(</span><span class="n">api_secret</span><span class="p">,</span> <span class="s">"utf-8"</span><span class="p">),</span>
-    <span class="nb">bytes</span><span class="p">(</span><span class="sa">f</span><span class="s">"GET/realtime</span><span class="si">{</span><span class="n">expires</span><span class="si">}</span><span class="s">"</span><span class="p">,</span> <span class="s">"utf-8"</span><span class="p">),</span> <span class="n">digestmod</span><span class="o">=</span><span class="s">"sha256"</span>
-<span class="p">).</span><span class="n">hexdigest</span><span class="p">())</span>
 
 <span class="c1"># Authenticate with API.
 </span><span class="n">ws</span><span class="p">.</span><span class="n">send</span><span class="p">(</span>
     <span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">({</span>
         <span class="s">"op"</span><span class="p">:</span> <span class="s">"auth"</span><span class="p">,</span>
-        <span class="s">"args"</span><span class="p">:</span> <span class="p">[</span><span class="n">api_key</span><span class="p">,</span> <span class="n">expires</span><span class="p">,</span> <span class="n">signature</span><span class="p">]</span>
+        <span class="s">"args"</span><span class="p">:</span> <span class="p">[</span><span class="n">api_key</span><span class="p">]</span>
+    <span class="p">})</span>
+<span class="p">)</span>
+
+<span class="o">//</span><span class="n">sub</span>
+<span class="n">ws</span><span class="p">.</span><span class="n">send</span><span class="p">(</span>
+    <span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">({</span>
+        <span class="s">"op"</span><span class="p">:</span> <span class="s">"subscribe"</span><span class="p">,</span>
+        <span class="s">"args"</span><span class="p">:</span> <span class="p">[</span><span class="s">"contract.execution"</span><span class="p">,</span><span class="s">"contract.wallet"</span><span class="p">]</span>
     <span class="p">})</span>
 <span class="p">)</span>
 
@@ -6032,10 +4664,6 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
 
 <p>驗證示例如右側代碼區所示</p>
 
-<aside class="notice">
-點擊查看 <a href="https://github.com/mufex-exchange/api-usage-examples">示例加密算法</a>.
-</aside>
-
 <aside class="warning">
 由於網絡的復雜性，您和Bybit的websocket鏈接隨時可能會斷開，為了保證您能及時收到websocket推送消息，強烈建議您按照以下建議處理網絡異常： <p>1. 通過<a href="#t-heartbeat">發送心跳包</a>保持連接</p> <p>2. 一旦發現連接斷開，應該立刻重新建立連接。</p>
 </aside>
@@ -6070,13 +4698,13 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
 <p>直接訂閱</p>
 </blockquote>
 <div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="c1">// Subscribing to the trade data for BTCUSD</span>
-<span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">{"op":"subscribe","args":["publicTrade.BTCUSD"],"req_id": "customised_id"}}</span><span class="dl">'</span><span class="p">)</span>
+<span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">{"op":"subscribe","args":["trade-100.BTCUSDT"],"req_id": "customised_id"}}</span><span class="dl">'</span><span class="p">)</span>
 </code></pre></div>
 <blockquote>
 <p>通過分隔符來訂閱多個topic</p>
 </blockquote>
 <div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="c1">// Example: Subscribing to the trade data for BTCUSD and XRPUSD</span>
-<span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">{"op":"subscribe","args":["publicTrade.BTCUSD", "publicTrade.XRPUSD"],"req_id": "customised_id"}</span><span class="dl">'</span><span class="p">)</span>
+<span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">{"op":"subscribe","args":["trade-100.BTCUSDT", "trade-100.ETHUSDT"],"req_id": "customised_id"}</span><span class="dl">'</span><span class="p">)</span>
 </code></pre></div>
 <p>建立連接後, 可以通過發送JSON請求來訂閱topic. 其中binary為false表示不進行壓縮傳輸，為true時表示以GZIP格式進行壓縮，請求格式如下:
 </p>
@@ -6097,14 +4725,12 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
 <p>取消訂閱</p>
 </blockquote>
 <div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="c1">// Unsubscribing from the trade data for ETHUSD</span>
-<span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">{{"op":"subscribe","args":["books-25.BTCUSDT"]}</span><span class="dl">'</span><span class="p">)</span>
+<span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">{{"op":"unsubscribe","args":["books-25.BTCUSDT"]}</span><span class="dl">'</span><span class="p">)</span>
 </code></pre></div>
 <p>您可以在不斷開連接的前提下動態調整您要訂閱的信息，取消訂閱方式如下:
 </p>
 
 <p><code>ws.send(&#39;{&quot;op&quot;: &quot;unsubscribe&quot;, &quot;args&quot;: [&quot;topic.filter&quot;, &quot;topic.filter&quot;]});</code></p>
-<h3 id='t-intervals'>推送周期</h3>
-<p>如果topic名中包含一個<code>推送周期</code>，如<code>100ms</code>, 那麽表明這個topic是每隔<code>100ms</code>推送一次.否則, 這個topic<code>只要有消息就會推送</code>.</p>
 <h2 id='t-websocketresponse'>訂閱結果</h2>
 <blockquote>
 <p>訂閱推送</p>
@@ -6220,34 +4846,64 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left">ts</td>
-<td style="text-align: left">long</td>
-<td>時間戳(毫秒). 為系統生成該數據的時間</td>
-</tr>
-<tr>
-<td style="text-align: left">s</td>
+<td style="text-align: left">topic</td>
 <td style="text-align: left">string</td>
-<td>合約類型</td>
-</tr>
-<tr>
-<td style="text-align: left">b</td>
-<td style="text-align: left">array</td>
-<td>買方</td>
-</tr>
-<tr>
-<td style="text-align: left">a</td>
-<td style="text-align: left">array</td>
-<td>賣方</td>
-</tr>
-<tr>
-<td style="text-align: left">cs</td>
-<td style="text-align: left">number</td>
-<td>撮合版本號</td>
+<td>Topic name</td>
 </tr>
 <tr>
 <td style="text-align: left">type</td>
 <td style="text-align: left">string</td>
 <td>snapshot/delta/reset</td>
+</tr>
+<tr>
+<td style="text-align: left">ts</td>
+<td style="text-align: left">long</td>
+<td>時間戳(毫秒). 為系統生成該數據的時間</td>
+</tr>
+<tr>
+<td style="text-align: left">data</td>
+<td style="text-align: left">Object</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left">&gt;s</td>
+<td style="text-align: left">string</td>
+<td>合約類型</td>
+</tr>
+<tr>
+<td style="text-align: left">&gt;b</td>
+<td style="text-align: left">array <array></td>
+<td>買方</td>
+</tr>
+<tr>
+<td style="text-align: left">&gt;&gt;b[0][0]</td>
+<td style="text-align: left">string</td>
+<td>Bid price</td>
+</tr>
+<tr>
+<td style="text-align: left">&gt;&gt;b[0][1]</td>
+<td style="text-align: left">string</td>
+<td>Bid size</td>
+</tr>
+<tr>
+<td style="text-align: left">&gt;a</td>
+<td style="text-align: left">array <array></td>
+<td>賣方</td>
+</tr>
+<tr>
+<td style="text-align: left">&gt;&gt;a[0][0]</td>
+<td style="text-align: left">string</td>
+<td>Ask price</td>
+</tr>
+<tr>
+<td style="text-align: left">&gt;&gt;a[0][1]</td>
+<td style="text-align: left">string</td>
+<td>Ask size  0:delete</td>
+</tr>
+<tr>
+<td style="text-align: left">cs</td>
+<td style="text-align: left">number</td>
+<td>撮合版本號</td>
 </tr>
 </tbody></table>
 <h3 id='t-websockettrade'>平臺成交</h3>
@@ -6311,64 +4967,74 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left">ts</td>
-<td style="text-align: left">long</td>
-<td>時間戳(毫秒). 為系統生成該數據的時間</td>
-</tr>
-<tr>
-<td style="text-align: left">d</td>
-<td style="text-align: left">array</td>
-<td>trade list</td>
+<td style="text-align: left">topic</td>
+<td style="text-align: left">string</td>
+<td>Topic name</td>
 </tr>
 <tr>
 <td style="text-align: left">type</td>
 <td style="text-align: left">string</td>
-<td>snapshot</td>
+<td>snapshot/delta</td>
 </tr>
 <tr>
-<td style="text-align: left">t (trade list )</td>
-<td style="text-align: left"></td>
+<td style="text-align: left">data</td>
+<td style="text-align: left">Object</td>
 <td></td>
 </tr>
 <tr>
-<td style="text-align: left">:-----</td>
-<td style="text-align: left">:-----</td>
-<td>-----</td>
+<td style="text-align: left">&gt;s</td>
+<td style="text-align: left">string</td>
+<td>合約類型</td>
 </tr>
 <tr>
-<td style="text-align: left">0</td>
+<td style="text-align: left">&gt;d</td>
+<td style="text-align: left">array</td>
+<td>trade list</td>
+</tr>
+<tr>
+<td style="text-align: left">&gt;&gt;0</td>
 <td style="text-align: left">string</td>
 <td>價格變化方向</td>
 </tr>
 <tr>
-<td style="text-align: left">1</td>
+<td style="text-align: left">&gt;&gt;1</td>
 <td style="text-align: left">string</td>
 <td>委托價格</td>
 </tr>
 <tr>
-<td style="text-align: left">2</td>
+<td style="text-align: left">&gt;&gt;2</td>
 <td style="text-align: left">string</td>
 <td>倉位數量</td>
 </tr>
 <tr>
-<td style="text-align: left">3</td>
+<td style="text-align: left">&gt;&gt;3</td>
 <td style="text-align: left">long</td>
 <td>時間戳(毫秒). 訂單撮合成交的時間</td>
 </tr>
 <tr>
-<td style="text-align: left">4</td>
+<td style="text-align: left">&gt;&gt;4</td>
 <td style="text-align: left">string</td>
-<td>taker的買賣方向</td>
+<td>taker的買賣方向 a:ask ,b:bid</td>
 </tr>
 <tr>
-<td style="text-align: left">5</td>
+<td style="text-align: left">&gt;&gt;5</td>
 <td style="text-align: left">string</td>
 <td>交易ID</td>
 </tr>
 <tr>
-<td style="text-align: left">6</td>
+<td style="text-align: left">&gt;&gt;6</td>
 <td style="text-align: left">string</td>
 <td>&quot;0&quot;</td>
+</tr>
+<tr>
+<td style="text-align: left">cs</td>
+<td style="text-align: left">number</td>
+<td>撮合版本號</td>
+</tr>
+<tr>
+<td style="text-align: left">ts</td>
+<td style="text-align: left">long</td>
+<td>時間戳(毫秒). 為系統生成該數據的時間</td>
 </tr>
 </tbody></table>
 <h3 id='t-websocketticker_v3'>行情</h3>
@@ -6448,9 +5114,27 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
 <th style="text-align: left">參數</th>
 <th style="text-align: left">類型</th>
 <th>說明</th>
-<th style="text-align: left">shorthand｜</th>
+<th style="text-align: left">shorthand</th>
 </tr>
 </thead><tbody>
+<tr>
+<td style="text-align: left">topic</td>
+<td style="text-align: left">string</td>
+<td>Topic name</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">type</td>
+<td style="text-align: left">string</td>
+<td>snapshot/delta</td>
+<td style="text-align: left"></td>
+</tr>
+<tr>
+<td style="text-align: left">data</td>
+<td style="text-align: left">Object</td>
+<td></td>
+<td style="text-align: left"></td>
+</tr>
 <tr>
 <td style="text-align: left">symbol</td>
 <td style="text-align: left">string</td>
@@ -6542,22 +5226,10 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
 <td style="text-align: left">b1</td>
 </tr>
 <tr>
-<td style="text-align: left">bid1Size</td>
-<td style="text-align: left">string</td>
-<td>第一筆掛單買入數量</td>
-<td style="text-align: left">-</td>
-</tr>
-<tr>
 <td style="text-align: left">ask1Price</td>
 <td style="text-align: left">string</td>
 <td>第一筆掛單賣出價</td>
 <td style="text-align: left">a1</td>
-</tr>
-<tr>
-<td style="text-align: left">ask1Size</td>
-<td style="text-align: left">string</td>
-<td>第一筆掛單賣出數量</td>
-<td style="text-align: left">-</td>
 </tr>
 <tr>
 <td style="text-align: left">prevPrice1h</td>
@@ -6642,52 +5314,62 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
 </tr>
 </thead><tbody>
 <tr>
-<td style="text-align: left">start</td>
+<td style="text-align: left">topic</td>
+<td style="text-align: left">string</td>
+<td>Topic name</td>
+</tr>
+<tr>
+<td style="text-align: left">data</td>
+<td style="text-align: left">Object</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: left">&gt;start</td>
 <td style="text-align: left">integer</td>
 <td>開始時間戳（秒）</td>
 </tr>
 <tr>
-<td style="text-align: left">end</td>
+<td style="text-align: left">&gt;end</td>
 <td style="text-align: left">integer</td>
 <td>結束時間戳（秒）</td>
 </tr>
 <tr>
-<td style="text-align: left">period</td>
+<td style="text-align: left">&gt;period</td>
 <td style="text-align: left">string</td>
 <td>數據更新頻率. 枚舉值： 1 3 5 15 30 60 120 240 360 720 "D" "M" "W"</td>
 </tr>
 <tr>
-<td style="text-align: left">open</td>
+<td style="text-align: left">&gt;open</td>
 <td style="text-align: left">number</td>
 <td>開始價格</td>
 </tr>
 <tr>
-<td style="text-align: left">close</td>
+<td style="text-align: left">&gt;close</td>
 <td style="text-align: left">number</td>
 <td>結束價格</td>
 </tr>
 <tr>
-<td style="text-align: left">high</td>
+<td style="text-align: left">&gt;high</td>
 <td style="text-align: left">number</td>
 <td>最高價格</td>
 </tr>
 <tr>
-<td style="text-align: left">low</td>
+<td style="text-align: left">&gt;low</td>
 <td style="text-align: left">number</td>
 <td>最低價格</td>
 </tr>
 <tr>
-<td style="text-align: left">volume</td>
+<td style="text-align: left">&gt;volume</td>
 <td style="text-align: left">string</td>
 <td>交易量</td>
 </tr>
 <tr>
-<td style="text-align: left">turnover</td>
+<td style="text-align: left">&gt;turnover</td>
 <td style="text-align: left">string</td>
 <td><a href="#t-faq_turnover">成交金額</a></td>
 </tr>
 <tr>
-<td style="text-align: left">confirm</td>
+<td style="text-align: left">&gt;confirm</td>
 <td style="text-align: left">boolean</td>
 <td>是否確認</td>
 </tr>
@@ -6700,72 +5382,6 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
 <td style="text-align: left">ts</td>
 <td style="text-align: left">long</td>
 <td>時間戳(毫秒). 為系統生成該數據的時間</td>
-</tr>
-</tbody></table>
-<h3 id='t-websocketliquidation'>平臺強平推送</h3>
-<blockquote>
-<p>請求訂閱</p>
-</blockquote>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">{"op":"subscribe","req_id": "10110001", "args":["liquidation.GALAUSDT"]}</span><span class="dl">'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
-</code></pre></div>
-<blockquote>
-<p>響應示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
-    <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
-        <span class="dl">"</span><span class="s2">price</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.03803</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">side</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Buy</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">size</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1637</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">symbol</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">GALAUSDT</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">updatedTime</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1673251091822</span>
-    <span class="p">},</span>
-    <span class="dl">"</span><span class="s2">topic</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">liquidation.GALAUSDT</span><span class="dl">"</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">ts</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1673251091822</span><span class="p">,</span>
-    <span class="dl">"</span><span class="s2">type</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">snapshot</span><span class="dl">"</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>獲取Bybit平台最近的強平訂單數據，推送增量數據。業務範圍：USDT永續、反向永續、反向交割、USDC永續<br/>
-<br/>
-推送頻率：<b>實時</b><br/>
-<br/>
-<b>Topic:</b><br/>
-<code>liquidation.{symbol}</code>
-</p>
-
-<p class="fake_header">返回參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">參數</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">updatedTime</td>
-<td style="text-align: left">integer</td>
-<td>數據更新毫秒時間戳</td>
-</tr>
-<tr>
-<td style="text-align: left">symbol</td>
-<td style="text-align: left">string</td>
-<td>合約類型</td>
-</tr>
-<tr>
-<td style="text-align: left">side</td>
-<td style="text-align: left">string</td>
-<td>訂單方向. <code>Buy</code> <code>Sell</code></td>
-</tr>
-<tr>
-<td style="text-align: left">size</td>
-<td style="text-align: left">string</td>
-<td>成交數量</td>
-</tr>
-<tr>
-<td style="text-align: left">price</td>
-<td style="text-align: left">string</td>
-<td>成交價格</td>
 </tr>
 </tbody></table>
 <h2 id='t-contract_privatetopic'>私有 Topics</h2><h3 id='t-websocketposition'>持倉</h3>
@@ -6781,21 +5397,28 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
     <span class="dl">"</span><span class="s2">topic</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">contract.position</span><span class="dl">"</span><span class="p">,</span>
     <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
-            <span class="dl">"</span><span class="s2">symbol</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">BTCUSDT</span><span class="dl">"</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">size</span><span class="dl">"</span><span class="p">:</span> <span class="mf">10.8</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">userId</span><span class="dl">"</span><span class="p">:</span> <span class="mi">139688</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">symbol</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">BCHUSDT</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">size</span><span class="dl">"</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">side</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Buy</span><span class="dl">"</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">positionValue</span><span class="dl">"</span><span class="p">:</span> <span class="mf">303483.25</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">entryPrice</span><span class="dl">"</span><span class="p">:</span> <span class="mf">28100.3</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">liqPrice</span><span class="dl">"</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">bustPrice</span><span class="dl">"</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">positionValue</span><span class="dl">"</span><span class="p">:</span> <span class="mf">28.35</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">entryPrice</span><span class="dl">"</span><span class="p">:</span> <span class="mf">283.5</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">liqPrice</span><span class="dl">"</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">bustPrice</span><span class="dl">"</span><span class="p">:</span> <span class="mf">0.01</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">leverage</span><span class="dl">"</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">positionMargin</span><span class="dl">"</span><span class="p">:</span> <span class="mf">2997400.2</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">unrealisedPnl</span><span class="dl">"</span><span class="p">:</span> <span class="mf">33.7225</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">autoAddMargin</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">cumRealisedPnl</span><span class="dl">"</span><span class="p">:</span> <span class="mf">819.33264</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">positionMargin</span><span class="dl">"</span><span class="p">:</span> <span class="mf">427.80124</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">takeProfit</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">tpTriggerBy</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">UNKNOWN</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">stopLoss</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">slTriggerBy</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">UNKNOWN</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">trailingStop</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">unrealisedPnl</span><span class="dl">"</span><span class="p">:</span> <span class="o">-</span><span class="mf">4.129</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">autoAddMargin</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">cumRealisedPnl</span><span class="dl">"</span><span class="p">:</span> <span class="o">-</span><span class="mf">0.21757852</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">positionStatus</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Normal</span><span class="dl">"</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">adlRankIndicator</span><span class="dl">"</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">tpSlMode</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Partial</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">freeQty</span><span class="dl">"</span><span class="p">:</span> <span class="mf">0.1</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">tpSlMode</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Full</span><span class="dl">"</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">riskId</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">isolated</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">positionMode</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">MergedSingle</span><span class="dl">"</span><span class="p">,</span>
@@ -6819,6 +5442,11 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
 <th>說明</th>
 </tr>
 </thead><tbody>
+<tr>
+<td style="text-align: left">userId</td>
+<td style="text-align: left">string</td>
+<td>userId</td>
+</tr>
 <tr>
 <td style="text-align: left">symbol</td>
 <td style="text-align: left">string</td>
@@ -6886,6 +5514,16 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
 <td>更新時間</td>
 </tr>
 <tr>
+<td style="text-align: left">freeQty</td>
+<td style="text-align: left">float32</td>
+<td>freeQty</td>
+</tr>
+<tr>
+<td style="text-align: left">positionMode</td>
+<td style="text-align: left">string</td>
+<td>positionMode</td>
+</tr>
+<tr>
 <td style="text-align: left">positionIdx</td>
 <td style="text-align: left">integer</td>
 <td>Position idx, 用於在不同倉位模式下標識倉位：0-單向持倉；1-雙向持倉Buy；2-雙向持倉Sell. Linear 必傳。Inverse，Options 不傳。
@@ -6895,6 +5533,11 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
 <td style="text-align: left">riskId</td>
 <td style="text-align: left">integer</td>
 <td><a href="#t-getrisklimit">風險限額ID</a></td>
+</tr>
+<tr>
+<td style="text-align: left">adlRankIndicator</td>
+<td style="text-align: left">integer</td>
+<td>adlRankIndicator</td>
 </tr>
 </tbody></table>
 <h3 id='t-websocketexecution'>個人成交</h3>
@@ -6922,7 +5565,8 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
             <span class="dl">"</span><span class="s2">execFee</span><span class="dl">"</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.81</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">leavesQty</span><span class="dl">"</span><span class="p">:</span> <span class="mf">0.2</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">isMaker</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">execTime</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2023-03-22T02:58:51.906815Z</span><span class="dl">"</span>
+            <span class="dl">"</span><span class="s2">execTime</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2023-03-22T02:58:51.906815Z</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">updatedAtE9</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1690858192550670750</span><span class="p">,</span>
         <span class="p">}</span>
     <span class="p">]</span>
 <span class="p">}</span>
@@ -6997,6 +5641,11 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
 <td style="text-align: left">string</td>
 <td>交易時間，精確到毫秒</td>
 </tr>
+<tr>
+<td style="text-align: left">updatedAtE9</td>
+<td style="text-align: left">long</td>
+<td>updatedTime</td>
+</tr>
 </tbody></table>
 <h3 id='t-websocketorder'>訂單</h3>
 <blockquote>
@@ -7011,6 +5660,7 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
     <span class="dl">"</span><span class="s2">topic</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">contract.order</span><span class="dl">"</span><span class="p">,</span>
     <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
+            <span class="dl">"</span><span class="s2">userId</span><span class="dl">"</span><span class="p">:</span> <span class="mi">139688</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">symbol</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">BTCUSDT</span><span class="dl">"</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">orderId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">789eb56a-c85d-11ed-a5d3-525400d110a3</span><span class="dl">"</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">orderLinkId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
@@ -7027,8 +5677,8 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
             <span class="dl">"</span><span class="s2">orderStatus</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">PartiallyFilled</span><span class="dl">"</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">takeProfit</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">stopLoss</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">createTime</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2023-03-22T02:58:49.954324094Z</span><span class="dl">"</span><span class="p">,</span>
-            <span class="dl">"</span><span class="s2">updateTime</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">2023-03-22T02:58:51.911163835Z</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">createTime</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1690855647288566156</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">updateTime</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1690855647295584436</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">reduceOnly</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">closeOnTrigger</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">positionIdx</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span>
@@ -7051,6 +5701,11 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
 <th>說明</th>
 </tr>
 </thead><tbody>
+<tr>
+<td style="text-align: left">userId</td>
+<td style="text-align: left">string</td>
+<td>userId</td>
+</tr>
 <tr>
 <td style="text-align: left">symbol</td>
 <td style="text-align: left">string</td>
@@ -7165,6 +5820,7 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
     <span class="dl">"</span><span class="s2">topic</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">contract.wallet</span><span class="dl">"</span><span class="p">,</span>
     <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
+            <span class="dl">"</span><span class="s2">userId</span><span class="dl">"</span><span class="p">:</span> <span class="mi">139688</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">coin</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">USDT</span><span class="dl">"</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">equity</span><span class="dl">"</span><span class="p">:</span> <span class="mi">3000527</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">walletBalance</span><span class="dl">"</span><span class="p">:</span> <span class="mf">3000819.5</span><span class="p">,</span>
@@ -7190,6 +5846,11 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
 <th>說明</th>
 </tr>
 </thead><tbody>
+<tr>
+<td style="text-align: left">userId</td>
+<td style="text-align: left">string</td>
+<td>userId</td>
+</tr>
 <tr>
 <td style="text-align: left">coin</td>
 <td style="text-align: left">string</td>
@@ -7241,52 +5902,43 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
 <h2 id='category-category'>Category(<code>category</code>)</h2>
 <ul>
 <li><code>linear</code> 正向永續合約, 包含USDC永續</li>
-<li><code>inverse</code> 反向合約，包含反向永續和反向交割</li>
-<li><code>option</code> 期權</li>
 </ul>
 <h2 id='symbol-symbol'>Symbol (<code>symbol</code>)</h2>
 <ul>
 <li><code>BTCUSDT</code></li>
-<li><code>ETHUSD</code></li>
-<li><code>BTCPERP</code></li>
-<li><code>BTC-30DEC22-25000-P</code></li>
-<li><code>BTCUSDU22</code></li>
 <li><code>ETHUSDT</code></li>
-<li><code>BTCUSD</code></li>
+<li><code>BNBUSDT</code></li>
+<li><code>ARBUSDT</code></li>
+<li><code>SOLUSDT</code></li>
+<li><code>BCHUSDT</code></li>
+<li><code>COMPUSDT</code></li>
+<li><code>MKRUSDT</code></li>
+<li><code>LTCUSDT</code></li>
 <li><code>XRPUSDT</code></li>
-<li><code>DOTUSD</code></li>
+<li><code>MATICUSDT</code></li>
+<li><code>SUIUSDT</code></li>
+<li><code>OPUSDT</code></li>
+<li><code>WLDUSDT</code></li>
 </ul>
 
 <p>您可以根據<a href="#t-dv_instrhead">查询衍生品交易规格</a>接口獲取所有交易中的symbol。</p>
 <h2 id='currency-currency-coin'>Currency (<code>currency</code>/<code>coin</code>)</h2>
 <ul>
-<li><code>BTC</code></li>
-<li><code>ETH</code></li>
-<li><code>EOS</code></li>
-<li><code>XRP</code></li>
-<li><code>DOT</code></li>
 <li><code>USDT</code></li>
 </ul>
 <h2 id='contract-type-contracttype'>Contract Type(<code>contractType</code>)</h2>
 <ul>
-<li><code>InversePerpetual</code></li>
 <li><code>LinearPerpetual</code></li>
-<li><code>InverseFutures</code></li>
 </ul>
 <h2 id='contract-status-status'>Contract Status(<code>status</code>)</h2>
 <ul>
 <li><code>Pending</code> 待上線（距離上線前10分鐘）</li>
 <li><code>Trading</code> 已上線</li>
-<li><code>Settling</code> 交割中</li>
 <li><code>Closed</code> 已下線</li>
 </ul>
 <h2 id='account-type-from_account_type-to_account_type'>Account type (<code>from_account_type</code>/<code>to_account_type</code>)</h2>
 <ul>
 <li><code>CONTRACT</code>  - 期貨賬戶</li>
-<li><code>SPOT</code>      - 現貨賬戶</li>
-<li><code>INVESTMENT</code> - 理財賬戶</li>
-<li><code>OPTION</code> translation missing: zh-my.accountType_option</li>
-<li><code>UNIFIED</code> - 統一保證金帳戶(UMA 或 UTA)</li>
 </ul>
 <h2 id='wallet-fund-type-walletfundtype-type'>Wallet fund type (<code>walletFundType</code> / <code>type</code>)</h2>
 <ul>
@@ -7295,25 +5947,6 @@ X-Bapi-Limit-Reset-Timestamp: 1665397625986
 <li><code>RealisedPNL</code> 已結盈虧</li>
 <li><code>Commission</code> 傭金</li>
 <li><code>Refund</code> 系統返還（如提幣審核拒絕返還、用戶提幣取消返還）</li>
-<li><code>Prize</code> 贈金</li>
-<li><code>ExchangeOrderWithdraw</code> 兌出</li>
-<li><code>ExchangeOrderDeposit</code> 兌入</li>
-<li><code>ReturnServiceCash</code> 返還手續費贈金</li>
-<li><code>Insurance</code> 保險賬戶劃轉</li>
-<li><code>SubMember</code> 母子賬號劃轉</li>
-<li><code>Coupon</code> 生息券</li>
-<li><code>AccountTransfer</code> 賬戶劃轉</li>
-<li><code>CashBack</code> 返現</li>
-</ul>
-<h2 id='withdraw-status-status'>Withdraw status (<code>status</code>)</h2>
-<ul>
-<li><code>ToBeConfirmed</code> 待（用戶郵件）確認</li>
-<li><code>UnderReview</code> 審核中</li>
-<li><code>Pending</code> 待打款</li>
-<li><code>Success</code> 打款成功</li>
-<li><code>CancelByUser</code> 用戶取消</li>
-<li><code>Reject</code> 審核拒絕</li>
-<li><code>Expire</code> 提幣請求過期</li>
 </ul>
 <h2 id='order-type-ordertype'>Order type (<code>orderType</code>)</h2>
 <ul>
@@ -7422,7 +6055,6 @@ ELSE
 <li><code>AdlTrade</code> 自動減倉</li>
 <li><code>Funding</code> 資金費率</li>
 <li><code>BustTrade</code> 強製平倉</li>
-<li><code>Settle</code></li>
 </ul>
 <h2 id='liquidity-type-lastliquidityind'>Liquidity type (<code>lastLiquidityInd</code>)</h2>
 <ul>
@@ -7519,172 +6151,150 @@ ELSE
 <td>訪問路徑不存在</td>
 </tr>
 </tbody></table>
-<h2 id='10001'>10001</h2>
-<p>translation missing: zh-my.v3_err_10001</p>
-<h2 id='10002'>10002</h2>
-<p>translation missing: zh-my.v3_err_10002</p>
-<h2 id='10003'>10003</h2>
-<p>translation missing: zh-my.v3_err_10003</p>
-<h2 id='10004'>10004</h2>
-<p>translation missing: zh-my.v3_err_10004</p>
-<h2 id='10005'>10005</h2>
-<p>translation missing: zh-my.v3_err_10005</p>
-<h2 id='10006'>10006</h2>
-<p>translation missing: zh-my.v3_err_10006</p>
-<h2 id='10008'>10008</h2>
-<p>translation missing: zh-my.v3_err_10008</p>
-<h2 id='10009'>10009</h2>
-<p>translation missing: zh-my.v3_err_10009</p>
-<h2 id='10000'>10000</h2>
-<p>處理請求時發生未知錯誤</p>
-<h2 id='10010'>10010</h2>
-<p>translation missing: zh-my.v3_err_10010</p>
-<h2 id='10016'>10016</h2>
-<p>translation missing: zh-my.v3_err_10016</p>
-<h2 id='10018'>10018</h2>
-<p>translation missing: zh-my.v3_err_10018</p>
-<h2 id='10027'>10027</h2>
-<p>translation missing: zh-my.v3_err_10027</p>
-<h2 id='10014'>10014</h2>
-<p>translation missing: zh-my.v3_err_10014</p>
-<h2 id='140001'>140001</h2>
-<p>translation missing: zh-my.v3_err_110001</p>
-<h2 id='140003'>140003</h2>
-<p>translation missing: zh-my.v3_err_110003</p>
-<h2 id='140004'>140004</h2>
-<p>translation missing: zh-my.v3_err_110004</p>
-<h2 id='140005'>140005</h2>
-<p>translation missing: zh-my.v3_err_110005</p>
-<h2 id='140006'>140006</h2>
-<p>translation missing: zh-my.v3_err_110006</p>
-<h2 id='140007'>140007</h2>
-<p>translation missing: zh-my.v3_err_110007</p>
-<h2 id='140008'>140008</h2>
-<p>translation missing: zh-my.v3_err_110008</p>
-<h2 id='140009'>140009</h2>
-<p>translation missing: zh-my.v3_err_110009</p>
-<h2 id='140010'>140010</h2>
-<p>translation missing: zh-my.v3_err_110010</p>
-<h2 id='140011'>140011</h2>
-<p>translation missing: zh-my.v3_err_110011</p>
-<h2 id='140012'>140012</h2>
-<p>translation missing: zh-my.v3_err_110012</p>
-<h2 id='140013'>140013</h2>
-<p>translation missing: zh-my.v3_err_110013</p>
-<h2 id='140014'>140014</h2>
-<p>translation missing: zh-my.v3_err_110014</p>
-<h2 id='140015'>140015</h2>
-<p>translation missing: zh-my.v3_err_110015</p>
-<h2 id='140016'>140016</h2>
-<p>translation missing: zh-my.v3_err_110016</p>
-<h2 id='140017'>140017</h2>
-<p>translation missing: zh-my.v3_err_110017</p>
-<h2 id='140018'>140018</h2>
-<p>translation missing: zh-my.v3_err_110018</p>
-<h2 id='140019'>140019</h2>
-<p>translation missing: zh-my.v3_err_110019</p>
-<h2 id='140020'>140020</h2>
-<p>translation missing: zh-my.v3_err_110020</p>
-<h2 id='140021'>140021</h2>
-<p>translation missing: zh-my.v3_err_110021</p>
-<h2 id='140022'>140022</h2>
-<p>translation missing: zh-my.v3_err_110022</p>
-<h2 id='140023'>140023</h2>
-<p>translation missing: zh-my.v3_err_110023</p>
-<h2 id='140024'>140024</h2>
-<p>translation missing: zh-my.v3_err_110024</p>
-<h2 id='140025'>140025</h2>
-<p>translation missing: zh-my.v3_err_110025</p>
-<h2 id='140026'>140026</h2>
-<p>translation missing: zh-my.v3_err_110026</p>
-<h2 id='140027'>140027</h2>
-<p>translation missing: zh-my.v3_err_110027</p>
-<h2 id='140028'>140028</h2>
-<p>translation missing: zh-my.v3_err_110028</p>
-<h2 id='140029'>140029</h2>
-<p>translation missing: zh-my.v3_err_110029</p>
-<h2 id='140030'>140030</h2>
-<p>translation missing: zh-my.v3_err_110030</p>
-<h2 id='140031'>140031</h2>
-<p>translation missing: zh-my.v3_err_110031</p>
-<h2 id='140032'>140032</h2>
-<p>translation missing: zh-my.v3_err_110032</p>
-<h2 id='140033'>140033</h2>
-<p>translation missing: zh-my.v3_err_110033</p>
-<h2 id='140034'>140034</h2>
-<p>translation missing: zh-my.v3_err_110034</p>
-<h2 id='140035'>140035</h2>
-<p>translation missing: zh-my.v3_err_110035</p>
-<h2 id='140036'>140036</h2>
-<p>translation missing: zh-my.v3_err_110036</p>
-<h2 id='140037'>140037</h2>
-<p>translation missing: zh-my.v3_err_110037</p>
-<h2 id='140038'>140038</h2>
-<p>translation missing: zh-my.v3_err_110038</p>
-<h2 id='140039'>140039</h2>
-<p>translation missing: zh-my.v3_err_110039</p>
-<h2 id='140040'>140040</h2>
-<p>translation missing: zh-my.v3_err_110040</p>
-<h2 id='140041'>140041</h2>
-<p>translation missing: zh-my.v3_err_110041</p>
-<h2 id='140042'>140042</h2>
-<p>translation missing: zh-my.v3_err_110042</p>
-<h2 id='140043'>140043</h2>
-<p>translation missing: zh-my.v3_err_110043</p>
-<h2 id='140044'>140044</h2>
-<p>translation missing: zh-my.v3_err_110044</p>
-<h2 id='140045'>140045</h2>
-<p>translation missing: zh-my.v3_err_110045</p>
-<h2 id='140046'>140046</h2>
-<p>translation missing: zh-my.v3_err_110046</p>
-<h2 id='140047'>140047</h2>
-<p>translation missing: zh-my.v3_err_110047</p>
-<h2 id='140048'>140048</h2>
-<p>translation missing: zh-my.v3_err_110048</p>
-<h2 id='140049'>140049</h2>
-<p>translation missing: zh-my.v3_err_110049</p>
-<h2 id='140050'>140050</h2>
-<p>translation missing: zh-my.v3_err_110050</p>
-<h2 id='140051'>140051</h2>
-<p>translation missing: zh-my.v3_err_110051</p>
-<h2 id='140052'>140052</h2>
-<p>translation missing: zh-my.v3_err_110052</p>
-<h2 id='140053'>140053</h2>
-<p>translation missing: zh-my.v3_err_110053</p>
-<h2 id='140054'>140054</h2>
-<p>translation missing: zh-my.v3_err_110054</p>
-<h2 id='140055'>140055</h2>
-<p>translation missing: zh-my.v3_err_110055</p>
-<h2 id='140056'>140056</h2>
-<p>translation missing: zh-my.v3_err_110056</p>
-<h2 id='140057'>140057</h2>
-<p>translation missing: zh-my.v3_err_110057</p>
-<h2 id='140058'>140058</h2>
-<p>translation missing: zh-my.v3_err_110058</p>
-<h2 id='140059'>140059</h2>
-<p>translation missing: zh-my.v3_err_110059</p>
-<h2 id='140060'>140060</h2>
-<p>translation missing: zh-my.v3_err_110060</p>
-<h2 id='140061'>140061</h2>
-<p>translation missing: zh-my.v3_err_110061</p>
-<h2 id='140062'>140062</h2>
-<p>translation missing: zh-my.v3_err_110062</p>
-<h2 id='140063'>140063</h2>
-<p>translation missing: zh-my.v3_err_110063</p>
-<h2 id='140064'>140064</h2>
-<p>translation missing: zh-my.v3_err_110064</p>
-<h2 id='140065'>140065</h2>
-<p>translation missing: zh-my.v3_err_110065</p>
-<h2 id='140066'>140066</h2>
-<p>translation missing: zh-my.v3_err_110066</p>
-<h2 id='140067'>140067</h2>
-<p>translation missing: zh-my.v3_err_110067</p>
-<h2 id='140068'>140068</h2>
-<p>translation missing: zh-my.v3_err_110068</p>
-<h2 id='140069'>140069</h2>
-<p>translation missing: zh-my.v3_err_110069</p>
-<h2 id='140070'>140070</h2>
-<p>translation missing: zh-my.v3_err_110070</p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Code</th>
+<th style="text-align: left">Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">26200001</td>
+<td style="text-align: left">Server Timeout</td>
+</tr>
+<tr>
+<td style="text-align: left">26200002</td>
+<td style="text-align: left">Invalid request, please check your timestamp and recv_window param</td>
+</tr>
+<tr>
+<td style="text-align: left">26200003</td>
+<td style="text-align: left">Invalid api_key</td>
+</tr>
+<tr>
+<td style="text-align: left">26200004</td>
+<td style="text-align: left">Error sign</td>
+</tr>
+<tr>
+<td style="text-align: left">26200005</td>
+<td style="text-align: left">Permission denied</td>
+</tr>
+<tr>
+<td style="text-align: left">26200006</td>
+<td style="text-align: left">Too many visits</td>
+</tr>
+<tr>
+<td style="text-align: left">26200008</td>
+<td style="text-align: left">User had been banned</td>
+</tr>
+<tr>
+<td style="text-align: left">26200010</td>
+<td style="text-align: left">unmatched IP</td>
+</tr>
+<tr>
+<td style="text-align: left">26200016</td>
+<td style="text-align: left">Server Error</td>
+</tr>
+<tr>
+<td style="text-align: left">26200018</td>
+<td style="text-align: left">Out of frequency limit of IP</td>
+</tr>
+<tr>
+<td style="text-align: left">26200014</td>
+<td style="text-align: left">Request is duplicate</td>
+</tr>
+<tr>
+<td style="text-align: left">14110001</td>
+<td style="text-align: left">internal Server error</td>
+</tr>
+<tr>
+<td style="text-align: left">14120001</td>
+<td style="text-align: left">Order not exists</td>
+</tr>
+<tr>
+<td style="text-align: left">14120002</td>
+<td style="text-align: left">qty need greater than zero&#39;</td>
+</tr>
+<tr>
+<td style="text-align: left">14120003</td>
+<td style="text-align: left">coin is not in the range of selected</td>
+</tr>
+<tr>
+<td style="text-align: left">14120004</td>
+<td style="text-align: left">Request idempotent</td>
+</tr>
+<tr>
+<td style="text-align: left">14120005</td>
+<td style="text-align: left">params error</td>
+</tr>
+<tr>
+<td style="text-align: left">14120006</td>
+<td style="text-align: left">Origin header invalid</td>
+</tr>
+<tr>
+<td style="text-align: left">14120007</td>
+<td style="text-align: left">Permission denied</td>
+</tr>
+<tr>
+<td style="text-align: left">14120008</td>
+<td style="text-align: left">User had been banned</td>
+</tr>
+<tr>
+<td style="text-align: left">14120009</td>
+<td style="text-align: left">order_link_id not unique</td>
+</tr>
+<tr>
+<td style="text-align: left">14120010</td>
+<td style="text-align: left">orderid duplication</td>
+</tr>
+<tr>
+<td style="text-align: left">14120011</td>
+<td style="text-align: left">The number of contracts exceeds maximum limit allowed</td>
+</tr>
+<tr>
+<td style="text-align: left">14120012</td>
+<td style="text-align: left">The number of contracts exceeds maximum limit allowed: too large</td>
+</tr>
+<tr>
+<td style="text-align: left">14120013</td>
+<td style="text-align: left">Order price is out of permissible range</td>
+</tr>
+<tr>
+<td style="text-align: left">14120014</td>
+<td style="text-align: left">no last_price</td>
+</tr>
+<tr>
+<td style="text-align: left">14120015</td>
+<td style="text-align: left">Order price is out of permissible range</td>
+</tr>
+<tr>
+<td style="text-align: left">14120016</td>
+<td style="text-align: left">order_type duplication</td>
+</tr>
+<tr>
+<td style="text-align: left">14120017</td>
+<td style="text-align: left">no position</td>
+</tr>
+<tr>
+<td style="text-align: left">14120018</td>
+<td style="text-align: left">Insufficient wallet balance</td>
+</tr>
+<tr>
+<td style="text-align: left">14120019</td>
+<td style="text-align: left">Operation not allowed as position is undergoing liquidation</td>
+</tr>
+<tr>
+<td style="text-align: left">14120020</td>
+<td style="text-align: left">Operation not allowed as position is undergoing ADL</td>
+</tr>
+<tr>
+<td style="text-align: left">14120021</td>
+<td style="text-align: left">position invalid status</td>
+</tr>
+<tr>
+<td style="text-align: left">14120022</td>
+<td style="text-align: left">Invalid exit order: qty != size</td>
+</tr>
+</tbody></table>
 
       </div>
       <div class="dark-box">
