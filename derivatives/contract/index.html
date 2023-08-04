@@ -678,6 +678,11 @@
                   </li>
                   <li>
                     <a href="#t-constructingtherequest" class="toc-h2 toc-link" data-title="Create A Request">Create A Request</a>
+                      <ul class="toc-list-h3">
+                          <li>
+                            <a href="#examples-of-the-signature-algorithm" class="toc-h3 toc-link" data-title="Examples of the Signature Algorithm">Examples of the Signature Algorithm</a>
+                          </li>
+                      </ul>
                   </li>
               </ul>
           </li>
@@ -1019,16 +1024,11 @@ The following parameters must be used for authentication:
 <span class="s">}'</span>
 </code></pre></div>
 <p><p>3. Append the sign parameter to request header, and send the HTTP request. Note that the message format for GET and POST requests is different. Please refer to the examples.</p></p>
-
-<!--
-### Examples of the Signature Algorithm
-
-* [C#](https://github.com/mufex-exchange/mufex-official-api-docs/blob/master/en/example/Encryption.cs)
-* [Python](https://github.com/mufex-exchange/mufex-official-api-docs/blob/master/en/example/Encryption.py)
-* [C++](https://github.com/mufex-exchange/mufex-official-api-docs/blob/master/en/example/Encryption.cpp)
-* [Go](https://github.com/mufex-exchange/mufex-official-api-docs/blob/master/en/example/Encryption.go)
-* [PHP](https://github.com/mufex-exchange/mufex-official-api-docs/blob/master/en/example/Encryption.php)
--->
+<h3 id='examples-of-the-signature-algorithm'>Examples of the Signature Algorithm</h3>
+<ul>
+<li><a href="https://github.com/MUFEX-Exchange/Examples-of-API-Usage/blob/main/v1/api_demo/Encryption_HMAC.go">Go</a></li>
+<li><a href="https://github.com/MUFEX-Exchange/Examples-of-API-Usage/blob/main/v1/api_demo/Encryption_HMAC.py">Python</a></li>
+</ul>
 
 <script>
 function copyStringToClipboard (endpoint) {
@@ -6197,6 +6197,10 @@ ELSE
 <tr>
 <td style="text-align: left">26200003</td>
 <td style="text-align: left">Invalid api_key</td>
+</tr>
+<tr>
+<td style="text-align: left">20011005</td>
+<td style="text-align: left">the apikey is not exist</td>
 </tr>
 <tr>
 <td style="text-align: left">26200004</td>
