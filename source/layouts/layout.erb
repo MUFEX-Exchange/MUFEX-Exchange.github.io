@@ -28,15 +28,6 @@ under the License.
 <!doctype html>
 <html>
   <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-158616893-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'UA-158616893-1');
-    </script>
 
     <%= favicon_tag "favicon.ico" %>
     <meta charset="utf-8">
@@ -99,7 +90,7 @@ under the License.
 
       .con a.selected {
         border-bottom: 2px solid transparent;
-        border-color: #FFB11A;
+        border-color: #1a86ff;
         color: #fff;
       }
 
@@ -116,12 +107,7 @@ under the License.
         word-break: keep-all;
       }
 
-      /* Environment dropdown list */
-      /* The dropdown container */
-      .dropdown {
-        float: left;
-        overflow: hidden;
-      }
+
 
       /* Dropdown button */
       .dropdown .dropbtn {
@@ -223,178 +209,9 @@ under the License.
 
       <ul class="con">
 
-        <!-- Derivatives V3 -->
-        <% if page_classes.include?("unified_margin") %>
-          <li>
-            <div class="dropdown">
-              <button class="dropbtn"><%=t(:derivatives)%>
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
-                <% if page_classes.include?("testnet") %>
-                  <a href="<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s %>/testnet/derivativesV3/unified_margin" class="dropdown-content-selected"><%=t(:dv_unifiedMargin)%></a>
-                  <a href="<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s %>/testnet/derivativesV3/contract" class="dropdown-content-selected"><%=t(:dv_contract)%></a>
-                <% else %>
-                  <a href="<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s %>/derivatives/contract" class="dropdown-content-selected"><%=t(:dv_contract)%></a>
-                <% end %>
-              </div>
-            </div>
-          </li>
-        <% elsif page_classes.include?("contract") %>
-          <li>
-            <div class="dropdown">
-              <button class="dropbtn"><%=t(:derivatives)%>
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
-                <% if page_classes.include?("testnet") %>
-                  <a href="<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s %>/testnet/derivativesV3/unified_margin" class="dropdown-content-selected"><%=t(:dv_unifiedMargin)%></a>
-                  <a href="<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s %>/testnet/derivativesV3/contract" class="dropdown-content-selected"><%=t(:dv_contract)%></a>
-                <% else %>
-                  <a href="<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s %>/derivatives/contract" class="dropdown-content-selected"><%=t(:dv_contract)%></a>
-              </div>
-            </div>
-          </li>
-          <% end %>
-        <% else %>
-          <li>
-            <div class="dropdown">
-              <button class="dropbtn"><%=t(:derivativesV3)%>
-                <i class="fa fa-caret-down"></i>
-              </button>
-              <div class="dropdown-content">
-                <% if page_classes.include?("testnet") %>
-                  <a href="<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s %>/testnet/derivativesV3/unified_margin" ><%=t(:dv_unifiedMargin)%></a>
-                  <a href="<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s %>/testnet/derivativesV3/contract" ><%=t(:dv_contract)%></a>
-                <% else %>
-                  <a href="<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s %>/derivativesV3/unified_margin" class="dropdown-content-selected"><%=t(:dv_unifiedMargin)%></a>
-                  <a href="<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s %>/derivativesV3/contract" class="dropdown-content-selected"><%=t(:dv_contract)%></a>
-                <% end %>
-              </div>
-            </div>
-          </li>
-        <% end %>
 
 
-        <!-- Environment dropdown (Testnet, Mainnet) -->
-        <!-- It's very long because each button needs its own logic to link to testnet or mainnet depending on if the website is on testnet or mainnet. -->
-        <li>
-          <div class="dropdown">
-            <button class="dropbtn">Environment
-              <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content">
-              <% if page_classes.end_with?("unified_margin_index") %>
-                <% if page_classes.include?("testnet") %>
-                  <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/derivativesV3/unified_margin>Mainnet</a>
-                  <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/derivativesV3/unified_margin>Testnet</a></span>
-                <% else %>
-                  <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/derivativesV3/unified_margin>Mainnet</a></span>
-                  <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/derivativesV3/unified_margin>Testnet</a>
-                <% end %>
-              <% end %>
-              <% if page_classes.end_with?("contract_index") %>
-                <% if page_classes.include?("testnet") %>
-                  <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/derivativesV3/contract>Mainnet</a>
-                  <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/derivativesV3/contract>Testnet</a></span>
-                <% else %>
-                  <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/derivativesV3/contract>Mainnet</a></span>
-                  <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/derivativesV3/contract>Testnet</a>
-                <% end %>
-              <% end %>
-              <% if page_classes.end_with?("inverse_index") %>
-                <% if page_classes.include?("testnet") %>
-                  <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/futuresV2/inverse>Mainnet</a>
-                  <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/futuresV2/inverse>Testnet</a></span>
-                <% else %>
-                  <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/futuresV2/inverse>Mainnet</a></span>
-                  <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/futuresV2/inverse>Testnet</a>
-                <% end %>
-              <% end %>
-              <% if page_classes.end_with?("linear_index") %>
-                <% if page_classes.include?("testnet") %>
-                  <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/futuresV2/linear>Mainnet</a>
-                  <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/futuresV2/linear>Testnet</a></span>
-                <% else %>
-                  <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/futuresV2/linear>Mainnet</a></span>
-                  <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/futuresV2/linear>Testnet</a>
-                <% end %>
-              <% end %>
-              <% if page_classes.end_with?("inverse_futures_index") %>
-                <% if page_classes.include?("testnet") %>
-                  <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/futuresV2/inverse_futures>Mainnet</a>
-                  <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/futuresV2/inverse_futures>Testnet</a></span>
-                <% else %>
-                  <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/futuresV2/inverse_futures>Mainnet</a></span>
-                  <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/futuresV2/inverse_futures>Testnet</a>
-                <% end %>
-              <% end %>
 
-              <!-- it's for spot testnet switch to spot mainnet -->
-              <% if page_classes.end_with?("v1_index") %>
-                <% if page_classes.include?("spot") %>
-                  <% if page_classes.include?("testnet") %>
-                    <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/spot/v1>Mainnet</a>
-                    <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/spot/v1>Testnet</a></span>
-                  <% else %>
-                    <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/spot/v1>Mainnet</a></span>
-                    <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/spot/v1>Testnet</a>
-                  <% end %>
-                <% end %>
-              <% end %>
-              <% if page_classes.end_with?("v3_index") %>
-                <% if page_classes.include?("spot") %>
-                  <% if page_classes.include?("testnet") %>
-                    <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/spot/v3>Mainnet</a>
-                    <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/spot/v3>Testnet</a></span>
-                  <% else %>
-                    <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/spot/v3>Mainnet</a></span>
-                    <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/spot/v3>Testnet</a>
-                  <% end %>
-                <% end %>
-              <% end %>
-
-        
-
-              <% if page_classes.end_with?("copy_trading_index") %>
-                <% if page_classes.include?("testnet") %>
-                  <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/copy_trading>Mainnet</a>
-                  <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/copy_trading>Testnet</a></span>
-                <% else %>
-                  <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/copy_trading>Mainnet</a></span>
-                  <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/copy_trading>Testnet</a>
-                <% end %>
-              <% end %>
-              <% if page_classes.include?("option") %>
-                <% if page_classes.include?("testnet") %>
-                  <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/usdc/option>Mainnet</a>
-                  <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/usdc/option>Testnet</a></span>
-                <% else %>
-                  <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/usdc/option>Mainnet</a></span>
-                  <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/usdc/option>Testnet</a>
-                <% end %>
-              <% end %>
-              <% if page_classes.include?("perpetual") %>
-                <% if page_classes.include?("testnet") %>
-                  <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/usdc/perpetual>Mainnet</a>
-                  <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/usdc/perpetual>Testnet</a></span>
-                <% else %>
-                  <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/usdc/perpetual>Mainnet</a></span>
-                  <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/usdc/option>Testnet</a>
-                <% end %>
-              <% end %>
-              <% if page_classes.end_with?("tax_index") %>
-                <% if page_classes.include?("testnet") %>
-                  <!-- <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/tax>Mainnet</a> -->
-                  <!-- <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/tax>Testnet</a></span> -->
-                <% else %>
-                  <!-- <span class="dropdown-content-selected"><a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/tax>Mainnet</a></span> -->
-                  <!-- <a href=<%= (I18n.locale.to_s == 'en') ? "/docs-legacy" : "/docs-legacy/"+I18n.locale.to_s%>/testnet/tax>Testnet</a> -->
-                <% end %>
-              <% end %>
-            </div>
-          </div>
-        </li>
       </ul>
 
     </div>

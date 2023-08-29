@@ -10,14 +10,21 @@ t(:auth_aside_env)
 t(:auth_para_privatepublic)
 
 ## t(:authenticationparameters)
+t(:auth_para_cdn_request_id)
+t(:auth_para_params)
+t(:auth_aside_timestamp)
+
+t(:auth_para_dv3_construct1)
+t(:auth_para_construct2)
+
 
 ## t(:constructingtherequest)
 > t(:auth_codequote_construct1a_v3)
 
 
 ```http
-GET /private/v1/trade/orders?category=option&symbol=BTC-29JUL22-25000-C HTTP/1.1
-Host: api-testnet.mufex.com
+GET /private/v1/trade/orders?symbol=BTCUSDT HTTP/1.1
+Host: api.mufex.finance
 -H 'MF-ACCESS-SIGN-TYPE: 2' \
 -H 'MF-ACCESS-SIGN: eb431d99a1a203a434a82ac3ea8e107b5f94a967e9aaf922c41e84fb3ec9df78' \
 -H 'MF-ACCESS-API-KEY: {api key}' \
@@ -29,7 +36,7 @@ Host: api-testnet.mufex.com
 
 ```http
 POST /private/v1/trade/cancel HTTP/1.1
-Host: api-testnet.mufex.com
+Host: api.mufex.finance
 -H 'MF-ACCESS-SIGN-TYPE: 2' \
 -H 'MF-ACCESS-SIGN: c822337e76e30505e41b87a55af291e074f59f9496ba12ca2a57dc04fe65a178' \
 -H 'MF-ACCESS-API-KEY: {api key}' \
@@ -43,20 +50,11 @@ Host: api-testnet.mufex.com
 
 t(:auth_para_construct3_dv3)
 
-<aside class="notice">
-t(:auth_aside_signature)
-</aside>
 
-<!--
 ### Examples of the Signature Algorithm
 
-* [C#](https://github.com/mufex-exchange/mufex-official-api-docs/blob/master/en/example/Encryption.cs)
-* [Python](https://github.com/mufex-exchange/mufex-official-api-docs/blob/master/en/example/Encryption.py)
-* [C++](https://github.com/mufex-exchange/mufex-official-api-docs/blob/master/en/example/Encryption.cpp)
-* [Go](https://github.com/mufex-exchange/mufex-official-api-docs/blob/master/en/example/Encryption.go)
-* [PHP](https://github.com/mufex-exchange/mufex-official-api-docs/blob/master/en/example/Encryption.php)
--->
-
+* [Go](https://github.com/MUFEX-Exchange/Examples-of-API-Usage/blob/main/v1/api_demo/Encryption_HMAC.go)
+* [Python](https://github.com/MUFEX-Exchange/Examples-of-API-Usage/blob/main/v1/api_demo/Encryption_HMAC.py)
 
 <script>
 function copyStringToClipboard (endpoint) {

@@ -6,7 +6,7 @@ t(:account_para)
 > t(:codequote_curlExample)
 
 ```console
-curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/trade/create' \
+curl --location --request POST 'https://api.mufex.finance/private/v1/trade/create' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: f02a18137c25c40d64b2c474f575c01a62ba076124946d38619238e19c86a2f2' \
 --header 'MF-ACCESS-API-KEY: XXXXXXXXXX' \
@@ -44,7 +44,7 @@ curl --location --request POST 'https://api-testnet.betterbitfinance.com/private
         "message":"OK",
         "data": {
         "orderId":"a09a43f1-7a65-4255-8758-034103447a4e",
-            "orderLinkId":""
+        "orderLinkId":""
     },
     "ext_info":null,
         "time":1658850321861
@@ -52,10 +52,6 @@ curl --location --request POST 'https://api-testnet.betterbitfinance.com/private
 ```
 
 t(:contract_order_para)
-
-<aside class="notice">
-t(:account_aside_placeOrder_positionIdx)
-</aside>
 
 <p class="fake_header">t(:httprequest)</p>
 POST
@@ -66,8 +62,8 @@ POST
 |t(:column_parameter)|t(:column_required)|t(:column_type)|t(:column_comments)|
 |:----- |:-------|:-----|----- |
 |symbol |<b>true</b> |string |t(:row_comment_symbol)   |
-|side |<b>true</b> |string |t(:row_comment_side)    |
-|positionIdx |false |integer |t(:row_comment_position_idx_create_order_v3)  |
+|side |<b>true</b> |string | Buy| Sell :Closing a position is done by opening a reverse order|
+|positionIdx |true |integer |t(:row_comment_position_idx_create_order_v3)  |
 |t(:contract_param_orderType) |<b>true</b> |string |t(:row_comment_activeOrderType)   |
 |qty |<b>true</b> |string |t(:contract_comment_qty) |
 |price |false |string |t(:contract_comment_price) |
@@ -90,123 +86,11 @@ POST
 | orderId |string |t(:row_comment_order_id) |
 |orderLinkId |string |t(:row_comment_orderLinkId)  |
 
-### t(:dv_batchPlaceOrder)
-> t(:codequote_curlExample)
-
-```console
-curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/trade/batch-orders' \
---header 'MF-ACCESS-SIGN-TYPE: 2' \
---header 'MF-ACCESS-SIGN: f02a18137c25c40d64b2c474f575c01a62ba076124946d38619238e19c86a2f2' \
---header 'MF-ACCESS-API-KEY: XXXXXXXXXX' \
---header 'MF-ACCESS-TIMESTAMP: 1658884339826' \
---header 'MF-ACCESS-RECV-WINDOW: 5000' \
---header 'Content-Type: application/json' \
---data-raw '{
-  "creates": [
-        {
-            "symbol": "BTCUSDT",
-            "side": "Buy",
-            "positionIdx": 0,
-            "orderType": "Limit",
-            "qty": "0.01",
-            "price": "28300",
-            "timeInForce": "GoodTillCancel",
-            "orderLinkId": "delly062603"
-        },
-        {
-            "symbol": "BTCUSDT",
-            "side": "Buy",
-            "positionIdx": 0,
-            "orderType": "Limit",
-            "qty": "0.01",
-            "price": "28300",
-            "timeInForce": "GoodTillCancel",
-            "orderLinkId": "delly062604"
-        }
-    ]
-}'
-```
-
-```python--pybit
-
-```
-
-> t(:codequote_responseExample)
-
-```javascript
-{
-    "code": 0,
-    "message": "OK",
-    "data": {
-        "batchResp": [
-            {
-                "category": "",
-                "symbol": "",
-                "orderId": "9476763d-5faf-4a59-ba75-e2659c91fb33",
-                "orderLinkId": "",
-                "code": 0,
-                "createdAt": "1687761917147"
-            },
-            {
-                "category": "",
-                "symbol": "",
-                "orderId": "78c4d3be-916d-4170-94ea-5256b2ad6e10",
-                "orderLinkId": "",
-                "code": 0,
-                "createdAt": "1687761917147"
-            }
-        ]
-    },
-    "ext_info": {},
-    "time": 1687761917148
-}
-```
-
-t(:contract_batch_order_para)
-
-<aside class="notice">
-t(:account_aside_placeOrder_positionIdx)
-</aside>
-
-<p class="fake_header">t(:httprequest)</p>
-POST
-<code><span id=vpoCreate>/private/v1/trade/batch-orders</span></code>
-<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#vpoCreate"><img src="/images/copy_to_clipboard.png" height=zh5 width=15></img></button>
-
-<p class="fake_header">t(:requestparameters)</p>
-|t(:column_parameter)|t(:column_required)|t(:column_type)|t(:column_comments)|
-|:----- |:-------|:-----|----- |
-|creates |<b>true</b> |array | Object   |
-|>symbol |<b>true</b> |string |t(:row_comment_symbol)   |
-|>side |<b>true</b> |string |t(:row_comment_side)    |
-|>positionIdx |false |integer |t(:row_comment_position_idx_create_order_v3)  |
-|>t(:contract_param_orderType) |<b>true</b> |string |t(:row_comment_activeOrderType)   |
-|>qty |<b>true</b> |string |t(:contract_comment_qty) |
-|>price |false |string |t(:contract_comment_price) |
-|>t(:row_parameter_timeInForce) |<b>true</b> |string |t(:row_comment_timeInForce) |
-|>orderLinkId |false |string |t(:row_comment_orderLinkId) |
-|>reduceOnly |false |bool |t(:linear_row_comment_reduceOnly) |
-|>closeOnTrigger |false |bool |t(:linear_row_comment_closeOnTrigger)
-
-
-<p class="fake_header">t(:responseparameters)</p>
-|t(:column_parameter)|t(:column_type)|t(:column_comments)|
-|:----- |:-----|----- |
-| data | Object | |
-| batchResp | array | Object |
-| >orderId |string |t(:row_comment_order_id) |
-| >orderLinkId |string |t(:row_comment_orderLinkId)  |
-| >category |string |t(:row_comment_category_v3) |
-| >createdAt |string |t(:row_comment_created_at)  |
-| >code |integer |t(:row_comment_code_response_v3)  |
-
-
-
 ### t(:contract_getOrder)
 > t(:codequote_curlExample)
 
 ```console
-curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/v1/trade/orders?symbol=DOGEUSDT&orderStatus=Filled' \
+curl --location --request GET 'https://api.mufex.finance/private/v1/trade/orders?symbol=BTCUSDT&orderStatus=Filled' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: 61df2c2de39cfce40fe334e503de4a61e26a95aebec690b9b482e4feb31cb088' \
 --header 'MF-ACCESS-API-KEY: {api key}' \
@@ -227,7 +111,7 @@ curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/
     "data":  {
         "list": [
             {
-                "symbol": "XRPUSDT",
+                "symbol": "BTCUSDT",
                 "side": "Buy",
                 "orderType": "Market",
                 "price": "0.3431",
@@ -310,6 +194,7 @@ GET
 |list> stopLoss |string |t(:row_comment_stop_loss)  |
 |list> tpTriggerBy |string |t(:contract_comment_tpTriggerBy) |
 |list> slTriggerBy |string |t(:contract_comment_slTriggerBy) |
+|list> triggerBy |string |The price type of trigger price |
 |list> triggerPrice |string |t(:contract_comment_getOrderTriggerPrice) |
 |list> positionIdx |integer |t(:row_comment_position_idx) |
 |nextPageCursor |string |t(:contract_comment_nextPageCursor) |
@@ -319,7 +204,7 @@ GET
 > t(:codequote_curlExample)
 
 ```console
-curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/trade/cancel' \
+curl --location --request POST 'https://api.mufex.finance/private/v1/trade/cancel' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: c9f2c118e40040fc3a12c9400816a26e475ce2f7995248a3625d92be3454b9f1' \
 --header 'MF-ACCESS-API-KEY: {api key}' \
@@ -373,159 +258,12 @@ POST
 |orderId |string |t(:account_row_comment_orderId) |
 |orderLinkId |string |t(:misc_row_comment_orderLinkIdNotOrderId) |
 
-### t(:dv_batchCancelOrders)
-> t(:codequote_curlExample)
-
-```console
-curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/trade/batch-cancel-orders' \
---header 'MF-ACCESS-SIGN-TYPE: 2' \
---header 'MF-ACCESS-SIGN: f02a18137c25c40d64b2c474f575c01a62ba076124946d38619238e19c86a2f2' \
---header 'MF-ACCESS-API-KEY: XXXXXXXXXX' \
---header 'MF-ACCESS-TIMESTAMP: 1658884339826' \
---header 'MF-ACCESS-RECV-WINDOW: 5000' \
---header 'Content-Type: application/json' \
---data-raw '{
-  "cancels": [
-        {
-            "symbol": "BTCUSDT",
-            "orderId": "",
-            "orderLinkId": "test001"
-        },
-        {
-            "symbol": "BTCUSDT",
-            "orderId": "dc4e0e85-b510-47f1-a2bb-df02b544eafc",
-            "orderLinkId": ""
-        }
-    ]
-}'
-```
-
-```python--pybit
-
-```
-
-> t(:codequote_responseExample)
-
-```javascript
-{
-    "code":0,
-    "message":"OK",
-    "data":{
-        "batchResp":[
-            {
-                "orderId":"bc8005cf-6d88-448b-a05f-8a1a4e923435",
-                "orderLinkId":"delly062603",
-                "code":0,
-                "msg":""
-            },
-            {
-                "orderId":"dc4e0e85-b510-47f1-a2bb-df02b544eafc",
-                "orderLinkId":"delly062604",
-                "code":0,
-                "msg":""
-            }
-        ]
-    },
-    "ext_info":{},
-    "time":1687771998388
-}
-```
-
-t(:contract_batch_cancel_order_para)
-
-<aside class="notice">
-t(:account_aside_placeOrder_positionIdx)
-</aside>
-
-<p class="fake_header">t(:httprequest)</p>
-POST
-<code><span id=vpoCreate>/private/v1/trade/batch-cancel-orders</span></code>
-<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#vpoCreate"><img src="/images/copy_to_clipboard.png" height=zh5 width=15></img></button>
-
-<p class="fake_header">t(:requestparameters)</p>
-|t(:column_parameter)|t(:column_required)|t(:column_type)|t(:column_comments)|
-|:----- |:-------|:-----|----- |
-|cancels |<b>true</b> |array | Object   |
-|>symbol |<b>true</b> |string |t(:row_comment_symbol)   |
-|>orderId |false |string |t(:account_row_comment_orderId) |
-|>orderLinkId |false |string |t(:misc_row_comment_orderLinkIdNotOrderId) |
-
-
-
-<p class="fake_header">t(:responseparameters)</p>
-|t(:column_parameter)|t(:column_type)|t(:column_comments)|
-|:----- |:-----|----- |
-| data | Object | |
-| batchResp | array | Object |
-| >orderId |string |t(:row_comment_order_id) |
-| >orderLinkId |string |t(:row_comment_orderLinkId)  |
-| >code |integer |t(:row_comment_code_response_v3)  |
-
-
-### t(:contract_cancelAllOrders)
-> t(:codequote_curlExample)
-
-```console
-curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/trade/cancel-all' \
---header 'MF-ACCESS-SIGN-TYPE: 2' \
---header 'MF-ACCESS-SIGN: ee5af51734abed24925af73badbce8ef06f0dd34a3b35fcd5a829c892f565aed' \
---header 'MF-ACCESS-API-KEY: {api key}' \
---header 'MF-ACCESS-TIMESTAMP: 1658901358435' \
---header 'MF-ACCESS-RECV-WINDOW: 5000' \
---header 'Content-Type: application/json' \
---data-raw '{
-  "symbol": "XRPUSDT"
-}'
-```
-
-```python--pybit
-
-```
-
-> t(:codequote_responseExample)
-
-```javascript
-{
-    "code": 0,
-        "message": "OK",
-        "data":  {
-        "list": [
-            {
-                "orderId": "4030430d-1dba-4134-ac77-3d81c14aaa00",
-                "orderLinkId": "x001"
-            }
-        ]
-    },
-    "ext_info": {},
-    "time": 1658901359225
-}
-```
-
-t(:contract_para_cancelAllOrders)
-
-<p class="fake_header">t(:httprequest)</p>
-POST
-<code><span id=vpoCancelAll>/private/v1/trade/cancel-all</span></code>
-<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#vpoCancelAll"><img src="/images/copy_to_clipboard.png" height=15 width=15></img></button>
-
-<p class="fake_header">t(:requestparameters)</p>
-|t(:column_parameter)|t(:column_required)|t(:column_type)|t(:column_comments)|
-|:----- |:-------|:-----|----- |
-|symbol |false |string | t(:row_comment_symbol) |
-|settleCoin |false |string | t(:contract_cancelAll_settleCoin) |
-
-<p class="fake_header">t(:responseparameters)</p>
-|t(:column_parameter)|t(:column_type)|t(:column_comments)|
-|:----- |:-----|----- |
-|list> orderId |string |t(:account_row_comment_orderId) |
-|list> orderLinkId |false |string |t(:misc_row_comment_orderLinkIdNotOrderId) |
-
 
 ### t(:contract_replaceOrder)
 > t(:codequote_curlExample)
 
 ```console
-curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/trade/replace' \
+curl --location --request POST 'https://api.mufex.finance/private/v1/trade/replace' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: 78c358649d431bb30dfc35e5a3cd99128b5f23faf04c15765b3d894f2930e8f5' \
 --header 'MF-ACCESS-API-KEY: {api key}' \
@@ -537,9 +275,7 @@ curl --location --request POST 'https://api-testnet.betterbitfinance.com/private
     "orderId":"db8b74b3-72d3-4264-bf3f-52d39b41956e",
     "orderLinkId": null,
     "qty": "15",
-    "price": "0.4",
-    "takeProfit": "0.2",
-    "stopLoss": "1.6"
+    "price": "0.4"
 }'
 ```
 
@@ -581,12 +317,6 @@ POST
 |symbol |<b>true</b> |string |t(:row_comment_symbol) |
 |qty |false |string |t(:row_comment_pRQty) |
 |price |false |string |t(:row_comment_pRPrice) |
-|takeProfit |false |string |t(:row_comemnt_replace_take_profit)  |
-|stopLoss |false |string |t(:row_comemnt_replace_stop_loss)  |
-|tpTriggerBy |false |string |t(:account_row_comment_tp_trigger_by) |
-|slTriggerBy |false |string |t(:account_row_comment_sl_trigger_by) |
-|triggerPrice |false |string |t(:row_comment_triggerPrice_replace_v3) |
-|triggerBy |false |string |t(:row_comment_triggerBy_v3) |
 
 <p class="fake_header">t(:responseparameters)</p>
 |t(:column_parameter)|t(:column_type)|t(:column_comments)|
@@ -599,7 +329,7 @@ POST
 > t(:codequote_curlExample)
 
 ```console
-curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/v1/trade/activity-orders?symbol=XRPUSDT' \
+curl --location --request GET 'https://api.mufex.finance/private/v1/trade/activity-orders?symbol=XRPUSDT' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: e3a1e4b88dfc2730c987fb3253dd3e09bc05cf68ae4d9d9d71a8235c44cb1f02' \
 --header 'MF-ACCESS-API-KEY: {api key}' \
@@ -669,7 +399,6 @@ GET
 |symbol |false |string |t(:contract_comment_realtimeOrderSymbol) |
 |orderId |false |string | t(:misc_row_comment_orderIdNotOrderLinkId)|
 |orderLinkId |false |string |t(:misc_row_comment_orderLinkIdNotOrderId) |
-|settleCoin |false |string | t(:contract_comment_positionSettleCoin)|
 |<a href="#order-filter-orderfilter">orderFilter</a> |false |string | t(:row_comment_orderFilter_v3)|
 |limit |false |number |t(:row_comment_limit) |
 |cursor |false |string |t(:row_comment_resp_cursor)   |
@@ -677,37 +406,37 @@ GET
 <p class="fake_header">t(:responseparameters)</p>
 |t(:column_parameter)|t(:column_type)|t(:column_comments)|
 |:----- |:-----|----- |
-|list> symbol |string |t(:row_comment_symbol)    |
-|list> orderId |string |t(:row_comment_order_id) |
-|list> side |string |t(:row_comment_side)  |
-|list> orderType |string |t(:row_comment_order_type)  |
-|list> triggerDirection |integer |t(:contract_comment_triggerDirection)  |
-|list> price |string |t(:row_comment_resp_price)  |
-|list> qty |string |t(:contract_comment_qty)  |
-|list> timeInForce |string |t(:row_comment_timeInForce)  |
-|list> orderStatus |string |t(:row_comment_orderStatus)  |
-|list> triggerPrice |string |t(:contract_comment_triggerPrice)  |
-|list> triggerBy |string |t(:row_comment_linear_triggerBy) |
-|list> tpTriggerBy |string |t(:account_row_comment_tp_trigger_by) |
-|list> slTriggerBy |string |t(:account_row_comment_sl_trigger_by) |
-|list> orderLinkId |string |t(:row_comment_orderLinkId)  |
-|list> createdTime |string |t(:row_comment_created_at)  |
-|list> updatedTime |string |t(:row_comment_updated_at)  |
-|list> takeProfit |string |t(:row_comment_take_profit)  |
-|list> stopLoss |string |t(:row_comment_stop_loss)  |
-|list> reduce_only |bool |t(:linear_resp_field_reduce_only)  |
-|list> cumExecQty |string |t(:linear_resp_field_cum_exec_qty)  |
-|list> cumExecValue |string |t(:linear_resp_field_cum_exec_value)  |
-|list> cumExecFee |string |t(:linear_resp_field_cum_exec_fee)  |
-|list> leavesQty |string |t(:row_comment_leaves_qty)  |
-|list> leavesValue |string |t(:row_comment_leaves_value)  |
+|> symbol |string |t(:row_comment_symbol)    |
+|> orderId |string |t(:row_comment_order_id) |
+|> side |string |t(:row_comment_side)  |
+|> orderType |string |t(:row_comment_order_type)  |
+|> triggerDirection |integer |t(:contract_comment_triggerDirection)  |
+|> price |string |t(:row_comment_resp_price)  |
+|> qty |string |t(:contract_comment_qty)  |
+|> timeInForce |string |t(:row_comment_timeInForce)  |
+|> orderStatus |string |t(:row_comment_orderStatus)  |
+|> triggerPrice |string |t(:contract_comment_triggerPrice)  |
+|> triggerBy |string |t(:row_comment_linear_triggerBy) |
+|> tpTriggerBy |string |t(:account_row_comment_tp_trigger_by) |
+|> slTriggerBy |string |t(:account_row_comment_sl_trigger_by) |
+|> orderLinkId |string |t(:row_comment_orderLinkId)  |
+|> createdTime |string |t(:row_comment_created_at)  |
+|> updatedTime |string |t(:row_comment_updated_at)  |
+|> takeProfit |string |t(:row_comment_take_profit)  |
+|> stopLoss |string |t(:row_comment_stop_loss)  |
+|> reduce_only |bool |t(:linear_resp_field_reduce_only)  |
+|> cumExecQty |string |t(:linear_resp_field_cum_exec_qty)  |
+|> cumExecValue |string |t(:linear_resp_field_cum_exec_value)  |
+|> cumExecFee |string |t(:linear_resp_field_cum_exec_fee)  |
+|> leavesQty |string |t(:row_comment_leaves_qty)  |
+|> leavesValue |string |t(:row_comment_leaves_value)  |
 |nextPageCursor |string |t(:row_comment_query_nextPageCursor_v3)  |
 
 ### t(:usertraderecords)
 > t(:codequote_curlExample)
 
 ```console
-curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/v1/trade/fills?symbol=XRPUSDT' \
+curl --location --request GET 'https://api.mufex.finance/private/v1/trade/fills?symbol=BTCUSDT' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: a7358fb068bf66570e7ecf063e39a6dbd11f1d5572ba79a63d5996221d864585' \
 --header 'MF-ACCESS-API-KEY: XXXXXXXXXXXX' \
@@ -728,46 +457,48 @@ curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/
         "data":  {
         "list": [
             {
-                "symbol": "BITUSDT",
-                "execFee": "0.001356",
-                "execId": "499e1a2a-c664-55db-bbf0-78ad31b7b033",
-                "execPrice": "0.452",
-                "execQty": "5.0",
-                "execType": "Trade",
-                "execValue": "2.26",
-                "feeRate": "0.0006",
-                "lastLiquidityInd": "RemovedLiquidity",
-                "leavesQty": "0.0",
-                "orderId": "1d40db82-b1f6-4340-9190-650eeddd440b",
+                "symbol": "BTCUSDT",
+                "execFee": "0.00293025",
+                "execId": "16bff97b-0e04-4303-82b5-1b1134f15695",
+                "execPrice": "0.00",
+                "execQty": "0.001",
+                "execType": "Funding",
+                "execValue": "29.30248",
+                "feeRate": "0.0001",
+                "lastLiquidityInd": "UNKNOWN",
+                "leavesQty": "0.000",
+                "orderId": "1690588800-BTCUSDT-139688-Buy",
                 "orderLinkId": "",
-                "orderPrice": "0.430",
-                "orderQty": "5.0",
-                "orderType": "Market",
+                "orderPrice": "0.00",
+                "orderQty": "0.000",
+                "orderType": "UNKNOWN",
                 "stopOrderType": "UNKNOWN",
-                "side": "Sell",
-                "execTime": "1657269236943",
-                "closedSize": "5.0"
+                "side": "Buy",
+                "execTime": "1690588800000",
+                "closedSize": "0.000",
+                "crossSeq": "41019846"
             },
             {
-                "symbol": "BITUSDT",
-                "execFee": "0.004068",
-                "execId": "ed090e6a-afc0-5cb5-b51d-039592a44ec5",
-                "execPrice": "0.452",
-                "execQty": "15.0",
-                "execType": "Trade",
-                "execValue": "6.78",
-                "feeRate": "0.0006",
-                "lastLiquidityInd": "RemovedLiquidity",
-                "leavesQty": "0.0",
-                "orderId": "d34d40a1-2475-4552-9e54-347a27282ec0",
+                "symbol": "BTCUSDT",
+                "execFee": "0.00293787",
+                "execId": "d9439111-d9ee-4cf3-90e1-85e8f148b6a3",
+                "execPrice": "0.00",
+                "execQty": "0.001",
+                "execType": "Funding",
+                "execValue": "29.3787",
+                "feeRate": "0.0001",
+                "lastLiquidityInd": "UNKNOWN",
+                "leavesQty": "0.000",
+                "orderId": "1690560000-BTCUSDT-139688-Buy",
                 "orderLinkId": "",
-                "orderPrice": "0.429",
-                "orderQty": "15.0",
-                "orderType": "Market",
+                "orderPrice": "0.00",
+                "orderQty": "0.000",
+                "orderType": "UNKNOWN",
                 "stopOrderType": "UNKNOWN",
-                "side": "Sell",
-                "execTime": "1657268340170",
-                "closedSize": "15.0"
+                "side": "Buy",
+                "execTime": "1690560000000",
+                "closedSize": "0.000",
+                "crossSeq": "40849025"
             }
         ],
             "nextPageCursor": ""
@@ -831,7 +562,7 @@ GET
 > t(:codequote_curlExample)
 
 ```console
-curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/v1/account/positions?symbol=XRPUSDT' \
+curl --location --request GET 'https://api.mufex.finance/private/v1/account/positions?symbol=ETHUSDT' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: b0818cb2f91264ffd712db0c8f8648041b2c5eed643200aa63e4141c7aa12500' \
 --header 'MF-ACCESS-API-KEY: {api key}' \
@@ -944,65 +675,12 @@ GET
 |updatedTime |string |t(:row_comment_updated_at)  |
 |nextPageCursor | string | t(:contract_comment_nextPageCursor) |
 
-### t(:setautoaddmargin)
-> t(:codequote_curlExample)
-
-```console
-curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/account/set-auto-add-margin' \
---header 'MF-ACCESS-SIGN-TYPE: 2' \
---header 'MF-ACCESS-SIGN: 504e85b59fb0ee7c2c70d7cf2d82fc717258d67a3c3cdf631b4c4c68b43843b3' \
---header 'MF-ACCESS-API-KEY: {api key}' \
---header 'MF-ACCESS-TIMESTAMP: 1658908220837' \
---header 'MF-ACCESS-RECV-WINDOW: 5000' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "symbol": "XRPUSDT",
-    "side": "Sell",
-    "autoAddMargin": 1,
-    "positionIdx": 2
-}'
-```
-
-```python--pybit
-
-```
-
-> t(:codequote_responseExample)
-
-```javascript
-{
-    "code": 0,
-        "message": "OK",
-        "data":  {},
-    "ext_info": {},
-    "time": 1658908221642
-}
-```
-
-t(:linear_account_para_setAutoAddMargin)
-
-<p class="fake_header">t(:httprequest)</p>
-POST
-<code><span id=pSetAutoAddMargin>/private/v1/account/set-auto-add-margin</span></code>
-<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#pSetAutoAddMargin"><img src="/images/copy_to_clipboard.png" height=15 width=15></img></button>
-
-<p class="fake_header">t(:requestparameters)</p>
-|t(:column_parameter)|t(:column_required)|t(:column_type)|t(:column_comments)|
-|:----- |:-------|:-----|----- |
-|t(:row_parameter_symbol) |<b>true</b> |string |t(:row_comment_symbol)    |
-|t(:row_parameter_side) |<b>true</b> |string |t(:row_comment_side)    |
-|autoAddMargin |<b>true</b> |integer |t(:contract_comment_autoAddMargin)  |
-|positionIdx |false |integer |t(:row_comment_position_idx)  |
-
-<p class="fake_header">t(:responseparameters)</p>
-|t(:column_parameter)|t(:column_type)|t(:column_comments)|
-|:----- |:-----|----- |
 
 ### t(:dv_marginswitch)
 > t(:codequote_curlExample)
 
 ```console
-curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/account/set-isolated' \
+curl --location --request POST 'https://api.mufex.finance/private/v1/account/set-isolated' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: f178bda84f8a3fa971338b7424cce2204824c0114f196650b2516962371e3902' \
 --header 'MF-ACCESS-API-KEY: XXXXXXXXXX' \
@@ -1056,7 +734,7 @@ POST
 > t(:codequote_curlExample)
 
 ```console
-curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/account/set-position-mode' \
+curl --location --request POST 'https://api.mufex.finance/private/v1/account/set-position-mode' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: b07d38c9719187a8a9a0cee739f465edd05a1c7a30618e02a1f1dc9fc3639d97' \
 --header 'MF-ACCESS-API-KEY: XXXXXXXXXX' \
@@ -1135,15 +813,6 @@ t(:position_ability_para)
   <tr>
     <td>t(:product_1)</td><td>t(:ability_1)</td><td>t(:ability_2)</td>
   </tr>
-  <tr>
-    <td>t(:product_2)</td><td>t(:ability_2)</td><td>t(:ability_2)</td>
-  </tr>
-  <tr>
-    <td>t(:product_3)</td><td>t(:ability_2)</td><td>t(:ability_3)</td>
-  </tr>
-  <tr>
-    <td>t(:product_4)</td><td>t(:ability_1)</td><td>t(:ability_3)</td>
-  </tr>
 </table>
 
 <p class="fake_header">t(:httprequest)</p>
@@ -1163,190 +832,12 @@ POST
 |:----- |:-----|----- |
 
 
-### t(:dv_switchmode)
-> t(:codequote_curlExample)
-
-```console
-curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/account/switch-tpsl-mode' \
---header 'MF-ACCESS-SIGN-TYPE: 2' \
---header 'MF-ACCESS-SIGN: 018fd4ae872bdb5a90e849dc324eeab4157a047de05250bb74efb7c3434d0597' \
---header 'MF-ACCESS-API-KEY: XXXXXXXXXX' \
---header 'MF-ACCESS-TIMESTAMP: 1658909568597' \
---header 'MF-ACCESS-RECV-WINDOW: 5000' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "symbol":"XRPUSDT",
-    "tpSlMode":"Partial"
-}'
-```
-
-```python--pybit
-
-```
-
-> t(:codequote_responseExample)
-
-```javascript
-{
-    "code": 0,
-        "message": "OK",
-        "data":  {},
-    "ext_info": {},
-    "time": 1658909569340
-}
-```
-
-t(:linear_private_switchmode)
-
-<aside class="notice">
-t(:switchmode_aside)
-</aside>
-
-<p class="fake_header">t(:httprequest)</p>
-POST
-<code><span id=pltcList>/private/v1/account/switch-tpsl-mode</span></code>
-<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#pltcList"><img src="/images/copy_to_clipboard.png" height=15 width=15></img></button>
-
-<p class="fake_header">t(:requestparameters)</p>
-|t(:column_parameter)|t(:column_required)|t(:column_type)|t(:column_comments)|
-|:----- |:-------|:-----|----- |
-|t(:row_parameter_symbol) |<b>true</b> |string |t(:row_comment_symbol) |
-|tpSlMode |<b>true</b> |string |t(:contract_comment_tpSlMode)  |
-
-<p class="fake_header">t(:responseparameters)</p>
-|t(:column_parameter)|t(:column_type)|t(:column_comments)|
-|:----- |:-----|----- |
-
-
-### t(:setleverage)
-> t(:codequote_curlExample)
-
-```console
-curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/account/set-leverage' \
---header 'MF-ACCESS-SIGN-TYPE: 2' \
---header 'MF-ACCESS-SIGN: 6d17e6aa3a7c362b05071c737dc0904bd731fea1d04e9b46ee188749d17a7ce6' \
---header 'MF-ACCESS-API-KEY: {api key}' \
---header 'MF-ACCESS-TIMESTAMP: 1658910157065' \
---header 'MF-ACCESS-RECV-WINDOW: 5000' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "symbol":"XRPUSDT",
-    "buyLeverage":"5",
-    "sellLeverage":"10"
-}'
-```
-
-```python--pybit
-
-```
-
-> t(:codequote_responseExample)
-
-```javascript
-{
-    "code": 0,
-        "message": "OK",
-        "data":  {},
-    "ext_info": {},
-    "time": 1658910157755
-}
-```
-
-t(:linear_account_para_setLeverage)
-
-<p class="fake_header">t(:httprequest)</p>
-POST
-<code><span id=pSetLeverage>/private/v1/account/set-leverage</span></code>
-<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#pSetLeverage"><img src="/images/copy_to_clipboard.png" height=15 width=15></img></button>
-
-<p class="fake_header">t(:requestparameters)</p>
-|t(:column_parameter)|t(:column_required)|t(:column_type)|t(:column_comments)|
-|:----- |:-------|:-----|----- |
-|t(:row_parameter_symbol) |<b>true</b> |string |t(:row_comment_symbol)    |
-|buyLeverage |<b>true</b> |string |t(:linear_row_comment_leverage)  |
-|sellLeverage |<b>true</b> |string |t(:linear_row_comment_leverage)  |
-
-<p class="fake_header">t(:responseparameters)</p>
-|t(:column_parameter)|t(:column_type)|t(:column_comments)|
-|:----- |:-----|----- |
-
-### t(:tradingstop)
-> t(:codequote_curlExample)
-
-```console
-curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/account/trading-stop' \
---header 'MF-ACCESS-SIGN-TYPE: 2' \
---header 'MF-ACCESS-SIGN: 4c0406d6e31e30f5c37295627abefa980c248bc25170fa7158e47d8a46425d74' \
---header 'MF-ACCESS-API-KEY: {api key}' \
---header 'MF-ACCESS-TIMESTAMP: 1658910815488' \
---header 'MF-ACCESS-RECV-WINDOW: 5000' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "symbol": "XRPUSDT",
-    "takeProfit": "0.1",
-    "stopLoss": "0.7",
-    "activePrice": null,
-    "trailingStop": null,
-    "tpTriggerBy": "LastPrice",
-    "slTriggerBy": "MarkPrice",
-    "slSize": null,
-    "tpSize": null,
-    "positionIdx": 2
-}'
-```
-
-```python--pybit
-
-```
-
-> t(:codequote_responseExample)
-
-```javascript
-{
-    "code": 0,
-        "message": "OK",
-        "data":  {},
-    "ext_info": {},
-    "time": 1658910815936
-}
-```
-
-t(:account_para_tradingStop_linear)
-
-<aside class="notice">
-t(:account_aside_tradingStop)
-</aside>
-
-<p class="fake_header">t(:httprequest)</p>
-POST
-<code><span id=pSetTpSlTs>/private/v1/account/trading-stop</span></code>
-<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#pSetTpSlTs"><img src="/images/copy_to_clipboard.png" height=15 width=15></img></button>
-
-<p class="fake_header">t(:requestparameters)</p>
-|t(:column_parameter)|t(:column_required)|t(:column_type)|t(:column_comments)|
-|:----- |:-------|:-----|----- |
-|t(:row_parameter_symbol) |<b>true</b> |string |t(:row_comment_symbol) |
-|takeProfit |false |string |t(:account_row_comment_takeProfit) |
-|stopLoss |false |string |t(:account_row_comment_stopLoss) |
-|activePrice |false |string |t(:account_row_comment_activePrice_v3) |
-|trailingStop |false |string |t(:account_row_comment_trailingStop) |
-|tpTriggerBy | false | string | t(:account_row_comment_tp_trigger_by)
-|slTriggerBy | false | string | t(:account_row_comment_sl_trigger_by)
-|slSize |false |string |t(:row_comment_sl_size) |
-|tpSize |false |string |t(:row_comment_tp_size) |
-|positionIdx |false |integer |t(:row_comment_position_idx)  |
-
-<p class="fake_header">t(:responseparameters)</p>
-|t(:column_parameter)|t(:column_type)|t(:column_comments)|
-|:----- |:-----|----- |
-
-
 ### t(:setrisklimit)
 
 > t(:codequote_curlExample)
 
 ```console
-curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/account/set-position-risk' \
+curl --location --request POST 'https://api.mufex.finance/private/v1/account/set-position-risk' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: 82904cc14df4bb278722d4212bdb76dc7e1ec7a77e0e761d2e09b3361059a25c' \
 --header 'MF-ACCESS-API-KEY: XXXXXXXXXX' \
@@ -1389,7 +880,7 @@ POST
 |t(:column_parameter)|t(:column_required)|t(:column_type)|t(:column_comments)|
 |:----- |:-------|:-----|----- |
 |symbol |<b>true</b> |string |t(:row_comment_symbol) |
-|riskId |<b>true</b> |integer |t(:row_comment_riskId) |
+|riskId |<b>true</b> |integer |Risk ID |
 |positionIdx |false |integer |t(:row_comment_position_idx)  |
 
 <p class="fake_header">t(:responseparameters)</p>
@@ -1402,7 +893,7 @@ POST
 > t(:codequote_curlExample)
 
 ```console
-curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/v1/account/closed-pnl?symbol=XRPUSDT&startTime=1658764800000&endTime=1658937600000' \
+curl --location --request GET 'https://api.mufex.finance/private/v1/account/closed-pnl?symbol=XRPUSDT&startTime=1658764800000&endTime=1658937600000' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: eb16a696924a92a3a47d769caf44d7373eca9ed6a644384ff6e8cd729ee9f7b1' \
 --header 'MF-ACCESS-API-KEY: XXXXXXXXXXXX' \
@@ -1494,7 +985,7 @@ GET
 > t(:codequote_curlExample)
 
 ```console
-curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/v1/account/balance?coin=BTC' \
+curl --location --request GET 'https://api.mufex.finance/private/v1/account/balance?coin=BTC' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: f8f516355e0c59b28d429b13b4ea6a350d02f9c96e2f9fd1be235863e8c1834c' \
 --header 'MF-ACCESS-API-KEY: {api key}' \
@@ -1537,9 +1028,6 @@ curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/
 
 t(:wallet_para_walletBalance)
 
-<aside class="notice">
-t(:wallet_aside_walletBalance)
-</aside>
 
 <p class="fake_header">t(:httprequest)</p>
 GET
@@ -1574,7 +1062,7 @@ t(:contract_tradingFeeRate_para)
 > t(:codequote_curlExample)
 
 ```console
-curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/v1/account/trade-fee?symbol=ETHUSDT' \
+curl --location --request GET 'https://api.mufex.finance/private/v1/account/trade-fee?symbol=ETHUSDT' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: e65aad8dd5459774ad21aaca77420947332fdbfe433bef959c6507ce2379999f' \
 --header 'MF-ACCESS-API-KEY: XXXXXXXXXXXX' \
@@ -1596,8 +1084,8 @@ curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/
         "list": [
             {
                 "symbol": "ETHUSDT",
-                "takerFeeRate": "0.0006",
-                "makerFeeRate": "0.0001"
+                "takerFeeRate": "0.0009",
+                "makerFeeRate": "0.0003"
             }
         ]
     },
@@ -1628,7 +1116,7 @@ GET
 > t(:codequote_curlExample)
 
 ```console
-curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/v1/account/bills?coin=USDT&walletFundType=AccountTransfer&limit=1' \
+curl --location --request GET 'https://api.mufex.finance/private/v1/account/bills?coin=USDT&walletFundType=RealisedPNL&limit=1' \
 --header 'MF-ACCESS-SIGN-TYPE: 2' \
 --header 'MF-ACCESS-SIGN: 591a44021fff458a6dfbba517755e1105066864d94c38a0ce84619ae51cf2313' \
 --header 'MF-ACCESS-API-KEY: {api key}' \
@@ -1650,7 +1138,7 @@ curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/
         "list": [
             {
                 "coin": "USDT",
-                "type": "AccountTransfer",
+                "type": "RealisedPNL",
                 "amount": "500",
                 "walletBalance": "2731.63599033",
                 "execTime": "1658215763731"
@@ -1665,17 +1153,6 @@ curl --location --request GET 'https://api-testnet.betterbitfinance.com/private/
 
 t(:wallet_para_walletRecords)
 
-<aside class="notice">
-t(:wallet_aside_walletRecords)
-</aside>
-
-<aside class="notice">
-t(:wallet_aside_walletRecords1)
-</aside>
-
-<aside class="warning">
-t(:wallet_aside_walletRecords2)
-</aside>
 
 <p class="fake_header">t(:httprequest)</p>
 GET

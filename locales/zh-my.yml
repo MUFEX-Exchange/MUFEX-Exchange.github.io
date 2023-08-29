@@ -765,7 +765,7 @@ zh-my:
     <ul>
     <p>
       <li>測試網:<br/>
-        <span id="testnet">https://api-testnet.mufex.com</span>
+        <span id="testnet">https://api.mufex.finance</span>
         <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#testnet"><img src="/images/copy_to_clipboard.png" height=15 width=15></img></button>
       </li>
     </p>
@@ -784,7 +784,7 @@ zh-my:
     <ul>
     <p>
       <li>測試網:<br/>
-        <span id="testnet">https://api-testnet.mufex.com</span>
+        <span id="testnet">https://api.mufex.finance</span>
         <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#testnet"><img src="/images/copy_to_clipboard.png" height=15 width=15></img></button>
       </li>
     </p>
@@ -802,7 +802,7 @@ zh-my:
     Domains:
     <ul>
       <li>
-        <span id=testnet><a href="https://api-testnet.mufex.com">https://api-testnet.mufex.com</a></span>
+        <span id=testnet><a href="https://api.mufex.finance">https://api.mufex.finance</a></span>
         <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#testnet"><img src="/images/copy_to_clipboard.png" height=15 width=15></img></button>
       </li>
       <li>
@@ -1436,7 +1436,7 @@ zh-my:
   rate_para_raise: |
     <ul>
     <li>請先閱讀<a href="#t-raisemylimit">如何滿足提高頻率限製條件</a></li>
-    <li>請發送郵件到 <a href="mailto:api@mufex.com">api@mufex.com</a>，我們會在 1-4 個工作日內答復。郵件內容必須包含以下內容：</li>
+    <li>請發送郵件到 <a href="mailto:github@mufex.finance">github@mufex.finance</a>，我們會在 1-4 個工作日內答復。郵件內容必須包含以下內容：</li>
     <ol>
       <li>您的姓名和公司名稱和簡介</li>
       <li>您的bybit 賬號uid或註冊郵箱手機號,以及您要申請提頻的交易對</li>
@@ -1447,7 +1447,7 @@ zh-my:
     </ul>
   rate_para_raise_v3: |
     <ul>
-    請發送郵件到 <a href="mailto:api@mufex.com">api@mufex.com</a>，我們會在 1-4 個工作日內答復。郵件內容必須包含以下內容：
+    請發送郵件到 <a href="mailto:github@mufex.finance">github@mufex.finance</a>，我們會在 1-4 個工作日內答復。郵件內容必須包含以下內容：
     <ol>
       <li>您的姓名和公司名稱和簡介</li>
       <li>您的bybit 賬號uid或註冊郵箱手機號,以及您要申請提頻的交易對</li>
@@ -2848,7 +2848,7 @@ zh-my:
   example_r9_d1: <b>變更 3</b>
   example_r9_d3: ASXUSDT 設置為單向持倉模式
   example_r10_d1: AXSUSDT為單向持倉模式，其餘交易對不做任何變更（繼承coin規則）
-  example_r11_d1: 新上線交易對 BITUSDT
+  example_r11_d1: 新上線交易對 BTCUSDT
   example_r12_d1: 新上線的BITUSDT為雙向持倉 (繼承coin規則)
   row_comment_positionmode: 倉位模式<span>:</span> 0 - 單倉模式  3 - 雙倉模式
   futures_row_comment_leverage: <code>杠桿大於0，小於風險限額對應的杠桿</code>

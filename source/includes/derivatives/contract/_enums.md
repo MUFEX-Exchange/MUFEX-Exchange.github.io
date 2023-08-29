@@ -7,47 +7,42 @@ t(:ENUMs_para)
 
 ## Category(`category`)
 * `linear` t(:dv3_category_linear)
-* `inverse` t(:dv3_category_inverse)
-* `option` t(:dv3_category_option)
 
 ## Symbol (`symbol`)
 * `BTCUSDT`
-* `ETHUSD`
-* `BTCPERP`
-* `BTC-30DEC22-25000-P`
-* `BTCUSDU22`
 * `ETHUSDT`
-* `BTCUSD`
+* `BNBUSDT`
+* `ARBUSDT`
+* `SOLUSDT`
+* `BCHUSDT`
+* `COMPUSDT`
+* `MKRUSDT`
+* `LTCUSDT`
 * `XRPUSDT`
-* `DOTUSD`
+* `MATICUSDT`
+* `SUIUSDT`
+* `OPUSDT`
+* `WLDUSDT`
+
+
 
 t(:dv_enum_comment_getSymbol)
 
 ## Currency (`currency`/`coin`)
-* `BTC`
-* `ETH`
-* `EOS`
-* `XRP`
-* `DOT`
 * `USDT`
 
 ## Contract Type(`contractType`)
-* `InversePerpetual`
 * `LinearPerpetual`
-* `InverseFutures`
+
 
 ## Contract Status(`status`)
 * `Pending` t(:waiting_online)
 * `Trading` t(:online)
-* `Settling` t(:delivering)
 * `Closed` t(:offline)
 
 ## Account type (`from_account_type`/`to_account_type`)
 * `CONTRACT`  t(:accountType_contract)
-* `SPOT`      t(:accountType_spot)
-* `INVESTMENT` t(:accountType_investment)
-* `OPTION` t(:accountType_option)
-* `UNIFIED` t(:accountType_unified)
+
 
 ## Wallet fund type (`walletFundType` / `type`)
 * `Deposit` t(:deposit)
@@ -55,25 +50,8 @@ t(:dv_enum_comment_getSymbol)
 * `RealisedPNL` t(:realisedpnl)
 * `Commission` t(:commission)
 * `Refund` t(:refund)
-* `Prize` t(:prize)
-* `ExchangeOrderWithdraw` t(:exchangeOrderWithdraw)
-* `ExchangeOrderDeposit` t(:exchangeOrderDeposit)
-* `ReturnServiceCash` t(:returnServiceCash)
-* `Insurance` t(:insurance)
-* `SubMember` t(:subMember)
-* `Coupon` t(:coupon)
-* `AccountTransfer` t(:accountTransfer)
-* `CashBack` t(:cashBack)
 
 
-## Withdraw status (`status`)
-* `ToBeConfirmed` t(:toBeConfirmed)
-* `UnderReview` t(:underReview)
-* `Pending` t(:pending)
-* `Success` t(:success)
-* `CancelByUser` t(:cancelByUser)
-* `Reject` t(:reject)
-* `Expire` t(:expire)
 
 
 ## Order type (`orderType`)
@@ -148,7 +126,6 @@ Only for conditional orders:
 * `AdlTrade` t(:exec_adlTrade)
 * `Funding` t(:exec_funding)
 * `BustTrade` t(:exec_bustTrade)
-* `Settle`
 
 ## Liquidity type (`lastLiquidityInd`)
 * `AddedLiquidity` t(:addedLiquidity)

@@ -10,251 +10,44 @@ HTTP Code | t(:errorcode_meaning)
 404 | t(:http_404)
 
 
-## 10001
-t(:v3_err_10001)
 
-## 10002
-t(:v3_err_10002)
+|Code   |Description|
+|:----- |:----------|
+| 26200001 |Server Timeout|
+| 26200002 |Invalid request, please check your timestamp and recv_window param|
+| 26200003 |Invalid api_key|
+| 20011005 |the apikey is not exist|
+| 26200004 |Error sign|
+| 26200005 |Permission denied|
+| 26200006 |Too many visits|
+| 26200008 |User had been banned|
+| 26200010 |unmatched IP|
+| 26200016 |Server Error|
+| 26200018 |Out of frequency limit of IP|
+| 26200014 |Request is duplicate|
+| 14110001 |internal Server error|
+| 14120001 |Order not exists|
+| 14120002 |qty need greater than zero'|
+| 14120003 |coin is not in the range of selected|
+| 14120004 |Request idempotent|
+| 14120005 |params error|
+| 14120006 |Origin header invalid|
+| 14120007 |Permission denied|
+| 14120008 |User had been banned|
+| 14120009 |order_link_id not unique|
+| 14120010 |orderid duplication|
+| 14120011 |The number of contracts exceeds maximum limit allowed|
+| 14120012 |The number of contracts exceeds maximum limit allowed: too large|
+| 14120013 |Order price is out of permissible range|
+| 14120014 | no last_price|
+| 14120015 |Order price is out of permissible range|
+| 14120016 |order_type duplication|
+| 14120017 |no position|
+| 14120018 |Insufficient wallet balance|
+| 14120019 |Operation not allowed as position is undergoing liquidation|
+| 14120020 |Operation not allowed as position is undergoing ADL|
+| 14120021 |position invalid status |
+| 14120022 |Invalid exit order: qty != size|
 
-## 10003
-t(:v3_err_10003)
 
-## 10004
-t(:v3_err_10004)
 
-## 10005
-t(:v3_err_10005)
-
-## 10006
-t(:v3_err_10006)
-
-## 10008
-t(:v3_err_10008)
-
-## 10009
-t(:v3_err_10009)
-
-## 10000
-t(:err_10000)
-
-## 10010
-t(:v3_err_10010)
-
-## 10016
-t(:v3_err_10016)
-
-## 10018
-t(:v3_err_10018)
-
-## 10027
-t(:v3_err_10027)
-
-## 10014
-t(:v3_err_10014)
-
-## 140001
-t(:v3_err_110001)
-
-## 140003
-t(:v3_err_110003)
-
-## 140004
-t(:v3_err_110004)
-
-## 140005
-t(:v3_err_110005)
-
-## 140006
-t(:v3_err_110006)
-
-## 140007
-t(:v3_err_110007)
-
-## 140008
-t(:v3_err_110008)
-
-## 140009
-t(:v3_err_110009)
-
-## 140010
-t(:v3_err_110010)
-
-## 140011
-t(:v3_err_110011)
-
-## 140012
-t(:v3_err_110012)
-
-## 140013
-t(:v3_err_110013)
-
-## 140014
-t(:v3_err_110014)
-
-## 140015
-t(:v3_err_110015)
-
-## 140016
-t(:v3_err_110016)
-
-## 140017
-t(:v3_err_110017)
-
-## 140018
-t(:v3_err_110018)
-
-## 140019
-t(:v3_err_110019)
-
-## 140020
-t(:v3_err_110020)
-
-## 140021
-t(:v3_err_110021)
-
-## 140022
-t(:v3_err_110022)
-
-## 140023
-t(:v3_err_110023)
-
-## 140024
-t(:v3_err_110024)
-
-## 140025
-t(:v3_err_110025)
-
-## 140026
-t(:v3_err_110026)
-
-## 140027
-t(:v3_err_110027)
-
-## 140028
-t(:v3_err_110028)
-
-## 140029
-t(:v3_err_110029)
-
-## 140030
-t(:v3_err_110030)
-
-## 140031
-t(:v3_err_110031)
-
-## 140032
-t(:v3_err_110032)
-
-## 140033
-t(:v3_err_110033)
-
-## 140034
-t(:v3_err_110034)
-
-## 140035
-t(:v3_err_110035)
-
-## 140036
-t(:v3_err_110036)
-
-## 140037
-t(:v3_err_110037)
-
-## 140038
-t(:v3_err_110038)
-
-## 140039
-t(:v3_err_110039)
-
-## 140040
-t(:v3_err_110040)
-
-## 140041
-t(:v3_err_110041)
-
-## 140042
-t(:v3_err_110042)
-
-## 140043
-t(:v3_err_110043)
-
-## 140044
-t(:v3_err_110044)
-
-## 140045
-t(:v3_err_110045)
-
-## 140046
-t(:v3_err_110046)
-
-## 140047
-t(:v3_err_110047)
-
-## 140048
-t(:v3_err_110048)
-
-## 140049
-t(:v3_err_110049)
-
-## 140050
-t(:v3_err_110050)
-
-## 140051
-t(:v3_err_110051)
-
-## 140052
-t(:v3_err_110052)
-
-## 140053
-t(:v3_err_110053)
-
-## 140054
-t(:v3_err_110054)
-
-## 140055
-t(:v3_err_110055)
-
-## 140056
-t(:v3_err_110056)
-
-## 140057
-t(:v3_err_110057)
-
-## 140058
-t(:v3_err_110058)
-
-## 140059
-t(:v3_err_110059)
-
-## 140060
-t(:v3_err_110060)
-
-## 140061
-t(:v3_err_110061)
-
-## 140062
-t(:v3_err_110062)
-
-## 140063
-t(:v3_err_110063)
-
-## 140064
-t(:v3_err_110064)
-
-## 140065
-t(:v3_err_110065)
-
-## 140066
-t(:v3_err_110066)
-
-## 140067
-t(:v3_err_110067)
-
-## 140068
-t(:v3_err_110068)
-
-## 140069
-t(:v3_err_110069)
-
-## 140070
-t(:v3_err_110070)
