@@ -948,20 +948,20 @@ en:
       </li>
     </ul>
   auth_para_privatepublic:
-    <p>All requests made to private endpoints must be authenticated. Requests made to public endpoints do not require additional authentication.</p>
+    <p>Private endpoints require authentication; public endpoints do not.</p>
 
   ## Parameters for Authenticated Endpoints
-  authenticationparameters: Parameters for Authenticated Endpoints
-  auth_para_cdn_request_id: To assist in diagnosing advanced network problems, you may consider adding <code>cdn-request-id</code> to your request headers. Its value should be unique for each request.
-  auth_para_params: |
-    The following parameters must be used for authentication:
-    <ul>
-      <li><b>api_key</b></li>
-      <li><b>timestamp</b> - UTC timestamp in <b>milliseconds</b></li>
-      <li><b>sign</b> - a signature derived from the request's parameters</li>
-    </ul>
-  auth_aside_timestamp:
-    <p>Please make sure that the timestamp parameter adheres to the following rule , server_time - recv_window <= timestamp < server_time + 1000; server_time stands for Mufex server time.</p>
+  authenticationparameters: Authenticated Endpoint Parameters
+auth_para_cdn_request_id: For advanced network diagnostics, include <code>cdn-request-id</code> in your request headers. Ensure each value is unique per request.
+auth_para_params: |
+Use these parameters for authentication:
+<ul>
+<li><b>api_key</b></li>
+<li><b>timestamp</b> - UTC timestamp in <b>milliseconds</b></li>
+<li><b>sign</b> - signature based on request parameters</li>
+</ul>
+auth_aside_timestamp:
+<p>Ensure the timestamp follows this rule: server_time - recv_window <= timestamp < server_time + 1000. Here, server_time refers to Mufex server time.</p>
 
   auth_para_recv: |
     <p>We also provide <code>recv_window</code> (unit in millisecond and default value is 5,000) to specify how long an HTTP request is valid. It is also used to prevent replay attacks.</p>
@@ -997,15 +997,15 @@ en:
   auth_para_construct1:
     <p>1. Concatenate all the public parameters in the <a href="https://en.wikipedia.org/wiki/Query_string">query string</a> format. The parameters must be ordered in <b>alphabetical</b> order. This will be used to generate the <code>sign</code>.</p>
   auth_para_dv3_construct1: |
-    <p>1. timestamp + api-key + [recv_window] + [queryString(order not needed) | jsonBodyString]</p>
+    <p>1. Construct: timestamp + api-key + [recv_window] + [queryString(order not needed) | jsonBodyString]</p>
   auth_para_construct2:
-    <p>2. Use the HMAC_SHA256 algorithm to sign the query string in step 1, and convert it to a hex string to obtain the sign parameter.</p>
+    <p>2. Sign the constructed string from step 1 using HMAC_SHA256, then convert to a hexadecimal string to get the 'sign' parameter.</p>
   auth_para_dv3_construct2:
     <p>2. Use the HMAC_SHA256 algorithm to sign the string in step 1, and convert it to a hex string to obtain the sign parameter.</p>
   auth_para_construct3:
     <p>3. Append the sign parameter to the end of the parameters string, and send the HTTP request. Note that the message format for GET and POST requests is different. Please refer to the examples.</p>
   auth_para_construct3_dv3:
-    <p>3. Append the sign parameter to request header, and send the HTTP request. Note that the message format for GET and POST requests is different. Please refer to the examples.</p>
+    <p>3. Add the 'sign' parameter to the request header and execute the HTTP request. Be aware that GET and POST requests have distinct message formats. See the provided examples for clarity.</p>
   auth_aside_signature:
     Example signature algorithms can be found <a href="https://github.com/mufex-exchange/api-usage-examples">here</a>.
   spot_auth_aside_signature:
@@ -2074,7 +2074,7 @@ en:
 
   # ENUMs Definitions
   enums: Enums Definitions
-  ENUMs_para: The following lists enumerator names for the request and response parameters of each endpoint.
+  ENUMs_para: Below are the enumerator names for each endpoint's request and response parameters.
   ## Wallet fund type (`wallet_fund_type` / `type`)
   deposit:      ""
   withdraw:     ""

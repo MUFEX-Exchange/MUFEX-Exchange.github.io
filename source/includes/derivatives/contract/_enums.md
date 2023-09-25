@@ -6,7 +6,7 @@ t(:ENUMs_para)
 * `Sell`
 
 ## Category(`category`)
-* `linear` t(:dv3_category_linear)
+* `Linear` t(:dv3_category_linear)
 
 ## Symbol (`symbol`)
 * `BTCUSDT`
@@ -40,11 +40,11 @@ t(:dv_enum_comment_getSymbol)
 * `Trading` t(:online)
 * `Closed` t(:offline)
 
-## Account type (`from_account_type`/`to_account_type`)
-* `CONTRACT`  t(:accountType_contract)
+## Account Type (`from_account_type`/`to_account_type`)
+* `Contract`  t(:accountType_contract)
 
 
-## Wallet fund type (`walletFundType` / `type`)
+## Wallet Fund Type (`walletFundType` / `type`)
 * `Deposit` t(:deposit)
 * `Withdraw` t(:withdraw)
 * `RealisedPNL` t(:realisedpnl)
@@ -54,7 +54,7 @@ t(:dv_enum_comment_getSymbol)
 
 
 
-## Order type (`orderType`)
+## Order Type (`orderType`)
 * `Limit` t(:limit)
 * `Market` t(:market)
 
@@ -64,13 +64,13 @@ t(:quantity)
 ## Price (`price`)
 t(:price)
 
-## Time in force (`timeInForce`)
+## Time in Force (`timeInForce`)
 * `GoodTillCancel` t(:goodTillCancel)
 * `ImmediateOrCancel` t(:immediateOrCancel)
 * `FillOrKill` t(:fillOrKill)
 * `PostOnly` t(:postOnly)
 
-## Trigger price type (`triggerBy`)
+## Trigger Price Type (`triggerBy`)
 * `LastPrice` t(:lastPrice)
 * `IndexPrice` t(:indexPrice)
 * `MarkPrice` t(:markPrice)
@@ -81,7 +81,7 @@ t(:para_order)
 * `desc` t(:desc)
 * `asc` t(:asc)
 
-## Order status (`orderStatus`/`stopOrderStatus`)
+## Order Status (`orderStatus`/`stopOrderStatus`)
 t(:para_orderStatusGet)
 
 * `Created` t(:created1)
@@ -92,7 +92,7 @@ t(:para_orderStatusGet)
 * `PendingCancel` t(:pendingCancel1)
 * `Cancelled` t(:cancelled1)
 
-Only for conditional orders:
+For Conditional Orders Only:
 
 * `Untriggered` t(:untriggered)
 * `Deactivated` t(:deactivated1)
@@ -100,7 +100,7 @@ Only for conditional orders:
 * `Active` t(:active)
 
 
-## Cancel type (`cancelType`)
+## Cancel Type (`cancelType`)
 * `CancelByUser` t(:cancelByUser)
 * `CancelByReduceOnly` t(:cancelByReduceOnly)
 * `CancelByPrepareLiq`,`CancelAllBeforeLiq` t(:cancelByPrepareLiq)
@@ -109,7 +109,7 @@ Only for conditional orders:
 * `CancelByTpSlTsClear` t(:cancelByTpSlTsClear)
 * `CancelByPzSideCh` t(:cancelByPzSideCh)
 
-## Create type (`createType`)
+## Create Type (`createType`)
 * `CreateByUser`
 * `CreateByClosing`
 * `CreateByAdminClosing`
@@ -121,18 +121,18 @@ Only for conditional orders:
 * `CreateByAdl_PassThrough` - Created by ADL
 * `CreateByTakeOver_PassThrough` - Created by liquidation takeover
 
-## Exec type (`execType`)
+## Exec Type (`execType`)
 * `Trade` t(:exec_trade)
 * `AdlTrade` t(:exec_adlTrade)
 * `Funding` t(:exec_funding)
 * `BustTrade` t(:exec_bustTrade)
 
-## Liquidity type (`lastLiquidityInd`)
+## Liquidity Type (`lastLiquidityInd`)
 * `AddedLiquidity` t(:addedLiquidity)
 * `RemovedLiquidity` t(:removedLiquidity)
 
 
-## Tick direction type (`tickDirection`)
+## Tick Direction Type (`tickDirection`)
 t(:tick_direction)
 
 * `PlusTick` t(:plusTick)
@@ -146,7 +146,7 @@ t(:tp_sl_mode)
 * `Full` t(:Full)
 * `Partial` t(:Partial)
 
-## Kline interval (`interval`)
+## Candlestick interval (`interval`)
 * `1` t(:interval_1)
 * `3` t(:interval_3)
 * `5` t(:interval_5)
@@ -164,7 +164,7 @@ t(:tp_sl_mode)
 ## Date (`startDate`/`endDate`)
 t(:date)
 
-## Stop order type (`stopOrderType`)
+## Stop Order Type (`stopOrderType`)
 * `TakeProfit`
 * `StopLoss`
 * `TrailingStop`
