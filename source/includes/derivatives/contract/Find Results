@@ -1,0 +1,46 @@
+Searching 56 files for "Enable 200 orders for orderbook API"
+
+~/Documents/GitHub/MUFEX-Exchange.github.io/locales/en.yml:
+ 5389    # orderbook
+ 5390    # reqParam
+ 5391:   dv_orderbookPara: Enable 200 orders for orderbook API
+ 5392    dv_orderbookLimit: 25 by default, 200 is max. If <b>option</b>, only 25 is available
+ 5393    # respParam
+
+1 match in 1 file
+
+
+Searching 56 files for "Enable 200 orders for orderbook API"
+
+~/Documents/GitHub/MUFEX-Exchange.github.io/locales/en.yml:
+ 5389    # orderbook
+ 5390    # reqParam
+ 5391:   dv_orderbookPara: Enable 200 orders for orderbook API
+ 5392    dv_orderbookLimit: 25 by default, 200 is max. If <b>option</b>, only 25 is available
+ 5393    # respParam
+
+1 match in 1 file
+
+
+Searching 56 files for "the apikey is not exist"
+
+~/Documents/GitHub/MUFEX-Exchange.github.io/source/includes/derivatives/contract/_errors.md:
+   17  | 26200002 |Invalid request, please check your timestamp and recv_window param|
+   18  | 26200003 |Invalid api_key|
+   19: | 20011005 |the apikey is not exist|
+   20  | 26200004 |Error sign|
+   21  | 26200005 |Permission denied|
+
+1 match in 1 file
+
+
+Searching 56 files for "Request is valid -- Your request is valid"
+
+~/Documents/GitHub/MUFEX-Exchange.github.io/locales/en.yml:
+ 2318    errors_intro: The Mufex API uses the following HTTP codes and error codes<span>:</span>
+ 2319  
+ 2320:   http_200: Successful Request - Your request has been processed successfully.
+ 2321    http_403: Access Denied - Excessive requests detected. Please adhere to the IP rate limit<a href="#t-ipratelimits">IP rate limit</a>
+ 2322    http_404: Not Found - The requested path or resource could not be located.
+
+1 match in 1 file
