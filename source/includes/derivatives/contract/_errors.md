@@ -14,40 +14,40 @@ HTTP Code | t(:errorcode_meaning)
 |Code   |Description|
 |:----- |:----------|
 | 26200001 |Server Timeout|
-| 26200002 |Invalid request, please check your timestamp and recv_window param|
+| 26200002 |Invalid Request: Check Timestamp and recv_window|
 | 26200003 |Invalid api_key|
-| 20011005 |the apikey is not exist|
-| 26200004 |Error sign|
-| 26200005 |Permission denied|
-| 26200006 |Too many visits|
-| 26200008 |User had been banned|
-| 26200010 |unmatched IP|
-| 26200016 |Server Error|
-| 26200018 |Out of frequency limit of IP|
-| 26200014 |Request is duplicate|
-| 14110001 |internal Server error|
-| 14120001 |Order not exists|
-| 14120002 |qty need greater than zero'|
-| 14120003 |coin is not in the range of selected|
-| 14120004 |Request idempotent|
-| 14120005 |params error|
-| 14120006 |Origin header invalid|
-| 14120007 |Permission denied|
-| 14120008 |User had been banned|
-| 14120009 |order_link_id not unique|
-| 14120010 |orderid duplication|
-| 14120011 |The number of contracts exceeds maximum limit allowed|
-| 14120012 |The number of contracts exceeds maximum limit allowed: too large|
-| 14120013 |Order price is out of permissible range|
-| 14120014 | no last_price|
-| 14120015 |Order price is out of permissible range|
-| 14120016 |order_type duplication|
-| 14120017 |no position|
-| 14120018 |Insufficient wallet balance|
-| 14120019 |Operation not allowed as position is undergoing liquidation|
-| 14120020 |Operation not allowed as position is undergoing ADL|
-| 14120021 |position invalid status |
-| 14120022 |Invalid exit order: qty != size|
+| 20011005 |API Key Not Found|
+| 26200004 |Invalid Signature|
+| 26200005 |Access Denied|
+| 26200006 |Request Rate Exceeded|
+| 26200008 |User Banned|
+| 26200010 |IP Mismatch|
+| 26200016 |Server Internal Error|
+| 26200018 |IP Request Frequency Exceeded|
+| 26200014 |Duplicate Request|
+| 14110001 |Server Internal Error|
+| 14120001 |Order Not Found|
+| 14120002 |Quantity Must Be Greater Than Zero|
+| 14120003 |Invalid Coin Selection|
+| 14120004 |Idempotent Request|
+| 14120005 |Parameter Error|
+| 14120006 |Invalid Origin Header|
+| 14120007 |Access Denied|
+| 14120008 |User Banned|
+| 14120009 |Non-unique order_link_id|
+| 14120010 |Duplicate Order ID|
+| 14120011 |Contract Count Exceeds Allowed Limit|
+| 14120012 |Contract Count Significantly Above Limit|
+| 14120013 |Order Price Out of Range|
+| 14120014 |Missing Last Price|
+| 14120015 |Order Price Out of Range|
+| 14120016 |Duplicate Order Type|
+| 14120017 |Position Not Found|
+| 14120018 |Insufficient Wallet Balance|
+| 14120019 |Action Denied: Position Undergoing Liquidation|
+| 14120020 |Action Denied: Position Undergoing ADL|
+| 14120021 |Invalid Position Status|
+| 14120022 |Exit Order Error: qty != size|
 
 
 
