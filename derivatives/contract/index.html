@@ -976,6 +976,12 @@ REST Base Endpoint:
 <p><p>Private endpoints require authentication; public endpoints do not.</p></p>
 <h2 id='t-authenticationparameters'>Authenticated Endpoint Parameters</h2>
 <p>For advanced network diagnostics, include <code>cdn-request-id</code> in your request headers. Ensure each value is unique per request.
+Use these parameters for authentication: |
+<ul>
+  <li><b>api_key</b></li>
+  <li><b>timestamp</b> - UTC timestamp in <b>milliseconds</b></li>
+  <li><b>sign</b> - signature based on request parameters</li>
+</ul>
 
 translation missing: en.auth_aside_timestamp</p>
 
