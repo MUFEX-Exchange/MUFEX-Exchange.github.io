@@ -983,7 +983,8 @@ Use these parameters for authentication: |
   <li><b>sign</b> - signature based on request parameters</li>
 </ul>
 
-{:"<p>Ensure the timestamp follows this rule"=>"server_time - recv_window <= timestamp < server_time + 1000. Here, server_time refers to Mufex server time.</p>"}</p>
+<p>Ensure the timestamp follows this rule: server_time - recv_window <= timestamp < server_time + 1000. Here, server_time refers to Mufex server time.</p>
+</p>
 
 <p><p>1. Construct: timestamp + api-key + [recv_window] + [queryString(order not needed) | jsonBodyString]</p>
 
