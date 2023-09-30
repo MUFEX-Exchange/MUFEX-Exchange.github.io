@@ -1745,7 +1745,7 @@ The response is in the snapshot format.
 <tr>
 <td style="text-align: left">id</td>
 <td style="text-align: left">number</td>
-<td><a href="#t-getrisklimit">Risk ID</a></td>
+<td><a >Risk ID</a></td>
 </tr>
 <tr>
 <td style="text-align: left">symbol</td>
@@ -2066,13 +2066,13 @@ The response is in the snapshot format.
 <td style="text-align: left">reduceOnly</td>
 <td style="text-align: left">false</td>
 <td style="text-align: left">bool</td>
-<td><a href="https://help.mufex.com/hc/en-us/articles/360039260574-What-is-a-reduce-only-order-"> What is a reduce-only order?</a> True means your position can only reduce in size if this order is triggered. When <code>reduce_only</code> is true, take profit/stop loss cannot be set</td>
+<td><a> What is a reduce-only order?</a> True means your position can only reduce in size if this order is triggered. When <code>reduce_only</code> is true, take profit/stop loss cannot be set</td>
 </tr>
 <tr>
 <td style="text-align: left">closeOnTrigger</td>
 <td style="text-align: left">false</td>
 <td style="text-align: left">bool</td>
-<td><a href="https://help.mufex.com/hc/en-us/articles/360039260534-What-is-a-close-on-trigger-Order-">  What is a close on trigger order?</a> For a closing order. It can only reduce your position, not increase it. If the account has insufficient available balance when the closing order is triggered, then other active orders of similar contracts will be cancelled or reduced. It can be used to ensure your stop loss reduces your position regardless of current available margin.</td>
+<td><a>  What is a close on trigger order?</a> For a closing order. It can only reduce your position, not increase it. If the account has insufficient available balance when the closing order is triggered, then other active orders of similar contracts will be cancelled or reduced. It can be used to ensure your stop loss reduces your position regardless of current available margin.</td>
 </tr>
 </tbody></table>
 
@@ -2305,7 +2305,7 @@ The response is in the snapshot format.
 <tr>
 <td style="text-align: left">list&gt; createdTime</td>
 <td style="text-align: left">string</td>
-<td>Creation time (when the <a href="#order-status-order_status-stop_order_status"><code>order_status</code></a> was <code>Created</code>)</td>
+<td>Creation time (when the <a ><code>order_status</code></a> was <code>Created</code>)</td>
 </tr>
 <tr>
 <td style="text-align: left">list&gt; updatedTime</td>
@@ -2782,7 +2782,7 @@ Please note that only orders that are unfilled or partially filled can be modifi
 <tr>
 <td style="text-align: left">&gt; createdTime</td>
 <td style="text-align: left">string</td>
-<td>Creation time (when the <a href="#order-status-order_status-stop_order_status"><code>order_status</code></a> was <code>Created</code>)</td>
+<td>Creation time (when the <a ><code>order_status</code></a> was <code>Created</code>)</td>
 </tr>
 <tr>
 <td style="text-align: left">&gt; updatedTime</td>
@@ -3262,7 +3262,7 @@ Please note that zero position will be displayed only if the symbol is passed in
 <tr>
 <td style="text-align: left">autoAddMargin</td>
 <td style="text-align: left">integer</td>
-<td>Whether or not <a href="https://help.mufex.com/hc/en-us/articles/900000394403-Introduction-to-Auto-Margin-Replenishment-USDT-Contract-),">auto-margin replenishment</a> is enabled</td>
+<td>Whether or not <a href="https://help.mufex.finance/hc/en-us/articles/900000394403-Introduction-to-Auto-Margin-Replenishment-USDT-Contract-),">auto-margin replenishment</a> is enabled</td>
 </tr>
 <tr>
 <td style="text-align: left">leverage</td>
@@ -3342,7 +3342,7 @@ Please note that zero position will be displayed only if the symbol is passed in
 <tr>
 <td style="text-align: left">createdTime</td>
 <td style="text-align: left">string</td>
-<td>Creation time (when the <a href="#order-status-order_status-stop_order_status"><code>order_status</code></a> was <code>Created</code>)</td>
+<td>Creation time (when the <a ><code>order_status</code></a> was <code>Created</code>)</td>
 </tr>
 <tr>
 <td style="text-align: left">updatedTime</td>
@@ -3836,7 +3836,7 @@ Read more about the risk limit .
 <tr>
 <td style="text-align: left">list&gt; createdAt</td>
 <td style="text-align: left">string</td>
-<td>Creation time (when the <a href="#order-status-order_status-stop_order_status"><code>order_status</code></a> was <code>Created</code>)</td>
+<td>Creation time (when the <a ><code>order_status</code></a> was <code>Created</code>)</td>
 </tr>
 <tr>
 <td style="text-align: left">nextPageCursor</td>
@@ -4278,7 +4278,7 @@ Please email <a href="mailto:github@mufex.finance">github@mufex.finance</a> with
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">websocket</span>
 
-<span class="n">ws_url</span> <span class="o">=</span> <span class="s">"wss://stream.mufex.com/realtime"</span>
+<span class="n">ws_url</span> <span class="o">=</span> <span class="s">"wss://stream.mufex.finance/realtime"</span>
 
 <span class="n">api_key</span> <span class="o">=</span> <span class="s">""</span>
 
@@ -4878,7 +4878,7 @@ This topic will utilises the <code>snapshot</code> field and  <code>delta</code>
 <tr>
 <td style="text-align: left">fundingRate</td>
 <td style="text-align: left">string</td>
-<td><a href="https://help.mufex.com/hc/en-us/articles/360039261114-What-is-funding-rate-and-predicted-rate-">Funding rate</a>. Inverse futures is <code>""</code></td>
+<td><a href="https://help.mufex.finance/hc/en-us/articles/360039261114-What-is-funding-rate-and-predicted-rate-">Funding rate</a>. Inverse futures is <code>""</code></td>
 <td style="text-align: left">fr</td>
 </tr>
 <tr>
@@ -5143,7 +5143,7 @@ If <code>confirm</code> is <code>True</code>, the data is the final tick for the
 <tr>
 <td style="text-align: left">bustPrice</td>
 <td style="text-align: left">float32</td>
-<td><a href="https://help.mufex.com/hc/en-us/articles/360039749813-What-is-Bankruptcy-Price-Inverse-Contract-">Bankruptcy price</a></td>
+<td><a href="https://help.mufex.finance/hc/en-us/articles/360039749813-What-is-Bankruptcy-Price-Inverse-Contract-">Bankruptcy price</a></td>
 </tr>
 <tr>
 <td style="text-align: left">leverage</td>
@@ -5196,7 +5196,7 @@ If <code>confirm</code> is <code>True</code>, the data is the final tick for the
 <tr>
 <td style="text-align: left">riskId</td>
 <td style="text-align: left">integer</td>
-<td><a href="#t-getrisklimit">Risk ID</a></td>
+<td><a >Risk ID</a></td>
 </tr>
 <tr>
 <td style="text-align: left">adlRankIndicator</td>
