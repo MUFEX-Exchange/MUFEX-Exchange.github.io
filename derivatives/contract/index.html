@@ -748,6 +748,9 @@
                             <a href="#t-dv_switchpositionmode" class="toc-h3 toc-link" data-title="Switch Position Mode">Switch Position Mode</a>
                           </li>
                           <li>
+                            <a href="#t-setleverage" class="toc-h3 toc-link" data-title="Set Leverage">Set Leverage</a>
+                          </li>
+                          <li>
                             <a href="#t-setrisklimit" class="toc-h3 toc-link" data-title="Set Risk Limit">Set Risk Limit</a>
                           </li>
                           <li>
@@ -3563,6 +3566,83 @@ Example:
 <td style="text-align: left">integer</td>
 <td>Position mode. <code>0</code>: One-Way mode. <code>3</code>: Hedge mode
 </td>
+</tr>
+</tbody></table>
+
+<p class="fake_header">Response Parameters</p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Parameter</th>
+<th style="text-align: left">Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h3 id='t-setleverage'>Set Leverage</h3>
+<blockquote>
+<p>Request Example</p>
+</blockquote>
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api-testnet.betterbitfinance.com/private/v1/account/set-leverage' \
+--header 'MF-ACCESS-SIGN-TYPE: 2' \
+--header 'MF-ACCESS-SIGN: 6d17e6aa3a7c362b05071c737dc0904bd731fea1d04e9b46ee188749d17a7ce6' \
+--header 'MF-ACCESS-API-KEY: {api key}' \
+--header 'MF-ACCESS-TIMESTAMP: 1658910157065' \
+--header 'MF-ACCESS-RECV-WINDOW: 5000' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "symbol":"XRPUSDT",
+    "buyLeverage":"5",
+    "sellLeverage":"10"
+}'
+</span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
+</code></pre></div>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+    <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span>  <span class="p">{},</span>
+    <span class="dl">"</span><span class="s2">ext_info</span><span class="dl">"</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1658910157755</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Set Leverage</p>
+
+<p class="fake_header">HTTP Request</p>
+
+<p>POST
+<code><span id=pSetLeverage>/private/v1/account/set-leverage</span></code>
+<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#pSetLeverage"><img src="../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button></p>
+
+<p class="fake_header">Request Parameters</p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Parameter</th>
+<th style="text-align: left">Required</th>
+<th style="text-align: left">Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><a href="#symbol-symbol">symbol</a></td>
+<td style="text-align: left"><b>true</b></td>
+<td style="text-align: left">string</td>
+<td>Symbol</td>
+</tr>
+<tr>
+<td style="text-align: left">buyLeverage</td>
+<td style="text-align: left"><b>true</b></td>
+<td style="text-align: left">string</td>
+<td>Must be greater than 0 and less than the <a href="https://help.mufex.finance/hc/en-us/articles/360039749753-What-is-Risk-Limit-What-effect-does-the-Risk-Limit-have-on-Margin-Inverse-Contract-">risk limit leverage</a>.</td>
+</tr>
+<tr>
+<td style="text-align: left">sellLeverage</td>
+<td style="text-align: left"><b>true</b></td>
+<td style="text-align: left">string</td>
+<td>Must be greater than 0 and less than the <a href="https://help.mufex.finance/hc/en-us/articles/360039749753-What-is-Risk-Limit-What-effect-does-the-Risk-Limit-have-on-Margin-Inverse-Contract-">risk limit leverage</a>.</td>
 </tr>
 </tbody></table>
 
