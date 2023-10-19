@@ -748,9 +748,6 @@
                             <a href="#t-dv_switchpositionmode" class="toc-h3 toc-link" data-title="切換倉位模式">切換倉位模式</a>
                           </li>
                           <li>
-                            <a href="#t-setleverage" class="toc-h3 toc-link" data-title="修改杠桿">修改杠桿</a>
-                          </li>
-                          <li>
                             <a href="#t-setrisklimit" class="toc-h3 toc-link" data-title="設置風險限額">設置風險限額</a>
                           </li>
                           <li>
@@ -958,7 +955,7 @@ clipboard.on('error', function(e) {
 </script>
 <h1 id='t-authentication'>鑒權/認證</h1>
 <aside class="notice">
-請先生成<a href="https://testnet.mufex.finance/app/user/api-management"><b>測試網</b></a> 或 <a href="https://www.mufex.finance/app/user/api-management"<b>主網</b></a>API KEY。
+請先生成<a href="https://testnet.mufex.com/app/user/api-management"><b>測試網</b></a> 或 <a href="https://www.mufex.com/app/user/api-management"<b>主網</b></a>API KEY。
 </aside>
 
 <aside class="notice">
@@ -972,10 +969,10 @@ REST接口根URL:
 </p>
 <p>
   <li>主網(請根據您的網絡情況選擇以下任意一個地址使用):<br/>
-    <span id="mainnet_1">https://api.mufex.finance</span>
+    <span id="mainnet_1">https://api.mufex.com</span>
     <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#mainnet_1"><img src="../../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button>
     <br/>
-    <span id="mainnet_2">https://api.mufex.finance.com</span>
+    <span id="mainnet_2">https://api.bytick.com</span>
     <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#mainnet_2"><img src="../../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button>
   </li>
 </p>
@@ -1821,7 +1818,7 @@ function copyStringToClipboard (endpoint) {
     <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1669802294719</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>獲取Bybit的最近成交數據。如果您想獲取歷史所有的成交記錄，請通過<a href="https://public.mufex.finance">這裏</a>下載歷史行情。</p>
+<p>獲取Bybit的最近成交數據。如果您想獲取歷史所有的成交記錄，請通過<a href="https://public.mufex.com">這裏</a>下載歷史行情。</p>
 
 <p class="fake_header">HTTP 請求</p>
 
@@ -2047,7 +2044,7 @@ function copyStringToClipboard (endpoint) {
 <td style="text-align: left"><a href="#time-in-force-timeinforce">timeInForce</a></td>
 <td style="text-align: left"><b>true</b></td>
 <td style="text-align: left">string</td>
-<td><a href="https://www.mufex.finance/zh-TW/help-center/bybitHC_Article?language=zh_TW&id=000001044">執行策略</a></td>
+<td><a href="https://www.mufex.com/zh-TW/help-center/bybitHC_Article?language=zh_TW&id=000001044">執行策略</a></td>
 </tr>
 <tr>
 <td style="text-align: left">orderLinkId</td>
@@ -2071,13 +2068,13 @@ function copyStringToClipboard (endpoint) {
 <td style="text-align: left">reduceOnly</td>
 <td style="text-align: left">false</td>
 <td style="text-align: left">bool</td>
-<td><a href="https://help.mufex.finance/hc/zh-cn/articles/360039260574-%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AA%E5%87%8F%E4%BB%93-"> 什麽是 reduce-only order?</a>,true-平倉 false-開倉,ture時止盈止損設置不生效</td>
+<td><a href="https://help.mufex.com/hc/zh-cn/articles/360039260574-%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AA%E5%87%8F%E4%BB%93-"> 什麽是 reduce-only order?</a>,true-平倉 false-開倉,ture時止盈止損設置不生效</td>
 </tr>
 <tr>
 <td style="text-align: left">closeOnTrigger</td>
 <td style="text-align: left">false</td>
 <td style="text-align: left">bool</td>
-<td><a href="https://help.mufex.finance/hc/zh-cn/articles/360039260534-%E4%BB%80%E4%B9%88%E6%98%AF%E8%A7%A6%E5%8F%91%E5%90%8E%E5%B9%B3%E4%BB%93-"> 什麽是 close on trigger order?</a>只會減少您的倉位而不會增加您的倉位。如果當平倉委托被觸發時，賬戶上的余額不足，那麽該合約的其他委托將被取消或者降低委托數量。使用此選項可以確保您的止損單被用於減倉而非加倉。</td>
+<td><a href="https://help.mufex.com/hc/zh-cn/articles/360039260534-%E4%BB%80%E4%B9%88%E6%98%AF%E8%A7%A6%E5%8F%91%E5%90%8E%E5%B9%B3%E4%BB%93-"> 什麽是 close on trigger order?</a>只會減少您的倉位而不會增加您的倉位。如果當平倉委托被觸發時，賬戶上的余額不足，那麽該合約的其他委托將被取消或者降低委托數量。使用此選項可以確保您的止損單被用於減倉而非加倉。</td>
 </tr>
 </tbody></table>
 
@@ -2264,7 +2261,7 @@ function copyStringToClipboard (endpoint) {
 <tr>
 <td style="text-align: left">list&gt; timeInForce</td>
 <td style="text-align: left">string</td>
-<td><a href="https://www.mufex.finance/zh-TW/help-center/bybitHC_Article?language=zh_TW&id=000001044">執行策略</a></td>
+<td><a href="https://www.mufex.com/zh-TW/help-center/bybitHC_Article?language=zh_TW&id=000001044">執行策略</a></td>
 </tr>
 <tr>
 <td style="text-align: left">list&gt; orderStatus</td>
@@ -2744,7 +2741,7 @@ function copyStringToClipboard (endpoint) {
 <tr>
 <td style="text-align: left">&gt; timeInForce</td>
 <td style="text-align: left">string</td>
-<td><a href="https://www.mufex.finance/zh-TW/help-center/bybitHC_Article?language=zh_TW&id=000001044">執行策略</a></td>
+<td><a href="https://www.mufex.com/zh-TW/help-center/bybitHC_Article?language=zh_TW&id=000001044">執行策略</a></td>
 </tr>
 <tr>
 <td style="text-align: left">&gt; orderStatus</td>
@@ -3256,7 +3253,7 @@ function copyStringToClipboard (endpoint) {
 <tr>
 <td style="text-align: left">autoAddMargin</td>
 <td style="text-align: left">integer</td>
-<td>是否 <a href="https://help.mufex.finance/hc/en-us/articles/900000394403-Introduction-to-Auto-Margin-Replenishment-USDT-Contract-),">自動追加保證金</a></td>
+<td>是否 <a href="https://help.mufex.com/hc/en-us/articles/900000394403-Introduction-to-Auto-Margin-Replenishment-USDT-Contract-),">自動追加保證金</a></td>
 </tr>
 <tr>
 <td style="text-align: left">leverage</td>
@@ -3568,83 +3565,6 @@ function copyStringToClipboard (endpoint) {
 </tr>
 </thead><tbody>
 </tbody></table>
-<h3 id='t-setleverage'>修改杠桿</h3>
-<blockquote>
-<p>請求示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api.mufex.finance/private/v1/account/set-leverage' \
---header 'MF-ACCESS-SIGN-TYPE: 2' \
---header 'MF-ACCESS-SIGN: 6d17e6aa3a7c362b05071c737dc0904bd731fea1d04e9b46ee188749d17a7ce6' \
---header 'MF-ACCESS-API-KEY: {api key}' \
---header 'MF-ACCESS-TIMESTAMP: 1658910157065' \
---header 'MF-ACCESS-RECV-WINDOW: 5000' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "symbol":"XRPUSDT",
-    "buyLeverage":"5",
-    "sellLeverage":"10"
-}'
-</span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
-</code></pre></div>
-<blockquote>
-<p>響應示例</p>
-</blockquote>
-<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
-    <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span><span class="p">,</span>
-        <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span>  <span class="p">{},</span>
-    <span class="dl">"</span><span class="s2">ext_info</span><span class="dl">"</span><span class="p">:</span> <span class="p">{},</span>
-    <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1658910157755</span>
-<span class="p">}</span>
-</code></pre></div>
-<p>設置杠桿</p>
-
-<p class="fake_header">HTTP 請求</p>
-
-<p>POST
-<code><span id=pSetLeverage>/private/v1/account/set-leverage</span></code>
-<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#pSetLeverage"><img src="../../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button></p>
-
-<p class="fake_header">請求參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">參數</th>
-<th style="text-align: left">是否必須</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-<tr>
-<td style="text-align: left">translation missing: zh-my.row_parameter_symbol</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td>合約類型</td>
-</tr>
-<tr>
-<td style="text-align: left">buyLeverage</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td><code>杠桿大於0，小於風險限額對應的杠桿</code></td>
-</tr>
-<tr>
-<td style="text-align: left">sellLeverage</td>
-<td style="text-align: left"><b>true</b></td>
-<td style="text-align: left">string</td>
-<td><code>杠桿大於0，小於風險限額對應的杠桿</code></td>
-</tr>
-</tbody></table>
-
-<p class="fake_header">返回參數</p>
-
-<table><thead>
-<tr>
-<th style="text-align: left">參數</th>
-<th style="text-align: left">類型</th>
-<th>說明</th>
-</tr>
-</thead><tbody>
-</tbody></table>
 <h3 id='t-setrisklimit'>設置風險限額</h3>
 <blockquote>
 <p>請求示例</p>
@@ -3673,7 +3593,7 @@ function copyStringToClipboard (endpoint) {
 <p>設置風險限額。</p>
 
 <aside class="notice">
-關於風險限額，點擊<a href="https://www.mufex.finance/zh-MY/help-center/HelpCenterKnowledge/bybitHC_Article/?language=en_US&id=000001164">這裏</a>了解更多。
+關於風險限額，點擊<a href="https://www.mufex.com/zh-MY/help-center/HelpCenterKnowledge/bybitHC_Article/?language=en_US&id=000001164">這裏</a>了解更多。
 </aside>
 
 <p class="fake_header">HTTP 請求</p>
@@ -4166,7 +4086,7 @@ function copyStringToClipboard (endpoint) {
     <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1658737209400</span>
 <span class="p">}</span>
 </code></pre></div>
-<p><p>查詢資金記錄。這個接口還展示來自網頁上<a href="https://testnet.mufex.finance/app/assets/assets-exchange">資產兌換</a>下的兌換紀錄, 其中對應的<code>type</code>兌換類型是<code>ExchangeOrderWithdraw</code>和<code>ExchangeOrderDeposit</code>。</p>
+<p><p>查詢資金記錄。這個接口還展示來自網頁上<a href="https://testnet.mufex.com/app/assets/assets-exchange">資產兌換</a>下的兌換紀錄, 其中對應的<code>type</code>兌換類型是<code>ExchangeOrderWithdraw</code>和<code>ExchangeOrderDeposit</code>。</p>
 <p>這個接口返回的關於衍生品帳戶下的劃轉紀錄的內容是不完整的。推薦使用<a href="https://mufex-exchange.github.io/docs-legacy/zh-my/account_asset/v3/#t-transfer_api">帳戶資產API</a>完成資產劃轉的操作和紀錄檢索。
 </p>
 
@@ -4331,7 +4251,7 @@ MF-ACCESS-Limit-Reset-Timestamp: 1665397625986
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">websocket</span>
 
-<span class="n">ws_url</span> <span class="o">=</span> <span class="s">"wss://stream.mufex.finance/realtime"</span>
+<span class="n">ws_url</span> <span class="o">=</span> <span class="s">"wss://stream.mufex.com/realtime"</span>
 
 <span class="n">api_key</span> <span class="o">=</span> <span class="s">""</span>
 
@@ -4360,17 +4280,17 @@ MF-ACCESS-Limit-Reset-Timestamp: 1665397625986
 <ul>
 <p>
 <li><b>主網</b>:<br/>
-    USDT合約: <span id="usdt_mainnet_address">wss://stream.mufex.finance/contract/usdt/public/v3</span>
+    USDT合約: <span id="usdt_mainnet_address">wss://stream.mufex.com/contract/usdt/public/v3</span>
     <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#usdt_mainnet_address"><img src="../../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button>
     <br/>
-    反向合約: <span id="inverse_mainnet_address">wss://stream.mufex.finance/contract/inverse/public/v3</span>
+    反向合約: <span id="inverse_mainnet_address">wss://stream.mufex.com/contract/inverse/public/v3</span>
     <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#inverse_mainnet_address"><img src="../../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button>
 </li>
 <li><b>測試網</b>:<br/>
-    USDT合約: <span id="usdt_testnet_address">wss://stream-testnet.mufex.finance/contract/usdt/public/v3</span>
+    USDT合約: <span id="usdt_testnet_address">wss://stream-testnet.mufex.com/contract/usdt/public/v3</span>
     <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#usdt_testnet_address"><img src="../../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button>
     <br/>
-    反向合約: <span id="inverse_testnet_address">wss://stream-testnet.mufex.finance/contract/inverse/public/v3</span>
+    反向合約: <span id="inverse_testnet_address">wss://stream-testnet.mufex.com/contract/inverse/public/v3</span>
     <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#inverse_testnet_address"><img src="../../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button>
 </li>
  </p>
@@ -4379,11 +4299,11 @@ MF-ACCESS-Limit-Reset-Timestamp: 1665397625986
 <ul>
 <p>
 <li><b>主網</b>:<br/>
-    合约帳戶: <span id="ca_mainnet_address">wss://stream.mufex.finance/contract/private</span>
+    合约帳戶: <span id="ca_mainnet_address">wss://stream.mufex.com/contract/private</span>
     <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#ca_mainnet_address"><img src="../../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button>
 </li>
 <li><b>測試網</b>:<br/>
-    合约帳戶: <span id="ca_testnet_address">wss://stream-testnet.mufex.finance/contract/private</span>
+    合约帳戶: <span id="ca_testnet_address">wss://stream-testnet.mufex.com/contract/private</span>
     <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#ca_testnet_address"><img src="../../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button>
 </li>
  </p>
@@ -5212,7 +5132,7 @@ MF-ACCESS-Limit-Reset-Timestamp: 1665397625986
 <tr>
 <td style="text-align: left">bustPrice</td>
 <td style="text-align: left">float32</td>
-<td><a href="https://help.mufex.finance/hc/en-us/articles/360039749813-What-is-Bankruptcy-Price-Inverse-Contract-">破產價格</a></td>
+<td><a href="https://help.mufex.com/hc/en-us/articles/360039749813-What-is-Bankruptcy-Price-Inverse-Contract-">破產價格</a></td>
 </tr>
 <tr>
 <td style="text-align: left">leverage</td>
