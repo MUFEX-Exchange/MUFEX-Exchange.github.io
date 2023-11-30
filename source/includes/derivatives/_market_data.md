@@ -96,6 +96,7 @@ curl GET 'https://api.mufex.finance/public/v1/market/kline?category=linear&symbo
       "symbol":"BTCUSDT",
       "interval":"1",
       "list":[
+      [
       "1621162800000",
       "49592.43",
       "49644.91",
@@ -103,6 +104,7 @@ curl GET 'https://api.mufex.finance/public/v1/market/kline?category=linear&symbo
       "49349.42",
       "1451.59",
       "2.4343353100000003"
+      ]
     ]
     },
     "ext_info": {},
