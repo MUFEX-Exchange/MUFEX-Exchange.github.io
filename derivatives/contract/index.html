@@ -4280,7 +4280,7 @@ Please email <a href="mailto:github@mufex.finance">github@mufex.finance</a> with
 <span class="kn">import</span> <span class="nn">time</span>
 <span class="kn">import</span> <span class="nn">websocket</span>
 
-<span class="n">ws_url</span> <span class="o">=</span> <span class="s">"wss://stream.mufex.com/realtime"</span>
+<span class="n">ws_url</span> <span class="o">=</span> <span class="s">"wss://ws.mufex.finance/contract/private"</span>
 
 <span class="n">api_key</span> <span class="o">=</span> <span class="s">""</span>
 
@@ -4292,11 +4292,23 @@ Please email <a href="mailto:github@mufex.finance">github@mufex.finance</a> with
     <span class="p">})</span>
 <span class="p">)</span>
 
+<span class="c1"># auth success response sample
+</span><span class="p">{</span>
+    <span class="s">"success"</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+    <span class="s">"ret_msg"</span><span class="p">:</span> <span class="s">"success"</span><span class="p">,</span>
+    <span class="s">"conn_id"</span><span class="p">:</span> <span class="s">"1a30f215-b7d2-4542-bac8-563a79963b35"</span><span class="p">,</span>
+    <span class="s">"request"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">"op"</span><span class="p">:</span> <span class="s">"auth"</span><span class="p">,</span>
+        <span class="s">"args"</span><span class="p">:</span> <span class="p">[</span><span class="n">api_key</span><span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
 <span class="o">//</span><span class="n">sub</span>
 <span class="n">ws</span><span class="p">.</span><span class="n">send</span><span class="p">(</span>
     <span class="n">json</span><span class="p">.</span><span class="n">dumps</span><span class="p">({</span>
         <span class="s">"op"</span><span class="p">:</span> <span class="s">"subscribe"</span><span class="p">,</span>
         <span class="s">"args"</span><span class="p">:</span> <span class="p">[</span><span class="s">"contract.execution"</span><span class="p">,</span><span class="s">"contract.wallet"</span><span class="p">]</span>
+        <span class="s">"conn_id"</span><span class="p">:</span> <span class="s">"1a30f215-b7d2-4542-bac8-563a79963b35"</span><span class="p">,</span>
     <span class="p">})</span>
 <span class="p">)</span>
 
@@ -4313,12 +4325,21 @@ Please email <a href="mailto:github@mufex.finance">github@mufex.finance</a> with
     <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#usdt_mainnet_address"><img src="../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button>
     <br/>
  </p>
+<li><b>Testnet</b>:<br/>
+    Public: <span id="usdt_mainnet_address">wss://ws.testnet.mufex.finance/realtime_public</span>
+    <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#usdt_mainnet_address"><img src="../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button>
+    <br/>
+ </p>
 </ul>
 <p><b>WebSocket private channel</b>:</p>
 <ul>
 <p>
 <li><b>Mainnet</b>:<br/>
     Private: <span id="uma_mainnet_address">wss://ws.mufex.finance/contract/private</span>
+    <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#uma_mainnet_address"><img src="../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button>
+</li>
+<li><b>Testnet</b>:<br/>
+    Private: <span id="uma_mainnet_address">wss://ws.testnet.mufex.finance/contract/private</span>
     <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#uma_mainnet_address"><img src="../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button>
 </li>
 </ul>
@@ -4364,13 +4385,13 @@ To avoid networks or program issues, we recommend that you send the <code>ping</
 <p>How to subscribe with a filter</p>
 </blockquote>
 <div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="c1">// Subscribing to the trade data for BTCUSD</span>
-<span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">{"op":"subscribe","args":["trade-100.BTCUSDT"],"req_id": "customised_id"}}</span><span class="dl">'</span><span class="p">)</span>
+<span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">{"op":"subscribe","args":["trades-100.BTCUSDT"],"req_id": "customised_id"}}</span><span class="dl">'</span><span class="p">)</span>
 </code></pre></div>
 <blockquote>
 <p>How to subscribe with multiple filters</p>
 </blockquote>
 <div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="c1">// Example: Subscribing to the trade data for BTCUSD and XRPUSD</span>
-<span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">{"op":"subscribe","args":["trade-100.BTCUSDT", "trade-100.ETHUSDT"],"req_id": "customised_id"}</span><span class="dl">'</span><span class="p">)</span>
+<span class="nx">ws</span><span class="p">.</span><span class="nx">send</span><span class="p">(</span><span class="dl">'</span><span class="s1">{"op":"subscribe","args":["trades-100.BTCUSDT", "trades-100.ETHUSDT"],"req_id": "customised_id"}</span><span class="dl">'</span><span class="p">)</span>
 </code></pre></div>
 <p>After establishing the connection, one can subscribe to a new topic by sending a JSON request. The specific formats are as follows:
 </p>
