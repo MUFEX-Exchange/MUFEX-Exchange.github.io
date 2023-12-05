@@ -1892,7 +1892,7 @@ en:
   ## How to Send the Heartbeat Packet
   heartbeat: How to Send Heartbeat Packet
   websocket_codequote_heartbeat: How to Send
-  websocket_aside_heartbeat: To avoid networks or program issues, we recommend that you send the <code>ping</code> heartbeat packet every <b>20</b> seconds to maintain the WebSocket connection.
+  websocket_aside_heartbeat: To avoid networks or program issues, we recommend that you send the <code>ping</code> heartbeat packet every <b>15</b> seconds to maintain the WebSocket connection.
 
   ## Rate Limits
   websocketlimit: Rate Limits
