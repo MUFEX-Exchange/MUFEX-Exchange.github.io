@@ -5494,6 +5494,10 @@ en:
         Unified margin account: <span id="uma_mainnet_address">wss://fstream.betterbitfinance.com/private/v1</span>
         <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#uma_mainnet_address"><img src="/images/copy_to_clipboard.png" height=15 width=15></img></button>
     </li>
+    <li><b>Testnet</b>:<br/>
+        Unified margin account: <span id="uma_mainnet_address">wss://fstream.betterbitfinance.com/private/v1</span>
+        <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#uma_mainnet_address"><img src="/images/copy_to_clipboard.png" height=15 width=15></img></button>
+    </li>
      </p>
     </ul>
 
@@ -5506,12 +5510,21 @@ en:
         <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#usdt_mainnet_address"><img src="/images/copy_to_clipboard.png" height=15 width=15></img></button>
         <br/>
      </p>
+    <li><b>Testnet</b>:<br/>
+        Public: <span id="usdt_mainnet_address">wss://ws.testnet.mufex.finance/realtime_public</span>
+        <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#usdt_mainnet_address"><img src="/images/copy_to_clipboard.png" height=15 width=15></img></button>
+        <br/>
+     </p>
     </ul>
     <p><b>WebSocket private channel</b>:</p>
     <ul>
     <p>
     <li><b>Mainnet</b>:<br/>
         Private: <span id="uma_mainnet_address">wss://ws.mufex.finance/contract/private</span>
+        <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#uma_mainnet_address"><img src="/images/copy_to_clipboard.png" height=15 width=15></img></button>
+    </li>
+    <li><b>Testnet</b>:<br/>
+        Private: <span id="uma_mainnet_address">wss://ws.testnet.mufex.finance/contract/private</span>
         <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#uma_mainnet_address"><img src="/images/copy_to_clipboard.png" height=15 width=15></img></button>
     </li>
     </ul>

@@ -12,7 +12,7 @@ import json
 import time
 import websocket
 
-ws_url = "wss://stream.mufex.com/realtime"
+ws_url = "wss://ws.mufex.finance/contract/private"
 
 api_key = ""
 
@@ -24,11 +24,23 @@ ws.send(
     })
 )
 
+# auth success response sample
+{
+    "success": true,
+    "ret_msg": "success",
+    "conn_id": "1a30f215-b7d2-4542-bac8-563a79963b35",
+    "request": {
+        "op": "auth",
+        "args": [api_key]
+    }
+}
+
 //sub
 ws.send(
     json.dumps({
         "op": "subscribe",
         "args": ["contract.execution","contract.wallet"]
+        "conn_id": "1a30f215-b7d2-4542-bac8-563a79963b35",
     })
 )
 
