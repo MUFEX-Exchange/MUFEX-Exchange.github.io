@@ -101,14 +101,14 @@ t(:websocket_para_limit)
 
 ```javascript
 // Subscribing to the trade data for BTCUSD
-ws.send('{"op":"subscribe","args":["trade-100.BTCUSDT"],"req_id": "customised_id"}}')
+ws.send('{"op":"subscribe","args":["trades-100.BTCUSDT"],"req_id": "customised_id"}}')
 ```
 
 > t(:websocket_codequote_filters2)
 
 ```javascript
 // Example: Subscribing to the trade data for BTCUSD and XRPUSD
-ws.send('{"op":"subscribe","args":["trade-100.BTCUSDT", "trade-100.ETHUSDT"],"req_id": "customised_id"}')
+ws.send('{"op":"subscribe","args":["trades-100.BTCUSDT", "trades-100.ETHUSDT"],"req_id": "customised_id"}')
 ```
 
 
