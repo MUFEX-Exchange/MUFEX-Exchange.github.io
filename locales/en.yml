@@ -5703,6 +5703,7 @@ en:
   contract_comment_positionBalance: Position balance
   contract_comment_tradeMode: |
     Cross/isolated mode. <code>0</code>: cross margin mode; <code>1</code>: isolated margin mode
+  contract_para_setLeverage: Set Leverage
   contract_para_switchIsolated: Switch cross margin mode/isolated margin mode
   contract_comment_buyLeverage: The value must be equal to <code>sellLeverage</code> value
   contract_comment_sellLeverage: The value must be equal to <code>buyLeverage</code> value
