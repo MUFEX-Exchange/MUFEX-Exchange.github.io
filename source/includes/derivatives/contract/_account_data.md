@@ -730,6 +730,59 @@ POST
 |t(:column_parameter)|t(:column_type)|t(:column_comments)|
 |:----- |:-----|----- |
 
+
+### t(:linear_account_para_setLeverage)
+> t(:codequote_curlExample)
+
+```console
+curl --location --request POST 'https://api.mufex.finance/private/v1/account/set-leverage' \
+--header 'MF-ACCESS-SIGN-TYPE: 2' \
+--header 'MF-ACCESS-SIGN: f178bda84f8a3fa971338b7424cce2204824c0114f196650b2516962371e3902' \
+--header 'MF-ACCESS-API-KEY: XXXXXXXXXX' \
+--header 'MF-ACCESS-TIMESTAMP: 1658908531694' \
+--header 'MF-ACCESS-RECV-WINDOW: 5000' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "symbol":"XRPUSDT",
+    "buyLeverage": "5",
+    "sellLeverage": "5"
+}'
+```
+```python--pybit
+
+```
+
+> t(:codequote_responseExample)
+
+```javascript
+{
+    "code": 0,
+        "message": "OK",
+        "data":  {},
+    "ext_info": {},
+    "time": 1658908532580
+}
+```
+
+t(:contract_para_setLeverage)
+
+<p class="fake_header">t(:httprequest)</p>
+POST
+<code><span id=pSetLeverage>/private/v1/account/set-leverage</span></code>
+<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#pSetLeverage"><img src="/images/copy_to_clipboard.png" height=15 width=15></img></button>
+
+<p class="fake_header">t(:requestparameters)</p>
+|t(:column_parameter)|t(:column_required)|t(:column_type)|t(:column_comments)|
+|:----- |:-------|:-----|----- |
+|t(:row_parameter_symbol) |<b>true</b> |string |t(:row_comment_symbol)    |
+|buyLeverage |<b>true</b> |string |t(:contract_comment_buyLeverage)  |
+|sellLeverage |<b>true</b> |string |t(:contract_comment_sellLeverage)  |
+
+<p class="fake_header">t(:responseparameters)</p>
+|t(:column_parameter)|t(:column_type)|t(:column_comments)|
+|:----- |:-----|----- |
+
+
 ### t(:dv_switchpositionmode)
 > t(:codequote_curlExample)
 
@@ -763,62 +816,6 @@ curl --location --request POST 'https://api.mufex.finance/private/v1/account/set
     "time": 1658909271272
 }
 ```
-
-t(:contract_para_setLeverage)
-
-<p class="fake_header">t(:httprequest)</p>
-POST
-<code><span id=setLeverage>/private/v1/account/set-leverage</span></code>
-<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#setLeverage"><img src="/images/copy_to_clipboard.png" height=15 width=15></img></button>
-
-<p class="fake_header">t(:requestparameters)</p>
-|t(:column_parameter)|t(:column_required)|t(:column_type)|t(:column_comments)|
-|:----- |:-------|:-----|----- |
-|t(:row_parameter_symbol) |<b>true</b> |string |t(:row_comment_symbol)    |
-|tradeMode |<b>true</b> |integer |t(:contract_comment_tradeMode)  |
-|buyLeverage |<b>false</b> |string |t(:contract_comment_buyLeverage)  |
-|sellLeverage |<b>false</b> |string |t(:contract_comment_sellLeverage)  |
-
-<p class="fake_header">t(:responseparameters)</p>
-|t(:column_parameter)|t(:column_type)|t(:column_comments)|
-|:----- |:-----|----- |
-
-### t(:dv_switchpositionmode)
-> t(:codequote_curlExample)
-
-```console
-curl --location --request POST 'https://api.mufex.finance/private/v1/account/set-leverage' \
---header 'MF-ACCESS-SIGN-TYPE: 2' \
---header 'MF-ACCESS-SIGN: b07d38c9719187a8a9a0cee739f465edd05a1c7a30618e02a1f1dc9fc3639d97' \
---header 'MF-ACCESS-API-KEY: XXXXXXXXXX' \
---header 'MF-ACCESS-TIMESTAMP: 1658909270602' \
---header 'MF-ACCESS-RECV-WINDOW: 5000' \
---header 'Content-Type: application/json' \
---data-raw '{
-    "symbol":"BTCUSDT",
-    "buyLeverage": "20",
-    "sellLeverage": "20"
-}'
-```
-
-```python--pybit
-
-```
-
-> t(:codequote_responseExample)
-
-```javascript
-{
-    "code": 0,
-        "message": "OK",
-        "data":  {},
-    "ext_info": {},
-    "time": 1658909271272
-}
-```
-
-
-
 t(:account_para_switchpositionmode_withcoin)
 
 <table class="custom_table">

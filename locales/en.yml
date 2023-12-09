@@ -5705,8 +5705,8 @@ en:
     Cross/isolated mode. <code>0</code>: cross margin mode; <code>1</code>: isolated margin mode
   contract_para_setLeverage: Set Leverage
   contract_para_switchIsolated: Switch cross margin mode/isolated margin mode
-  contract_comment_buyLeverage: The value must be equal to <code>sellLeverage</code> value
-  contract_comment_sellLeverage: The value must be equal to <code>buyLeverage</code> value
+  contract_comment_buyLeverage: (0, max leverage of corresponding risk limit]. For one-way mode, make sure that <code>buyLeverage</code> is equal to <code>sellLeverage</code>
+  contract_comment_sellLeverage: (0, max leverage of corresponding risk limit]. For one-way mode, make sure that <code>buyLeverage</code> is equal to <code>sellLeverage</code>
   contract_comment_mode: |
     Position mode. <code>0</code>: One-Way mode. <code>3</code>: Hedge mode
   contract_comment_tpSlMode: |
