@@ -745,6 +745,9 @@
                             <a href="#t-dv_marginswitch" class="toc-h3 toc-link" data-title="全倉/逐倉切換">全倉/逐倉切換</a>
                           </li>
                           <li>
+                            <a href="#t-linear_account_para_setleverage" class="toc-h3 toc-link" data-title="設置杠桿">設置杠桿</a>
+                          </li>
+                          <li>
                             <a href="#t-dv_switchpositionmode" class="toc-h3 toc-link" data-title="切換倉位模式">切換倉位模式</a>
                           </li>
                           <li>
@@ -3407,6 +3410,83 @@ function copyStringToClipboard (endpoint) {
 <td style="text-align: left"><b>true</b></td>
 <td style="text-align: left">integer</td>
 <td>交易模式. <code>0</code>：全倉; <code>1</code>：逐倉</td>
+</tr>
+<tr>
+<td style="text-align: left">buyLeverage</td>
+<td style="text-align: left"><b>false</b></td>
+<td style="text-align: left">string</td>
+<td>值必須和<code>sellLeverage</code>的值一樣</td>
+</tr>
+<tr>
+<td style="text-align: left">sellLeverage</td>
+<td style="text-align: left"><b>false</b></td>
+<td style="text-align: left">string</td>
+<td>值必須和<code>buyLeverage</code>的值一樣</td>
+</tr>
+</tbody></table>
+
+<p class="fake_header">返回參數</p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">參數</th>
+<th style="text-align: left">類型</th>
+<th>說明</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h3 id='t-linear_account_para_setleverage'>設置杠桿</h3>
+<blockquote>
+<p>請求示例</p>
+</blockquote>
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api.mufex.finance/private/v1/account/set-leverage' \
+--header 'MF-ACCESS-SIGN-TYPE: 2' \
+--header 'MF-ACCESS-SIGN: f178bda84f8a3fa971338b7424cce2204824c0114f196650b2516962371e3902' \
+--header 'MF-ACCESS-API-KEY: XXXXXXXXXX' \
+--header 'MF-ACCESS-TIMESTAMP: 1658908531694' \
+--header 'MF-ACCESS-RECV-WINDOW: 5000' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "symbol":"XRPUSDT",
+    "buyLeverage": "5",
+    "sellLeverage": "5"
+}'
+</span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
+</code></pre></div>
+<blockquote>
+<p>響應示例</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+    <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span>  <span class="p">{},</span>
+    <span class="dl">"</span><span class="s2">ext_info</span><span class="dl">"</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1658908532580</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>translation missing: zh-my.contract_para_setLeverage</p>
+
+<p class="fake_header">HTTP 請求</p>
+
+<p>POST
+<code><span id=pSetLeverage>/private/v1/account/set-leverage</span></code>
+<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#pSetLeverage"><img src="../../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button></p>
+
+<p class="fake_header">請求參數</p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">參數</th>
+<th style="text-align: left">是否必須</th>
+<th style="text-align: left">類型</th>
+<th>說明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">translation missing: zh-my.row_parameter_symbol</td>
+<td style="text-align: left"><b>true</b></td>
+<td style="text-align: left">string</td>
+<td>合約類型</td>
 </tr>
 <tr>
 <td style="text-align: left">buyLeverage</td>

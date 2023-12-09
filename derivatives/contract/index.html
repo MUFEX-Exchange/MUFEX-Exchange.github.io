@@ -745,6 +745,9 @@
                             <a href="#t-dv_marginswitch" class="toc-h3 toc-link" data-title="Switch Cross/Isolated Margin">Switch Cross/Isolated Margin</a>
                           </li>
                           <li>
+                            <a href="#t-linear_account_para_setleverage" class="toc-h3 toc-link" data-title="Set Leverage">Set Leverage</a>
+                          </li>
+                          <li>
                             <a href="#t-dv_switchpositionmode" class="toc-h3 toc-link" data-title="Switch Position Mode">Switch Position Mode</a>
                           </li>
                           <li>
@@ -3420,15 +3423,92 @@ Please note that zero position will be displayed only if the symbol is passed in
 </tr>
 <tr>
 <td style="text-align: left">buyLeverage</td>
+<td style="text-align: left"><b>false</b></td>
+<td style="text-align: left">string</td>
+<td>(0, max leverage of corresponding risk limit]. For one-way mode, make sure that <code>buyLeverage</code> is equal to <code>sellLeverage</code></td>
+</tr>
+<tr>
+<td style="text-align: left">sellLeverage</td>
+<td style="text-align: left"><b>false</b></td>
+<td style="text-align: left">string</td>
+<td>(0, max leverage of corresponding risk limit]. For one-way mode, make sure that <code>buyLeverage</code> is equal to <code>sellLeverage</code></td>
+</tr>
+</tbody></table>
+
+<p class="fake_header">Response Parameters</p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Parameter</th>
+<th style="text-align: left">Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h3 id='t-linear_account_para_setleverage'>Set Leverage</h3>
+<blockquote>
+<p>Request Example</p>
+</blockquote>
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api.mufex.finance/private/v1/account/set-leverage' \
+--header 'MF-ACCESS-SIGN-TYPE: 2' \
+--header 'MF-ACCESS-SIGN: f178bda84f8a3fa971338b7424cce2204824c0114f196650b2516962371e3902' \
+--header 'MF-ACCESS-API-KEY: XXXXXXXXXX' \
+--header 'MF-ACCESS-TIMESTAMP: 1658908531694' \
+--header 'MF-ACCESS-RECV-WINDOW: 5000' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "symbol":"XRPUSDT",
+    "buyLeverage": "5",
+    "sellLeverage": "5"
+}'
+</span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
+</code></pre></div>
+<blockquote>
+<p>Response Example</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+    <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span>  <span class="p">{},</span>
+    <span class="dl">"</span><span class="s2">ext_info</span><span class="dl">"</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1658908532580</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Set Leverage</p>
+
+<p class="fake_header">HTTP Request</p>
+
+<p>POST
+<code><span id=pSetLeverage>/private/v1/account/set-leverage</span></code>
+<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#pSetLeverage"><img src="../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button></p>
+
+<p class="fake_header">Request Parameters</p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">Parameter</th>
+<th style="text-align: left">Required</th>
+<th style="text-align: left">Type</th>
+<th>Comment</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left"><a href="#symbol-symbol">symbol</a></td>
 <td style="text-align: left"><b>true</b></td>
 <td style="text-align: left">string</td>
-<td>The value must be equal to <code>sellLeverage</code> value</td>
+<td>Symbol</td>
+</tr>
+<tr>
+<td style="text-align: left">buyLeverage</td>
+<td style="text-align: left"><b>true</b></td>
+<td style="text-align: left">string</td>
+<td>(0, max leverage of corresponding risk limit]. For one-way mode, make sure that <code>buyLeverage</code> is equal to <code>sellLeverage</code></td>
 </tr>
 <tr>
 <td style="text-align: left">sellLeverage</td>
 <td style="text-align: left"><b>true</b></td>
 <td style="text-align: left">string</td>
-<td>The value must be equal to <code>buyLeverage</code> value</td>
+<td>(0, max leverage of corresponding risk limit]. For one-way mode, make sure that <code>buyLeverage</code> is equal to <code>sellLeverage</code></td>
 </tr>
 </tbody></table>
 
