@@ -36,11 +36,11 @@ en:
   row_comment_position_idx: |
     Position idx, used to identify positions in different position modes<span>:</span> <br/> 1-Buy side of both side mode <br/> 2-Sell side of both side mode
   row_comment_position_idx_create_order: |
-    Position idx, used to identify positions in different position modes. <b>Required</b> 1-Buy side of both side mode <br/> 2-Sell side of both side mode
+    Position idx, used to identify positions in different position modes.  <br/>  1-Buy side of both side mode <br/> 2-Sell side of both side mode
   row_comment_position_idx_create_order_v3: |
-    Position idx, used to identify positions in different position modes. <b>Required</b> 1-Buy side of both side mode <br/> 2-Sell side of both side mode
+    Position idx, used to identify positions in different position modes.  <br/>  1-Buy side of both side mode <br/> 2-Sell side of both side mode
   row_comment_position_idx_create_order_inverse_futures: |
-    Position idx, used to identify positions in different position modes. <b>Required</b> 1-Buy side of both side mode <br/> 2-Sell side of both side mode
+    Position idx, used to identify positions in different position modes.  <br/>  1-Buy side of both side mode <br/> 2-Sell side of both side mode
   row_comment_position_idx_leverage: Deprecated!! Position idx
   row_comment_position_mode: Position mode
   row_comment_position_size: Position qty
