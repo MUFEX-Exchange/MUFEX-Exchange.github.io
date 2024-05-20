@@ -34,11 +34,11 @@ zh-my:
   row_comment_position_id: 倉位ID
   row_comment_position_idx: Position idx, 用於在不同倉位模式下標識倉位：<br/>0-單向持倉 <br/>1-雙向持倉Buy<br/> 2-雙向持倉Sell
   row_comment_position_idx_create_order: |
-    Position idx, 用於在不同倉位模式下標識倉位。 如果是<b>單向持倉</b>模式， 該參數為<b>必填</b><span>:</span> <br/>0-單向持倉 <br/>1-雙向持倉Buy<br/> 2-雙向持倉Sell
+    Position idx, 用於在不同倉位模式下標識倉位。 如果是<br>單向持倉</br>模式， 該參數為<br>必填</br><span>:</span> <br/>0-單向持倉 <br/>1-雙向持倉Buy<br/> 2-雙向持倉Sell
   row_comment_position_idx_create_order_v3: |
-    Position idx, 用於在不同倉位模式下標識倉位。 如果是<b>雙向持倉</b>模式， 該參數為<b>必填</b><span>:</span> <br/>0-單向持倉 <br/>1-雙向持倉Buy<br/> 2-雙向持倉Sell
+    Position idx, 用於在不同倉位模式下標識倉位。 如果是<br>雙向持倉</br>模式， 該參數為<br>必填</br><span>:</span> <br/>0-單向持倉 <br/>1-雙向持倉Buy<br/> 2-雙向持倉Sell
   row_comment_position_idx_create_order_inverse_futures: |
-    Position idx, 用於在不同倉位模式下標識倉位。 如果是<b>雙向持倉</b>模式， 該參數為<b>必填</b><span>:</span> <br/>0-單向持倉 <br/>1-雙向持倉Buy<br/> 2-雙向持倉Sell
+    Position idx, 用於在不同倉位模式下標識倉位。 如果是<br>雙向持倉</br>模式， 該參數為<br>必填</br><span>:</span> <br/>0-單向持倉 <br/>1-雙向持倉Buy<br/> 2-雙向持倉Sell
   row_comment_position_idx_leverage: 已廢棄!! Position idx
   row_comment_position_mode: 倉位模式
   row_comment_position_size: 倉位數量
@@ -264,7 +264,7 @@ zh-my:
   row_comment_resp_mark_price: 標記價格
   row_comment_resp_mark_price_e4: （已廢棄）標記價格 * 10^4
   row_comment_resp_index_price: 指數價格
-  row_comment_resp_index_price_e4 : （已廢棄）指數價格 * 10^4
+  row_comment_resp_index_price_e4: （已廢棄）指數價格 * 10^4
   row_comment_resp_open_interest: 未平倉合約數量
   row_comment_resp_open_interest_e8: 未平倉合約數量* 10^8
   row_comment_slow_update: 不是實時更新，最慢更新時間是一分鐘
@@ -355,7 +355,7 @@ zh-my:
   row_response_comment_liq_execqty: 交易數量
   row_response_comment_time: UTC 時間
   row_response_comment_timestamp: 时间戳，毫秒
-  row_response_comment_blocktrade:  成交类型是否大宗交易，是：true；否：false
+  row_response_comment_blocktrade: 成交类型是否大宗交易，是：true；否：false
   row_response_comment_name: 合約名稱
   row_response_comment_alias: 合約別名(不可用於API調用)
   row_response_comment_status: 合約狀態
@@ -399,7 +399,6 @@ zh-my:
   row_response_liq_record_side: 被強平倉位的方向
   row_comment_max_leverage: 最大杠桿
 
-
   # 统保下面v3接口字段定义区间开始
   row_comment_settleCoin_v3: category=option時，本參數無效
   row_comment_cancelAll_baseCoin_v3: |
@@ -408,7 +407,6 @@ zh-my:
     <p>- 若只傳入baseCoin，未傳入symbol，則撤銷所有傳入baseCoin下的全部active orders</p>
     <p>- 若傳入了symbol，則忽略baseCoin，只撤銷該symbol下的全部active orders</p>
   row_comment_cancelAll_orderFilter_v3: 條件單或是活動單。僅期貨有效，期權下該參數無效。
-
   row_parameter_side: <a href="#side-side">side</a>
   row_parameter_quantity: <a href="#quantity-qty">qty</a>
   row_parameter_price: <a href="#price-price">price</a>
@@ -563,7 +561,6 @@ zh-my:
   row_comment_query_deliveryRpl_v3: 交割已實現盈虧
   row_comment_coin_v3: currency alias，如果不傳參數coin，將返回所有錢包余額。允許傳多個，用逗號分隔，例如：USDC,USDT
 
-
   row_comment_query_accountIMRate_v3: 起始保證金比率：Account Total Initial Margin Base Coin / Account Margin Balance Base Coin
   row_comment_query_accountMMRate_v3: 維持保證金比率：Account Total Maintenance Margin Base Coin / Account Margin Balance Base Coin
   row_comment_query_totalEquity_v3: 賬戶維度換算成usd的資產凈值：Account Margin Balance Base Coin + Account Option Value Base Coin
@@ -595,7 +592,6 @@ zh-my:
 
   row_comment_query_result_v3: 用戶賬戶的升級狀態。1.處理中 2.升級成功 3.升級失敗 4.拒絕
   row_comment_query_msg_v3: 返回的錯誤信息
-
 
   row_comment_query_ThereisUSDCbeingtransferred_v3_code: USDC有劃轉中記錄
   row_comment_query_ThereisUSDCbeingtransferred_v3: update account failed. there are orders in the process of transferring in USDC Account. please wait until the transfer is completed
@@ -666,20 +662,18 @@ zh-my:
 
   # 统保下面v3接口字段定义区间结束
 
-
-
   default: 默認
   stop_order_trigger_price: 如果stop_order_type為`TrailingProfit`時，為激活價格，否則為觸發價格。
   errorcode_meaning: 含義
-  resp_field_leverage:  逐倉模式下, 值為用戶設置的杠桿；全倉模式下，值為當前風險限額下最大杠桿
+  resp_field_leverage: 逐倉模式下, 值為用戶設置的杠桿；全倉模式下，值為當前風險限額下最大杠桿
   resp_field_effective_leverage: 有效杠桿. 逐倉模式下, 等於`leverage`; 全倉模式下, 計算公式為： <code>position size / markprice / (wallet_balance+unrealised_pnl)</code>
   row_comment_from_id: 起始ID，默認為最新id
   row_comment_direction: 搜索方向：Prev:以起始ID升序檢索,Next:起始ID降序檢索，默認為Next
   row_comment_cursor_direction: 搜索方向：<code>prev</code>:上一頁,<code>next</code>:下一頁,默認為 <code>next</code>
-  resp_field_position_list:  當不傳參數<code>symbol</code>的時候，返回結構如下：
+  resp_field_position_list: 當不傳參數<code>symbol</code>的時候，返回結構如下：
   resp_field_position_list_valid: 表示當前data對應的symbol數據是否可用
   resp_field_position_list_data: 只有在<code>is_valid</code>為<b>true</b>時，<code>data</code>才可用，否則請不要使用data
-  resp_field_order_list:  當只傳參數<code>symbol</code>的時候，返回結構如下：
+  resp_field_order_list: 當只傳參數<code>symbol</code>的時候，返回結構如下：
 
   # introduction in index.html.md
   introduction: 中文社區和參考資料
@@ -691,8 +685,7 @@ zh-my:
     <p>該文檔旨在提供指導，以幫助您快速訪問Bybit的API接口，了解參數說明和常見錯誤碼等。
     若您有任何疑問或需要幫助，請加入我們的 <a href="https://t.me/Bybitapi">官方Telegram API討論群</a>！</p>
   resources: 中文社區和參考資料
-  intro_para_resources:
-    <ul class="mufex-community">
+  intro_para_resources: <ul class="mufex-community">
     <li><img src="/images/favicon.ico" height="14", width="14"> <a href="https://www.mufex.com/zh-TW/help-center/?language=zh_TW"><strong>幫助中心</strong></a> - <strong>在這裏了解合約交易</strong>
     <li><img src="/images/github_logo_icon.png" height="14", width="14"> <a href="https://pypi.org/project/pybit/"><strong>pybit</strong></a> - <strong>官方Python SDK</strong>
     <li><img src="/images/github_logo_icon.png" height="14", width="14"> <a href="https://www.npmjs.com/package/mufex-api"><strong>mufex-api</strong></a> - <strong>社區NodeJS SDK</strong>
@@ -714,10 +707,10 @@ zh-my:
   changelog_bugfix: bugfix
   changelog_rollback: 回滾
   ## 2020-04-10
-  bugfix_20200410:  調整行情接口請求示例地址為主網
+  bugfix_20200410: 調整行情接口請求示例地址為主網
   bugfix1_20200409: 調整排序描述，降序改為升序
   ## 2020-03-31
-  bugfix1_20200331:  修復<code>USDT</code>資產不準確的bug
+  bugfix1_20200331: 修復<code>USDT</code>資產不準確的bug
   ## 2020-03-26
   trailing_stop_20200326: 針對追蹤止損訂單增加了觸發價格 <code>new_trailing_active</code>.
   ## 2020-02-26
@@ -755,7 +748,6 @@ zh-my:
   trade___20200302: 增加毫秒成交時間 <code>trade_time_ms</code>
   usertraderecords_20200309: symbol是必填參數
   apikey_20200309: 返回結果中新增 <code>inviter_id</code>
-
 
   # api_auth
   authentication: 鑒權/認證
@@ -810,8 +802,7 @@ zh-my:
         <button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#mainnet"><img src="/images/copy_to_clipboard.png" height=15 width=15></img></button>
       </li>
     </ul>
-  auth_para_privatepublic:
-    <p>所有<b>private</b>接口都需要認證，<b>public</b> 接口不需要認證。</p>
+  auth_para_privatepublic: <p>所有<b>private</b>接口都需要認證，<b>public</b> 接口不需要認證。</p>
 
   authenticationparameters: 公共參數
   auth_para_cdn_request_id: 為了幫助診斷高級網絡問題，您可以考慮將 <code>cdn-request-id</code> 添加到您的請求標頭中。對於每個請求，它的值應該是唯一的。
@@ -822,24 +813,20 @@ zh-my:
       <li><b>timestamp</b> - UTC<b>毫秒</b>時間戳</li>
       <li><b>sign</b> - 請求參數簽名</li>
     </ul>
-  auth_para_recv : |
+  auth_para_recv: |
     另外我們提供可選的<code>recv_window</code>參數（單位是毫秒，默認值為<code>5000</code>），來指定請求在多長時間內有效，同時用來防止重放攻擊。
   auth_aside_timestamp: |
     註意，timestamp參數必須符合如下規則: <b>server_time - recv_window <= timestamp < server_time + 1000</b>，其中server_time是Bybit服務器時間，您可以通過<a href="#t-servertime">服務器時間接口</a>獲取。
-  spot_auth_para_recv : |
+  spot_auth_para_recv: |
     另外我們提供可選的<code>recvWindow</code>參數（單位是毫秒，默認值為<code>5000</code>），來指定請求在多長時間內有效，同時用來防止重放攻擊。
   spot_auth_aside_timestamp: |
     註意，timestamp參數必須符合如下規則: <b>serverTime - recvWindow <= timestamp < serverTime + 1000</b>，其中serverTime是Bybit服務器時間，您可以通過<a href="#t-servertime">服務器時間接口</a>獲取。
 
   constructingtherequest: 構建請求
-  auth_codequote_construct1a:
-    拼接參數示例（以修改槓桿率為例）：
-  auth_codequote_construct_asset_v3:
-    拼接參數示例（以獲取提現紀錄為例）
-  auth_codequote_construct1a_v3:
-    拼接參數示例：
-  auth_codequote_construct1b:
-    參數按照 <b>字母順序</b> 排列，然後計算<code>sign</code>。
+  auth_codequote_construct1a: 拼接參數示例（以修改槓桿率為例）：
+  auth_codequote_construct_asset_v3: 拼接參數示例（以獲取提現紀錄為例）
+  auth_codequote_construct1a_v3: 拼接參數示例：
+  auth_codequote_construct1b: 參數按照 <b>字母順序</b> 排列，然後計算<code>sign</code>。
   auth_codequote_construct2: |
     <b>GET</b>請求格式（查詢賬號余額）:
   auth_codequote_construct_asset_v3_1: |
@@ -850,26 +837,17 @@ zh-my:
     <b>POST</b>請求格式（創建訂單）:
   auth_codequote_account_asset_v3_2: |
     <b>POST</b>請求格式（提現）:
-  auth_para_construct1:
-    <p>1. 所有參數按照字母順序排序，然後按照<a href="https://en.wikipedia.org/wiki/Query_string">query string</a>格式拼接。</p>
+  auth_para_construct1: <p>1. 所有參數按照字母順序排序，然後按照<a href="https://en.wikipedia.org/wiki/Query_string">query string</a>格式拼接。</p>
   auth_para_dv3_construct1: |
     <p>1. 時間戳 + api-key + [recv_window]+ [queryString(無需排序) | jsonBodyString]</p>
-  auth_para_construct2:
-    <p>2. 使用<code>HMAC_SHA256</code>算法對第1步中拼接的query string簽名，並轉換為16進製字符串，得出<code>sign</code>參數。</p>
-  auth_para_dv3_construct2:
-    <p>2. 使用<code>HMAC_SHA256</code>算法對第1步中拼接的string簽名，並轉換為16進製字符串，得出<code>sign</code>參數。</p>
-  auth_para_construct3:
-    <p>3. 將<code>sign</code>參數加到請求參數中即可；註意<code>GET</code>和<code>POST</code>請求參數格式不同，詳見右邊示例。</p>
-  auth_para_construct3_dv3:
-    <p>3. 將<code>sign</code>參數加到請求頭中即可；註意<code>GET</code>和<code>POST</code>請求參數格式不同，詳見右邊示例。</p>
-  auth_aside_signature:
-    <a href="https://github.com/mufex-exchange/api-usage-examples">簽名計算示例</a>.
-  spot_auth_aside_signature:
-    <a href="https://github.com/mufex-exchange/api-usage-examples">簽名計算示例</a>.
-  spot_auth_codequote_construct1a:
-    拼接參數示例（以查詢賬號余額接口為例）：
-  spot_auth_codequote_construct1b:
-    參數按照 <b>字母順序</b> 排列，然後計算<code>sign</code>。
+  auth_para_construct2: <p>2. 使用<code>HMAC_SHA256</code>算法對第1步中拼接的query string簽名，並轉換為16進製字符串，得出<code>sign</code>參數。</p>
+  auth_para_dv3_construct2: <p>2. 使用<code>HMAC_SHA256</code>算法對第1步中拼接的string簽名，並轉換為16進製字符串，得出<code>sign</code>參數。</p>
+  auth_para_construct3: <p>3. 將<code>sign</code>參數加到請求參數中即可；註意<code>GET</code>和<code>POST</code>請求參數格式不同，詳見右邊示例。</p>
+  auth_para_construct3_dv3: <p>3. 將<code>sign</code>參數加到請求頭中即可；註意<code>GET</code>和<code>POST</code>請求參數格式不同，詳見右邊示例。</p>
+  auth_aside_signature: <a href="https://github.com/mufex-exchange/api-usage-examples">簽名計算示例</a>.
+  spot_auth_aside_signature: <a href="https://github.com/mufex-exchange/api-usage-examples">簽名計算示例</a>.
+  spot_auth_codequote_construct1a: 拼接參數示例（以查詢賬號余額接口為例）：
+  spot_auth_codequote_construct1b: 參數按照 <b>字母順序</b> 排列，然後計算<code>sign</code>。
 
   # Market Data Endpoints
   marketdata: 行情接口
@@ -976,22 +954,17 @@ zh-my:
   cancelallactive: 撤銷所有活動委托單
   account_para_cancelAllActive: |
     <p>撤銷所有未成交、部分成交的活動委托單。但全部成交的活動委托不可取消。</p>
-  account_aside_cancelAllActive:
-    註意，此api每調用一次會導致<code>rate_limit</code>扣減10
+  account_aside_cancelAllActive: 註意，此api每調用一次會導致<code>rate_limit</code>扣減10
   ### Replace Active Order
   replaceactive: 修改活動單信息
   a_replaceactive: 修改活動單信息
   account_para_replaceActive: |
     <p>本接口可以修改您的活動單信息.</p>
-  account_aside_replaceActive:
-    請註意，只有未成交或未完全成交的訂單才可以被修改。
-  account_aside_queryPosition:
-    請註意，入參裡只傳symbol 才會顯示0倉位； 其他條件查詢都只返回有持倉的數據。
-  account_aside_placeOrder_positionIdx:
-    請註意，<b>positionIdx</b> 在contractV3中雙倉模式是必傳的，在v2中單倉模式是必傳的
+  account_aside_replaceActive: 請註意，只有未成交或未完全成交的訂單才可以被修改。
+  account_aside_queryPosition: 請註意，入參裡只傳symbol 才會顯示0倉位； 其他條件查詢都只返回有持倉的數據。
+  account_aside_placeOrder_positionIdx: 請註意，<b>positionIdx</b> 在contractV3中雙倉模式是必傳的，在v2中單倉模式是必傳的
 
-  websocket_spot_public_topic_v3:
-    現貨V3公共topic只推送snapshot的數據
+  websocket_spot_public_topic_v3: 現貨V3公共topic只推送snapshot的數據
   ### Query Active Order (real-time)
   queryactive: 實時查詢活動委托
   account_para_queryActive: 實時查詢活動委托。當傳遞參數<code>order_id</code>或<code>order_link_id</code>其中任意一個時，將返回單條訂單數據，如果參數<code>order_id</code>和<code>order_link_id</code>都不傳遞時，將返回所有<b>未成交</b>的訂單，最多500條。
@@ -1010,8 +983,7 @@ zh-my:
     <p>委托價格: 表示您期望購買/賣出永續合約的價格，可以根據<a href="#t-querysymbol">交易對接口</a>查詢不同symbol價格階梯。</p>
     <p>條件委托觸發價格: 您可以為您的條件委托單設置一個觸發價格，條件委托單不進入委托表（Order Book)，只有觸發條件成立如市場價格到達觸發價格時，條件委托單才會進入交易系統。當市場價格到達觸發價格：1）您的限價條件委托單進入Order Book，等待被執行；2）您的市價條件委托單將按照市場最優價格立即被執行。</p>
     <p>自定義條件單ID: 您可以自定義活動委托訂單ID，我們會為您關聯到系統的訂單ID，並把系統的唯一訂單ID在活動委托創建成功後一並返回給您，您可以使用該訂單ID去取消活動委托，同時要求您傳遞的自定義訂單ID最大長度不超過36個字段且唯一。</p>
-  account_aside_placeCond:
-    請註意:只允許每個合約最多創建10個條件委托單
+  account_aside_placeCond: 請註意:只允許每個合約最多創建10個條件委托單
   account_aside_placeCond_linear: |
     請註意:只允許每個合約最多創建10個條件委托單
   account_aside_placeActive_linear_warn: |
@@ -1028,8 +1000,7 @@ zh-my:
   ### Get Conditional Order
   getcond: 查詢條件委托
   a_getcond: 查詢條件委托
-  account_para_getCond:
-    <p>獲取我的條件委托單列表。</p>
+  account_para_getCond: <p>獲取我的條件委托單列表。</p>
     <p>創建/取消訂單是異步的，因此<b>該接口可能返回的數據可能會有延遲</b>。如果要獲取訂單的實時信息，可以調用接口<a href="#t-querycond">實時查詢條件單信息</a>。</p>
   ### Cancel Conditional Order
   cancelcond: 撤消條件委托單
@@ -1039,13 +1010,11 @@ zh-my:
   ### Cancel All Conditional Orders
   cancelallcond: 撤消全部條件委托單
   account_para_cancelAllCond: 撤銷所有未被激活的條件委托。本質上所有條件委托在被激活後都是屬於活動委托，所以條件委托一旦被激活，您需要通過調用取消活動委托接口來取消所有未成交、部分成交的活動委托單。同樣全部成交的活動委托不可取消。
-  account_aside_cancelAllCond:
-    註意，此api每調用一次會導致rate_limit扣減10
+  account_aside_cancelAllCond: 註意，此api每調用一次會導致rate_limit扣減10
   ### Replace Conditional Order
   replacecond: 修改條件委托單
   a_replacecond: 修改條件委托單
-  account_para_replaceCond:
-    <p>修改未觸發的條件單。</p>
+  account_para_replaceCond: <p>修改未觸發的條件單。</p>
   account_aside_replaceCond: |
     請註意，只有未觸發的條件單才能被修改。
   ### Query Conditional Order (real-time)
@@ -1148,7 +1117,6 @@ zh-my:
   ## Set Risk Limit
   setrisklimit: 設置風險限額
   account_para_setRisk: 設置風險限額。
-
 
   ## 统保
   account_para_placeActive_v3: |
@@ -1302,7 +1270,6 @@ zh-my:
   udscGeeksDescV3: |
     <p><b>Topic：</b></p>
     <p>user.greeks.unifiedAccount</p></p>
-
 
   # API Data Endpoints
   api: 通用數據接口
@@ -1496,8 +1463,7 @@ zh-my:
   spot_rate_para_minimum: <code>7</code>日內API 交易用戶最小報單成交率門檻 0.1%
   #### API Request Frequency Limits
   frequencylimit: API 交易用戶提高頻率的條件
-  rate_para_frequency:
-    平臺會根據API用戶近<code>7</code>日掛單對<code>平臺流動性貢獻分</code>的最低值，對滿足條件的用戶進行提高頻率上限的獎勵
+  rate_para_frequency: 平臺會根據API用戶近<code>7</code>日掛單對<code>平臺流動性貢獻分</code>的最低值，對滿足條件的用戶進行提高頻率上限的獎勵
   column_LCP: 流動性貢獻分
   column_frequencyLimit: Order頻率限製
   row_frequencyLimit_800: 800次 / 每分鐘
@@ -1700,7 +1666,8 @@ zh-my:
   websocket_aside_push_trigger: 通常，只有在發生更改時才會推送 websocket 消息。 除非另有說明，否則您不會在訂閱後立即收到快照消息。 這意味著當訂閱您的 <code>position</code> 時，例如您的頭寸規模發生變化之前，您不會收到任何頭寸消息。
   websocket_para_methods: 驗證示例如右側代碼區所示
   websocket_aside_signature: 點擊查看 <a href="https://github.com/mufex-exchange/api-usage-examples">示例加密算法</a>.
-  websocket_best_practices: 由於網絡的復雜性，您和Bybit的websocket鏈接隨時可能會斷開，為了保證您能及時收到websocket推送消息，強烈建議您按照以下建議處理網絡異常：
+  websocket_best_practices:
+    由於網絡的復雜性，您和Bybit的websocket鏈接隨時可能會斷開，為了保證您能及時收到websocket推送消息，強烈建議您按照以下建議處理網絡異常：
     <p>1. 通過<a href="#t-heartbeat">發送心跳包</a>保持連接</p>
     <p>2. 一旦發現連接斷開，應該立刻重新建立連接。</p>
   websocket_max_50_connection: 單個IP同時最多50個websocket私有topic鏈接
@@ -1882,14 +1849,14 @@ zh-my:
   enums: 枚舉定義
   ENUMs_para: 以下是各個接口請求參數或返回結果中定義的枚舉。
   ## Wallet fund type (`wallet_fund_type` / `type`)
-  deposit:      "入金"
-  withdraw:     "提幣"
-  realisedpnl:  "已結盈虧"
-  commission:   "傭金"
-  refund:       "系統返還（如提幣審核拒絕返還、用戶提幣取消返還）"
-  prize:        "贈金"
+  deposit: "入金"
+  withdraw: "提幣"
+  realisedpnl: "已結盈虧"
+  commission: "傭金"
+  refund: "系統返還（如提幣審核拒絕返還、用戶提幣取消返還）"
+  prize: "贈金"
   exchangeOrderWithdraw: "兌出"
-  exchangeOrderDeposit:  "兌入"
+  exchangeOrderDeposit: "兌入"
   returnServiceCash: "返還手續費贈金"
   insurance: "保險賬戶劃轉"
   subMember: "母子賬號劃轉"
@@ -1898,20 +1865,19 @@ zh-my:
   cashBack: "返現"
 
   ## Withdraw status (`status`)
-  toBeConfirmed:  "待（用戶郵件）確認"
-  underReview:    "審核中"
-  pending:        "待打款"
-  success:        "打款成功"
-  cancelByUser:   "用戶取消"
-  reject:         "審核拒絕"
-  expire:         "提幣請求過期"
+  toBeConfirmed: "待（用戶郵件）確認"
+  underReview: "審核中"
+  pending: "待打款"
+  success: "打款成功"
+  cancelByUser: "用戶取消"
+  reject: "審核拒絕"
+  expire: "提幣請求過期"
   ## Order type (`order_type`)
-  limit:  "限價單"
+  limit: "限價單"
   market: "市價單"
   limit_maker: "做市單"
   ## Quantity (`qty`)
-  quantity:
-    <ul>
+  quantity: <ul>
     <li>最大值1百萬 (<code>1000000</code>)</li>
     <li>必須是正整數：
     <ul>
@@ -1979,54 +1945,54 @@ zh-my:
     </ul>
     </ul>
   ## Time in force (`time_in_force`)
-  goodTillCancel:     "一直有效至取消"
-  immediateOrCancel:  "立即成交或取消"
-  fillOrKill:         "完全成交或取消"
-  postOnly:           "被動委托"
+  goodTillCancel: "一直有效至取消"
+  immediateOrCancel: "立即成交或取消"
+  fillOrKill: "完全成交或取消"
+  postOnly: "被動委托"
   ## Trigger price type (`trigger_by`)
-  lastPrice:  "最新市價"
+  lastPrice: "最新市價"
   indexPrice: "指數價格"
-  markPrice:  "標記價格"
+  markPrice: "標記價格"
   ## Order (`order`)
   para_order: 排序方向
   desc: "(default)"
-  asc:  ""
+  asc: ""
   ## Order status (`order_status`)
   para_orderStatusGet: |
   #    在查詢接口中，您可以通過逗號分割來指定查詢多種狀態，如: <code>Filled,New</code>
-  created1:         ""
-  rejected1:        ""
-  new1:             ""
+  created1: ""
+  rejected1: ""
+  new1: ""
   partiallyFilled1: ""
-  filled1:          ""
-  cancelled1:       ""
-  pendingCancel1:   "- 撮合引擎收到取消指令但不一定會被成功取消"
+  filled1: ""
+  cancelled1: ""
+  pendingCancel1: "- 撮合引擎收到取消指令但不一定會被成功取消"
   ## Stop order status (`stop_order_status`)
-  active      : "- 條件單觸發成功且下單成功"
-  untriggered : "- 等待市價觸發條件單"
-  triggered   : "- 市價已觸發條件單"
-  cancelled   : "- 取消"
-  rejected    : "- 條件觸發成功但下單失敗"
-  deactivated1:     "- 條件單觸發前被取消"
+  active: "- 條件單觸發成功且下單成功"
+  untriggered: "- 等待市價觸發條件單"
+  triggered: "- 市價已觸發條件單"
+  cancelled: "- 取消"
+  rejected: "- 條件觸發成功但下單失敗"
+  deactivated1: "- 條件單觸發前被取消"
   ## Cancel type (`cancel_type`)
-  cancelByReduceOnly:   ""
-  cancelByPrepareLiq:   "- 倉位進入強平導致取消訂單"
-  cancelByPrepareAdl:   "- 自動減倉導致取消訂單"
-  cancelByAdmin:        ""
-  cancelByTpSlTsClear:  "- 止盈止損單被取消"
-  cancelByPzSideCh:     "- 該訂單在觸發止盈止損後被取消"
+  cancelByReduceOnly: ""
+  cancelByPrepareLiq: "- 倉位進入強平導致取消訂單"
+  cancelByPrepareAdl: "- 自動減倉導致取消訂單"
+  cancelByAdmin: ""
+  cancelByTpSlTsClear: "- 止盈止損單被取消"
+  cancelByPzSideCh: "- 該訂單在觸發止盈止損後被取消"
   cancelByCrossSelfMuch: "- 期權訂單不允許自成交"
   cancelByCrossReachMaxTradeNum: "- 若您的某個訂單吃掉了某個價位的10000筆訂單數量和，則剩餘部分將會被自動取消"
   ## Create type (`create_type`)
-  createByUser:                 ""
-  createByClosing:              ""
-  createByAdminClosing:         ""
-  createByStopOrder:            ""
-  createByTakeProfit:           ""
-  createByStopLoss:             ""
-  createByTrailingStop:         ""
-  createByLiq:                  "- 部分平倉。用戶觸發強平時，可以通過調整風險限額，部分平倉，來避免強平"
-  createByAdl_PassThrough:      "- 強平減倉"
+  createByUser: ""
+  createByClosing: ""
+  createByAdminClosing: ""
+  createByStopOrder: ""
+  createByTakeProfit: ""
+  createByStopLoss: ""
+  createByTrailingStop: ""
+  createByLiq: "- 部分平倉。用戶觸發強平時，可以通過調整風險限額，部分平倉，來避免強平"
+  createByAdl_PassThrough: "- 強平減倉"
   createByTakeOver_PassThrough: "- 強平接管"
   ## Exec type (`exec_type`)
   exec_trade: "普通交易"
@@ -2091,7 +2057,6 @@ zh-my:
   delivering: 交割中
   offline: 已下線
 
-
   # Error Code
   errors_intro: Bybit使用以下HTTP Code和錯誤碼：
 
@@ -2107,7 +2072,7 @@ zh-my:
   account_asset_http_200: 請求有效
   account_asset_http_403: 拒絕訪問
   account_asset_http_404: 訪問路徑不存在
-  account_asset_err_0:    成功
+  account_asset_err_0: 成功
   account_asset_err_10001: 參數錯誤
   account_asset_err_10016: 服務不可用
   account_asset_err_38000: 處理中
@@ -2205,7 +2170,6 @@ zh-my:
   err_1007: 等待後端服務器響應超時。 發送狀態未知； 執行狀態未知。
   err_1015: 新訂單太多。請減少你的請求頻率。新訂單太多； 當前限製為每％s ％s個訂單。
   err_1016: 該服務不可用
-
 
   err_10002: 請求過期，請檢查 <code>timestamp</code> 和 <code>recv_window</code>
   err_10003: 無效的apikey
@@ -2495,7 +2459,6 @@ zh-my:
   err_4015: 贖回入口暫時關閉
   err_4016: 輸入值格式不符合要求：精度或長度超出
 
-
   err_20001: 訂單不存在
   err_20003: 缺少參數<code>side</code>
   err_20004: <code>side</code>不合法
@@ -2616,12 +2579,8 @@ zh-my:
   httprequest_wallet: HTTP 請求
   requestparameters_wallet: 請求參數
 
-
-
-
   ## LinearQuantity (`qty`)
-  linear_quantity:
-    <ul>
+  linear_quantity: <ul>
     <li>BTCUSDT 開倉最大值 100，平倉最大值 100</li>
     <li>ETHUSDT 開倉最大值 1000，平倉最大值 1000</li>
     <li>LINKUSDT 開倉最大值 10000，平倉最大值 10000</li>
@@ -2648,8 +2607,7 @@ zh-my:
     </ul>
 
   ## LinearPrice (`price`)
-  linear_price:
-    <ul>
+  linear_price: <ul>
     <li>活動單<ul>
     <li>必須是<code>tick_size</code>的整數倍<ul>
     <li>當前symbol信息(如<code>tick_size</code>)，可以通過<a href="#t-querysymbol">交易對接口</a>接口獲得。</li>
@@ -2675,7 +2633,6 @@ zh-my:
     </ul>
     </li>
     </ul>
-
 
   err_130001: <code>position_idx</code>無效。請檢查您的持倉模式
   err_130002: 錢包數據為空
@@ -2777,7 +2734,7 @@ zh-my:
 
   ### LinearPosition
   linear_row_comment_qty: 委托數量(加密貨幣)
-  linear_row_comment_reduceOnly:  <a href="https://help.mufex.com/hc/zh-cn/articles/360039260574-%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AA%E5%87%8F%E4%BB%93-"> 什麽是 reduce-only order?</a>,true-平倉 false-開倉,ture時止盈止損設置不生效
+  linear_row_comment_reduceOnly: <a href="https://help.mufex.com/hc/zh-cn/articles/360039260574-%E4%BB%80%E4%B9%88%E6%98%AF%E5%8F%AA%E5%87%8F%E4%BB%93-"> 什麽是 reduce-only order?</a>,true-平倉 false-開倉,ture時止盈止損設置不生效
   linear_row_comment_closeOnTrigger: <a href="https://help.mufex.com/hc/zh-cn/articles/360039260534-%E4%BB%80%E4%B9%88%E6%98%AF%E8%A7%A6%E5%8F%91%E5%90%8E%E5%B9%B3%E4%BB%93-"> 什麽是 close on trigger order?</a>只會減少您的倉位而不會增加您的倉位。如果當平倉委托被觸發時，賬戶上的余額不足，那麽該合約的其他委托將被取消或者降低委托數量。使用此選項可以確保您的止損單被用於減倉而非加倉。
   linear_account_para_placeActive: |
     <p>市價活動委托: 一個傳統的市場價格訂單,會以當前的最優價格為您成交訂單。當且僅當選擇市價單時，<code>price</code>可為空！</p>
@@ -2861,7 +2818,6 @@ zh-my:
         <li><a href="https://mufex-exchange.github.io/docs-legacy/inverse/#t-websocketauthentication">反向永續/反向交割</a></li>
         <li><a href="https://mufex-exchange.github.io/docs-legacy/zh-my/spot/v3/#t-websocketauthentication">現貨</a></li>
       </ul>
-
 
   ### 正向websocket
   linear_websocket_para_endpoint: |
@@ -3110,7 +3066,8 @@ zh-my:
   restapi_update_20210618_1: 2021年6月24日起，停止使用<code>leverage</code>切換全逐倉,必須大於0且小於最大可設置杠桿 <a href="https://help.mufex.com/hc/en-us/articles/360039749753-What-is-Risk-Limit-What-effect-does-the-Risk-Limit-have-on-Margin-Inverse-Contract-">risk limit leverage</a>.
   restapi_update_20210628: 返回結果中增加<code>take_profit, stop_loss, trailing_stop</code>三個新字段。
   restapi_update_20210628_1: 修復<code>BCHUSDT</code> and <code>UNIUSDT</code>字段<code>min_price,tick_size</code>值不對的問題
-  restapi_update_20210701: 新增字段<code>leverage_only</code>該字段表明一個兼容邏輯。
+  restapi_update_20210701:
+    新增字段<code>leverage_only</code>該字段表明一個兼容邏輯。
     <br>若該字段為<code>false</code>,當<code>leverage </code>等於<code>0</code>時將會切換至全倉,當<code>leverage</code>大於<code>0</code>將切換至逐倉，此時無法在全倉下設置杠桿;<br>若該字段為<code>true</code>則表示在當前倉位模式下切換杠桿，此時<code>leverage</code>需要大於<code>0</code>,並可以使用全倉切換杠桿功能。</br>我們建議用戶<code>leverage</code>設置為<code>true</code>
   restapi_update_20210708_1: 更新字段<code>buy_leverage</code><code>sell_leverage</code>
   restapi_update_20210706: 支持逐倉切全倉設置杠桿<code>buy_leverage</code>,<code>sell_leverage</code>
@@ -3121,17 +3078,14 @@ zh-my:
   restapi_update_20220519: 提現與充值API發布
   restapi_update_20220808: 劃轉接口支持統一保證金帳戶，並新增錯誤碼
 
-
   restapi_update_2022042501: 支持獲取2年內用戶成交記錄。
   restapi_update_2022042801: 支持<code>coin</code>级别切换單倉模式和雙倉模式。
-
 
   restapi_update_2021101201: 修復USDT合約<a href="#t-querysymbol">Query Symbol</a>接口中<code>price_scale</code>返回參數。
 
   restapi_update_20211206: 请求参数和返回参数新增<code>position_idx</code>
   restapi_update_20211206_1: 请求参数新增<code>position_idx</code>
   restapi_update_20211206_2: 返回参数新增<code>position_idx</code>
-
 
   ws_update_20210202_0: 新增字段<code>reduce_only</code>和<code>close_on_trigger</code>
   ws_update_20210202_1: 新增字段<code>close_on_trigger</code>
@@ -3162,7 +3116,8 @@ zh-my:
   restapi_update_20210520: ETH反向交割合約發布
   restapi_update_20210527: 新增現貨open-api文檔
   restapi_update_20210617: 新增獲取交易幣對接口，修改接口參數order_link_id為orderLinkId
-  restapi_update_20210823: 增加<a href="#wallet-fund-type-wallet_fund_type-type">資金記錄類型描述</a>：
+  restapi_update_20210823:
+    增加<a href="#wallet-fund-type-wallet_fund_type-type">資金記錄類型描述</a>：
     <br>返還手續費贈金,保險賬戶劃轉,母子賬號劃轉
     <br>生息券,賬戶劃轉,返現
   restapi_update_20210902: |
@@ -3175,10 +3130,8 @@ zh-my:
     <li>廢棄 <code>index_price_e4</code>, 推薦使用 <code>index_price</code>
     <li>廢棄 <code>last_price_e4</code>, 推薦使用 <code>last_price</code>
     </ul>
-  restapi_update_20210907:
-    <ul><li>本次更新修復了平倉盈虧接口對於XLMUSDT,TRXUSDT幣種的返回參數的價格精度<code>avg_entry_price</code>，<code>order_price</code>，<code>avg_exit_price</code>。</li></ul>
-  restapi_update_20210910:
-    <ul><li>本次更新<code>start_time</code>開始時間需要限定在七天內, <code>end_time</code>結束時間也需要限定在七天內，如果需要更長時間範圍的數據請聯系客服下載。</li></ul>
+  restapi_update_20210907: <ul><li>本次更新修復了平倉盈虧接口對於XLMUSDT,TRXUSDT幣種的返回參數的價格精度<code>avg_entry_price</code>，<code>order_price</code>，<code>avg_exit_price</code>。</li></ul>
+  restapi_update_20210910: <ul><li>本次更新<code>start_time</code>開始時間需要限定在七天內, <code>end_time</code>結束時間也需要限定在七天內，如果需要更長時間範圍的數據請聯系客服下載。</li></ul>
   restapi_update_2021091401: Liquidated Orders REST API 將於 2021 年 9 月 24 日全量下線<a href="#t-query_liqrecords">查詢強平訂單數據</a>
   restapi_update_2021091402: 於此同時我們於 2021 年 9 月 14 日上線反向合約的 Liquidation WebSocket API，推送強平訂單。 此次調整旨在打造更加公平的交易環境，防止一些交易者通過強平訂單數據提前獲取市場信息，搶跑強平引擎。 請務必於 2021 年 9 月 24 日前調整代碼，以確保流暢的交易體驗。 感謝您一直以來的支持！
   restapi_update_20210924: Liquidated Orders REST API 將於 2021 年 9 月 24 日全量下線, 請使用<a href="#t-websocketliquidation">平臺強平推送</a> websocket服務。
@@ -3242,7 +3195,6 @@ zh-my:
   a_setleverage: 修改杠桿
   replace_by_new: 請使用新接口
   replace_by_new_topic: 請使用新topic
-
 
   # spot
   spot: 現貨
@@ -3578,7 +3530,7 @@ zh-my:
 
   #spot_ws_v2
   spot_websocket_ticker_v2: 訂單簿的Ticker
-  spot_websocket_ticker_desc_v2: '最優買一賣一價'
+  spot_websocket_ticker_desc_v2: "最優買一賣一價"
   spot_websocket_ticker_desc_v3: |
     <p>最優買一賣一價</p>
     <p><b>推送頻率</b>: 100ms</p>
@@ -3741,7 +3693,6 @@ zh-my:
   withdrawStatus_Fail: 失敗
   withdrawStatus_BlockchainConfirmed: 區塊鏈已確認
 
-
   enableuniversaltransfer: 配置可互相劃轉的子賬號列表
   row_comment_transferable_sub_ids: 逗號隔開的id列表，例：123,45,14,26,46
   createuniversaltransfer: 萬能劃轉
@@ -3804,7 +3755,7 @@ zh-my:
     上一頁Prev，下一頁 Next。默認下一頁
   deposit_response_chainname: 鏈名
   deposit_response_amt: 充值的數量
-  deposit_response_txid : |
+  deposit_response_txid: |
     交易ID。充值失敗/取消充值：為空
   deposit_response_status: |
     <p>0=未知<br>
@@ -3822,14 +3773,13 @@ zh-my:
   deposit_response_cursor: |
     游標信息：用來分頁
   deposit_response_currency_info: 充值的幣種
-
   withdrawrecordquery: 提現記錄查詢
   withdrawrecorddesc: |
     規則：按id倒序進行，開始時間和截止時間差最大限制為30天
   withdraw_id: 提現ID。 (提現API響應參數中的提現請求ID)
   withdraw_response_amt: 提現的數量
   withdraw_response_chainname: 鏈名
-  withdraw_response_txid : |
+  withdraw_response_txid: |
     交易ID。提現失敗/提現撤銷/內部轉帳：為空
   withdraw_response_status: |
     <table border=1><tr><th>接口返回值</th><th>對應c端狀態</th><th>狀態值</th></tr>
@@ -3857,7 +3807,6 @@ zh-my:
   withdraw_response_cursor: |
     游標信息：用來分頁
   withdraw_response_currency_info: 提現的幣種
-
   coin_info_query: 幣種信息查詢
   coin_info_desc: |
     規則：按id倒序進行，無須分頁，限頻跟目前線上接口保持一致
@@ -3889,7 +3838,6 @@ zh-my:
   withdraw_amount: |
     提幣數量。規則：大於等於最小提幣金額，最小提幣金額可從幣種信息接口獲取。
   #  withdraw_request_id: 提現單ID
-
   cancel_withdraw: 撤銷提幣
   cancel_withdraw_response: |
     結果對象（撤單申請結果：<code>1</code>成功，<code>0</code>失敗）
@@ -4002,7 +3950,6 @@ zh-my:
   perpSessionAvgPrice: 結算週期內持倉均價
   settlementTime: 結算時間,精確到毫秒
   usdcDeliveryLimit: 每頁數量, 最大200. 默認每頁50條
-
 
   startTime: 起始時間戳（單位秒）
   openTime: 開始時間
@@ -4143,7 +4090,6 @@ zh-my:
     <p>響應:</p>
     <p> {"id":"{uuid}","success":true,"conn_id":{conn_id},"type":"COMMAND_RESP"}</p>
 
-
   usdc_websocket_para_orderbook: |
     <p>獲取檔位範圍：25、100.</p>
     <p>訂閱成功後, 會持續得到一個當前快照包的推送信息. </p>
@@ -4155,8 +4101,7 @@ zh-my:
     <p>topic的格式：delta.orderbook100.{symbol} </p>
     <p>比如 delta.orderbook100.BTC-5NOV21-30000-P</p>
 
-  usdc_current_24_total:
-    <p>獲取Bybit平台最近24的成交數據</p>
+  usdc_current_24_total: <p>獲取Bybit平台最近24的成交數據</p>
     <p>從用戶訂閱開始，實時推送增量交易歷史，實時 或 每1秒推送一次，時間段中有多少條新增交易記錄就推多少條</p>
     <p>按照幣種的維度進行訂閱，比如BTC或者ETH</p>
     <p>topic的格式：</p>
@@ -4170,8 +4115,6 @@ zh-my:
   usdcErrorDesc: 錯誤描述訊息
   outRequestId: 系統內部使用字段，無實際意義，請忽略
   usdcLast500TradeDesc: 響應內容默認為<b>吃單方買入</b>數據
-
-
 
   usdcOrderType: 參考 <a href="#order-type-ordertype">訂單類型</a> （期權暫時不支持市價委託）
   usdcOptionOrderType: 參考<a href="#order-type-ordertype">下單類型</a>
@@ -4190,7 +4133,6 @@ zh-my:
   slTriggerBy: 止損激活價格類型，默認為LastPrice
   tptriggerby: 止盈激活價格類型，默認為LastPrice
 
-
   triggerPrice: 觸發價格
   triggerBy: 觸發價格類型，默認為LastPrice
   positionIdx: 期貨時使用 0-One-Way Mode 1-Buy side of both side mode 2-Sell side of both side mode
@@ -4201,7 +4143,7 @@ zh-my:
   stopLoss: 止損價格
   usdcOrderId: 平台生成的訂單號
   uscdOrderType: 訂單類型
-  usdcOrderFilter:   参考  <a href="#order-filter-orderfilter">Order Filter</a>
+  usdcOrderFilter: 参考  <a href="#order-filter-orderfilter">Order Filter</a>
   usdcReplaceOrderId: 期權場景必傳
   usdcOrderLinkId: orderId和orderLinkId二者必須傳一個
   cancelAllResponse: 取消所有活動單接口，實時返回的是受理成功或者失敗，根據retCode進行判斷
@@ -4245,7 +4187,6 @@ zh-my:
   feeRate: 手續費率
   cashBalance: 現金餘額
   blockTradeId: 大宗交易訂單號
-
 
   equity: 淨資產
   bonus: 奖金
@@ -4435,8 +4376,7 @@ zh-my:
     <p>topic:</p>
     <p>期權: user.mmp.event</p>
   usdc_trading_symbol_comment: 您可以根據<a href="#t-querysymbolinfo">Query Symbol</a>接口獲取所有交易中的symbol
-  usdcPriceRule:
-    <ul>
+  usdcPriceRule: <ul>
     <li>最大值1千萬 (<code>10000000</code>)</li>
     <li>必須是正數：
     <ul>
@@ -4446,8 +4386,7 @@ zh-my:
     <li><code>-30.5</code> - 非法</li>
     </li>
     </ul>
-  usdcQuantity:
-    <ul>
+  usdcQuantity: <ul>
     <li>最大值1千 (<code>1000</code>)</li>
     <li>必須是正數：
     <ul>
@@ -4458,12 +4397,11 @@ zh-my:
     </li>
     </ul>
 
-
   usdcTptriggerby: 止盈激活價格類型，默認為MarkPrice
   usdcSlTriggerBy: 止損激活價格類型，默認為MarkPrice
   usdcTriggerBy: 觸發價格類型，默認為MarkPrice
   usdcSettleLogsDesc: 僅期貨場景使用
-  riskLimitDesc:  僅期貨場景使用
+  riskLimitDesc: 僅期貨場景使用
   usdcQty: 數量
   ## Price (`price`)
   usdcStopOrderPrice: |
@@ -4500,7 +4438,7 @@ zh-my:
   usdcTradeApi: 交易
   queryLatest500Trades: 最近500條成交記錄
   usdcTradeHistory: 成交記錄
-  usdcTransactionType:  <a href="#transaction-type-type">Transaction type</a>
+  usdcTransactionType: <a href="#transaction-type-type">Transaction type</a>
   activeOrders: 訂單
   activeOrders_new: 訂單(純增量)
   usdcActiveOrder: |
@@ -4602,8 +4540,7 @@ zh-my:
     <p>topic的格式：orderBookL2_25.{symbol} 或者 orderBook_200.100ms.{symbol}</p>
     <p>orderBookL2_25.BTCPERP 或者 orderBook_200.100ms.BTCPERP</p>
 
-  usdc_current_24_total_perp:
-    <p>獲取Bybit平台最近的成交數據</p>
+  usdc_current_24_total_perp: <p>獲取Bybit平台最近的成交數據</p>
     <p>topic的格式：trade.{symbol}</p>
     <p>trade.BTCPERP</p>
 
@@ -4623,11 +4560,10 @@ zh-my:
     <p>topic:</p>
     <p>user.openapi.perp.order</p>
   usdc_perp_leave_qty: 剩餘數量
-  usdc_perp_order_desc:  |
+  usdc_perp_order_desc: |
     <p>topic:</p>
     <p>user.perp.orderHistory</p>
-  usdc_perp_price_rule:
-    <ul>
+  usdc_perp_price_rule: <ul>
     <li>最大值1百萬 (<code>1000000</code>)</li>
     <li>必須是正數：
     <ul>
@@ -4637,8 +4573,7 @@ zh-my:
     <li><code>-30.5</code> - 非法</li>
     </li>
     </ul>
-  usdc_perp_quantity:
-    <ul>
+  usdc_perp_quantity: <ul>
     <li>最大值1千 (<code>1000</code>)</li>
     <li>必須是正數：
     <ul>
@@ -4688,7 +4623,6 @@ zh-my:
   usdcTradeId: Trade Id
   usdcQueryLimit: 該接口僅支持最多30天的查詢記錄
   usdcQueryLimitWithInput: 該接口僅支持最多30天的查詢記錄。如果入參日期超出30天將報錯。
-
 
   lt: Leveraged Token 接口
   lt_notice: 沒有完全開放
@@ -4758,8 +4692,6 @@ zh-my:
   spotLtQuoteBasket: 籃子
 
   perpUsdcReplaceOrderDesc: 活動訂單參數（如數量、價格）與止盈止損參數，無法同時在一個請求中修改，請分開請求進行修改。
-
-
 
   #copytrade
   copy_trading: 跟單交易
@@ -4906,7 +4838,6 @@ zh-my:
   dv_batchCancelOrders: 批量撤銷訂單
   dv_cancelAllOrders: 撤銷全部訂單
 
-
   queryExchangeRecords: 獲取幣幣兌換紀錄
   interestBillStatement: 利息帳單
   queryLoanInterest: 查詢借貸利率
@@ -4937,8 +4868,6 @@ zh-my:
   dv_categorySuffix_8: 目前支持期權：option
   dv_categorySuffix_9: 目前僅支持正向合約：linear，且僅支持USDC perp
 
-
-
   ## Market
   # kline
   # reqParam
@@ -4959,7 +4888,6 @@ zh-my:
   # indexPriceKline
   # reqParam
   # respParam
-
 
   # orderbook
   # reqParam
@@ -4992,7 +4920,6 @@ zh-my:
   dv_instrMaxOrderQty: 單筆訂單最大交易數量
   dv_instrMinOrderQty: 單筆訂單最小交易數量
 
-
   # tickers
   dv_tickerHead: 衍生品最新行情信息
   dv_marketTickerPara: 所有衍生品產品最新行情信息
@@ -5014,7 +4941,6 @@ zh-my:
 
   # respParam
 
-
   # rateLimit
   # reqParam
   dv_riskLimitHead: 查詢風險限額表
@@ -5023,14 +4949,12 @@ zh-my:
 
   dv_riskInitialMargin: 起始保證金
 
-
   # optionDeliveryPrice
   dv_optionDeliveryHead: 查詢期權價格交割時間
   dv_market_option_para: 期權價格交割時間
   # reqParam
 
   # respParam
-
 
   # recentTrade
   # reqParam
@@ -5382,7 +5306,6 @@ zh-my:
     <br/>
     <b>Topic</b>:<br/><code>estimated_delivery_price.{baseCoin}_USD.{deliveryDate}</code> <br/>e.g. estimated_delivery_price.BTC_USD.19OCT22
   usdc_estimatedDeliveryPrice: 預估交割價格
-
   # coin-info v3
   coin_info_chain: 鏈名
   coin_info_chainDeposit: 幣鏈是否可充值. <code>0</code>：暫停; <code>1</code>：正常
@@ -5630,7 +5553,6 @@ zh-my:
   contract_cancelAll_settleCoin: |
     按照結算幣種取消訂單. <li>若<code>settleCoin</code>=USDT, 則取消所有USDT永續訂單</li><li>若<code>settleCoin</code>=BTC, 則取消所有BTCUSD這種反向合約
   option_wss_lengthLimit_warning: 請注意, 發送的訂閱消息長度應當控制在25k字符以內.
-
   # openAPI v3 - orderStatus
   orderStatus_v3: 指定訂單狀態查詢訂單列表。不傳該參數則默認查詢所有狀態訂單。
   # derivatives v3 - category enum
