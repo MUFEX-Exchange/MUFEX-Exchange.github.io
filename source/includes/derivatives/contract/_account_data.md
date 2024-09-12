@@ -824,7 +824,6 @@ POST
 <p class="fake_header">t(:requestparameters)</p>
 |t(:column_parameter)|t(:column_required)|t(:column_type)|t(:column_comments)|
 |:----- |:-------|:-----|----- |
-|t(:row_parameter_symbol) |<b>true</b> |string |t(:row_comment_symbol)    |
 |coin |<b>true</b> |string |t(:contract_comment_coin)  |
 |isSeparatePz |<b>true</b> |string |t(:contract_comment_isSeparatePz)  |
 
