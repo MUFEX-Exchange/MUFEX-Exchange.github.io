@@ -723,6 +723,7 @@ GET
 |positionIM |string |t(:row_comment_query_positionIM_v3)  |
 |positionMM |string |t(:row_comment_query_positionMM_v3)  |
 |cumRealisedPnl |string |t(:row_comment_query_cumRealisedPnl_v3)  |
+|pzLinkId |false |string |t(:row_comment_pzLinkId) |
 |createdTime |string |t(:row_comment_created_at)  |
 |updatedTime |string |t(:row_comment_updated_at)  |
 |nextPageCursor | string | t(:contract_comment_nextPageCursor) |
@@ -825,7 +826,7 @@ POST
 |t(:column_parameter)|t(:column_required)|t(:column_type)|t(:column_comments)|
 |:----- |:-------|:-----|----- |
 |coin |<b>true</b> |string |t(:contract_comment_coin)  |
-|isSeparatePz |<b>true</b> |string |t(:contract_comment_isSeparatePz)  |
+|isSeparatePz |<b>true</b> |bool |t(:contract_comment_isSeparatePz)  |
 
 <p class="fake_header">t(:responseparameters)</p>
 |t(:column_parameter)|t(:column_type)|t(:column_comments)|
