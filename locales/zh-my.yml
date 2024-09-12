@@ -180,6 +180,7 @@ zh-my:
   row_comment_triggerPrice: 觸發價格. 如果您期望價格上漲时觸發您的條件訂單，請確保 triggerPrice > max(market price, basePrice) 否則 triggerPrice < min(market price, basePrice)
   row_comment_closeOnTrigger: 觸發後平倉. 如果下平倉單，請設置為<code>true</code>，避免因為保證金不足而導致下單失敗
   row_comment_orderLinkId: 機構自定義訂單ID, 最大長度36位，且同一機構下自定義ID不可重復
+  row_comment_pzLinkId: 分倉倉位ID
   row_comment_page: 頁碼.默認取第一頁
   row_comment_page_max50: 頁碼.默認取第一頁,最大50
   row_comment_linear_page: 默認情況下，獲取第一頁數據。如果要獲取第二頁數據，需要將第一頁返回的page_token作為入參。
@@ -2756,6 +2757,8 @@ zh-my:
   linear_account_para_setLeverage: 設置杠桿
   linear_row_comment_leverage: <code>杠桿大於0，小於風險限額對應的杠桿</code>
 
+  linear_account_para_switchSeparatePositionMod: 切換分倉模式
+
   marginswitch: 全倉/逐倉切換
   dv_marginswitch: 全倉/逐倉切換
   linear_account_para_switchIsolated: 全倉/逐倉切換，從全倉切換至逐倉時需要傳杠桿
@@ -5214,6 +5217,9 @@ zh-my:
   contract_para_switchIsolated: 切換全倉/逐倉
   contract_comment_buyLeverage: 值必須和<code>sellLeverage</code>的值一樣
   contract_comment_sellLeverage: 值必須和<code>buyLeverage</code>的值一樣
+  contract_para_switchSeparatePositionMod: 切換全倉/分倉
+  contract_comment_coin: 幣種
+  contract_comment_isSeparatePz: 分倉
   contract_comment_mode: 倉位模式. <code>0</code>：單倉模式. <code>3</code>：雙倉模式
   contract_comment_tpSlMode: 止盈止損模式. <code>Full</code>：設置止盈止損為全倉; <code>Partial</code>：設置止盈止損為部分倉位
   contract_comment_orderId: 訂單號. 若不傳，則返回用戶全部交易紀錄
