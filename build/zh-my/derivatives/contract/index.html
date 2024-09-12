@@ -745,6 +745,9 @@
                             <a href="#t-dv_marginswitch" class="toc-h3 toc-link" data-title="全倉/逐倉切換">全倉/逐倉切換</a>
                           </li>
                           <li>
+                            <a href="#t-linear_account_para_switchseparatepositionmod" class="toc-h3 toc-link" data-title="切換分倉模式">切換分倉模式</a>
+                          </li>
+                          <li>
                             <a href="#t-linear_account_para_setleverage" class="toc-h3 toc-link" data-title="設置杠桿">設置杠桿</a>
                           </li>
                           <li>
@@ -1928,7 +1931,8 @@ function copyStringToClipboard (endpoint) {
     "takeProfit": "1100",
     "stopLoss": "1700",
     "reduce_only": false,
-    "closeOnTrigger": false
+    "closeOnTrigger": false,
+    "pzLinkId": "49e5e569-dc26-4263-8feb-77f543637002"
 }'
 </span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
 </code></pre></div>
@@ -2074,6 +2078,12 @@ function copyStringToClipboard (endpoint) {
 <td style="text-align: left">false</td>
 <td style="text-align: left">bool</td>
 <td><a href="https://help.mufex.com/hc/zh-cn/articles/360039260534-%E4%BB%80%E4%B9%88%E6%98%AF%E8%A7%A6%E5%8F%91%E5%90%8E%E5%B9%B3%E4%BB%93-"> 什麽是 close on trigger order?</a>只會減少您的倉位而不會增加您的倉位。如果當平倉委托被觸發時，賬戶上的余額不足，那麽該合約的其他委托將被取消或者降低委托數量。使用此選項可以確保您的止損單被用於減倉而非加倉。</td>
+</tr>
+<tr>
+<td style="text-align: left">pzLinkId</td>
+<td style="text-align: left">false</td>
+<td style="text-align: left">string</td>
+<td>分倉倉位ID</td>
 </tr>
 </tbody></table>
 
@@ -3131,13 +3141,63 @@ function copyStringToClipboard (endpoint) {
                 <span class="dl">"</span><span class="s2">positionIM</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
                 <span class="dl">"</span><span class="s2">positionStatus</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Normal</span><span class="dl">"</span><span class="p">,</span>
                 <span class="dl">"</span><span class="s2">sessionAvgPrice</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.00</span><span class="dl">"</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">pzLinkId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+                <span class="dl">"</span><span class="s2">isSeparatePz</span><span class="dl">"</span><span class="p">:</span> <span class="kc">false</span>
+
             <span class="p">}</span>
         <span class="p">],</span>
+            <span class="dl">"</span><span class="s2">separateList</span><span class="dl">"</span><span class="p">:</span> <span class="p">[]</span>
             <span class="dl">"</span><span class="s2">category</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">linear</span><span class="dl">"</span><span class="p">,</span>
             <span class="dl">"</span><span class="s2">nextPageCursor</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span>
     <span class="p">},</span>
     <span class="dl">"</span><span class="s2">ext_info</span><span class="dl">"</span><span class="p">:</span> <span class="p">{},</span>
     <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1670836410404</span>
+<span class="p">}</span>
+
+<span class="p">{</span>
+    <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">OK</span><span class="dl">"</span><span class="p">,</span>
+    <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">list</span><span class="dl">"</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="dl">"</span><span class="s2">category</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">nextPageCursor</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">separateList</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="dl">"</span><span class="s2">positionIdx</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">riskId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">symbol</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">BTCUSDT</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">side</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Buy</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">size</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.001</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">positionValue</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">57.6742</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">entryPrice</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">57674.2</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">tradeMode</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">autoAddMargin</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">leverage</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">10</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">positionBalance</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">5.76742</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">liqPrice</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.1</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">bustPrice</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.1</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">takeProfit</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.0</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">stopLoss</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.0</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">trailingStop</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.0</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">unrealisedPnl</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">-0.9374</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">createdTime</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1726017294861</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">updatedTime</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">1726026707029</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">tpSlMode</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Partial</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">riskLimitValue</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">activePrice</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.0</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">markPrice</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">56736.8</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">cumRealisedPnl</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">-0.03460452</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">positionMm</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">positionIm</span><span class="dl">"</span><span class="p">:</span> <span class="dl">""</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">positionStatus</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Normal</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">sessionAvgPrice</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">0.0</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">pzLinkId</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">3c582eef-33e9-41b4-98c5-37278c735576</span><span class="dl">"</span><span class="p">,</span>
+            <span class="dl">"</span><span class="s2">isSeparatePz</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">},</span>
+    <span class="dl">"</span><span class="s2">ext_info</span><span class="dl">"</span><span class="p">:</span> <span class="p">{},</span>
+    <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1726026707032</span>
 <span class="p">}</span>
 </code></pre></div>
 <p><p><b>接口說明：</b></p>
@@ -3416,6 +3476,76 @@ function copyStringToClipboard (endpoint) {
 <td style="text-align: left"><b>false</b></td>
 <td style="text-align: left">string</td>
 <td>值必須和<code>buyLeverage</code>的值一樣</td>
+</tr>
+</tbody></table>
+
+<p class="fake_header">返回參數</p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">參數</th>
+<th style="text-align: left">類型</th>
+<th>說明</th>
+</tr>
+</thead><tbody>
+</tbody></table>
+<h3 id='t-linear_account_para_switchseparatepositionmod'>切換分倉模式</h3>
+<blockquote>
+<p>請求示例</p>
+</blockquote>
+<div class="highlight"><pre class="highlight console tab-console"><code><span class="go">curl --location --request POST 'https://api.mufex.finance/private/v1/account/switch-separate-position' \
+--header 'MF-ACCESS-SIGN-TYPE: 2' \
+--header 'MF-ACCESS-SIGN: f178bda84f8a3fa971338b7424cce2204824c0114f196650b2516962371e3902' \
+--header 'MF-ACCESS-API-KEY: XXXXXXXXXX' \
+--header 'MF-ACCESS-TIMESTAMP: 1658908531694' \
+--header 'MF-ACCESS-RECV-WINDOW: 5000' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "coin": "USDT",
+    "isSeparatePz": true
+}'
+</span></code></pre></div><div class="highlight"><pre class="highlight python tab-python--pybit"><code>
+</code></pre></div>
+<blockquote>
+<p>響應示例</p>
+</blockquote>
+<div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="p">{</span>
+        <span class="dl">"</span><span class="s2">code</span><span class="dl">"</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> 
+        <span class="dl">"</span><span class="s2">message</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Success</span><span class="dl">"</span><span class="p">,</span>
+        <span class="dl">"</span><span class="s2">data</span><span class="dl">"</span><span class="p">:</span>  <span class="p">{},</span>
+        <span class="dl">"</span><span class="s2">ext_info</span><span class="dl">"</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="dl">"</span><span class="s2">time</span><span class="dl">"</span><span class="p">:</span> <span class="mi">1658908532580</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>切換全倉/分倉</p>
+
+<p class="fake_header">HTTP 請求</p>
+
+<p>POST
+<code><span id=pSwitchSeparatePositionMod>/private/v1/account/switch-separate-position</span></code>
+<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#pSetLeverage"><img src="../../../images/copy_to_clipboard-ff25494f.png" height=15 width=15></img></button></p>
+
+<p class="fake_header">請求參數</p>
+
+<table><thead>
+<tr>
+<th style="text-align: left">參數</th>
+<th style="text-align: left">是否必須</th>
+<th style="text-align: left">類型</th>
+<th>說明</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: left">coin</td>
+<td style="text-align: left"><b>true</b></td>
+<td style="text-align: left">string</td>
+<td>幣種</td>
+</tr>
+<tr>
+<td style="text-align: left">isSeparatePz</td>
+<td style="text-align: left"><b>true</b></td>
+<td style="text-align: left">string</td>
+<td>分倉</td>
 </tr>
 </tbody></table>
 
