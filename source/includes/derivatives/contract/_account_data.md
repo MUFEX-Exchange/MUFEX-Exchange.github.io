@@ -28,7 +28,8 @@ curl --location --request POST 'https://api.mufex.finance/private/v1/trade/creat
     "takeProfit": "1100",
     "stopLoss": "1700",
     "reduce_only": false,
-    "closeOnTrigger": false
+    "closeOnTrigger": false,
+    "pzLinkId": "49e5e569-dc26-4263-8feb-77f543637002"
 }'
 ```
 
@@ -77,7 +78,8 @@ POST
 |takeProfit |false |string |t(:row_comment_takeProfit) |
 |stopLoss |false |string |t(:row_comment_stopLoss) |
 |reduceOnly |false |bool |t(:linear_row_comment_reduceOnly) |
-|closeOnTrigger |false |bool |t(:linear_row_comment_closeOnTrigger)
+|closeOnTrigger |false |bool |t(:linear_row_comment_closeOnTrigger)|
+|pzLinkId |false |string |t(:row_comment_pzLinkId) |
 
 
 <p class="fake_header">t(:responseparameters)</p>
@@ -613,13 +615,63 @@ curl --location --request GET 'https://api.mufex.finance/private/v1/account/posi
                 "positionIM": "",
                 "positionStatus": "Normal",
                 "sessionAvgPrice": "0.00",
+                "pzLinkId": "",
+                "isSeparatePz": false
+                
             }
         ],
+            "separateList": []
             "category": "linear",
             "nextPageCursor": ""
     },
     "ext_info": {},
     "time": 1670836410404
+}
+
+{
+    "code": 0,
+    "message": "OK",
+    "data": {
+    "list": [],
+        "category": "",
+        "nextPageCursor": "",
+        "separateList": [
+        {
+            "positionIdx": 1,
+            "riskId": "0",
+            "symbol": "BTCUSDT",
+            "side": "Buy",
+            "size": "0.001",
+            "positionValue": "57.6742",
+            "entryPrice": "57674.2",
+            "tradeMode": 0,
+            "autoAddMargin": 0,
+            "leverage": "10",
+            "positionBalance": "5.76742",
+            "liqPrice": "0.1",
+            "bustPrice": "0.1",
+            "takeProfit": "0.0",
+            "stopLoss": "0.0",
+            "trailingStop": "0.0",
+            "unrealisedPnl": "-0.9374",
+            "createdTime": "1726017294861",
+            "updatedTime": "1726026707029",
+            "tpSlMode": "Partial",
+            "riskLimitValue": "0",
+            "activePrice": "0.0",
+            "markPrice": "56736.8",
+            "cumRealisedPnl": "-0.03460452",
+            "positionMm": "",
+            "positionIm": "",
+            "positionStatus": "Normal",
+            "sessionAvgPrice": "0.0",
+            "pzLinkId": "3c582eef-33e9-41b4-98c5-37278c735576",
+            "isSeparatePz": true
+        }
+    ]
+},
+    "ext_info": {},
+    "time": 1726026707032
 }
 ```
 
@@ -725,6 +777,56 @@ POST
 |tradeMode |<b>true</b> |integer |t(:contract_comment_tradeMode)  |
 |buyLeverage |<b>false</b> |string |t(:contract_comment_buyLeverage)  |
 |sellLeverage |<b>false</b> |string |t(:contract_comment_sellLeverage)  |
+
+<p class="fake_header">t(:responseparameters)</p>
+|t(:column_parameter)|t(:column_type)|t(:column_comments)|
+|:----- |:-----|----- |
+
+### t(:linear_account_para_switchSeparatePositionMod)
+> t(:codequote_curlExample)
+
+```console
+curl --location --request POST 'https://api.mufex.finance/private/v1/account/switch-separate-position' \
+--header 'MF-ACCESS-SIGN-TYPE: 2' \
+--header 'MF-ACCESS-SIGN: f178bda84f8a3fa971338b7424cce2204824c0114f196650b2516962371e3902' \
+--header 'MF-ACCESS-API-KEY: XXXXXXXXXX' \
+--header 'MF-ACCESS-TIMESTAMP: 1658908531694' \
+--header 'MF-ACCESS-RECV-WINDOW: 5000' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "coin": "USDT",
+    "isSeparatePz": true
+}'
+```
+```python--pybit
+
+```
+
+> t(:codequote_responseExample)
+
+```javascript
+{
+        "code": 0, 
+        "message": "Success",
+        "data":  {},
+        "ext_info": {},
+        "time": 1658908532580
+}
+```
+
+t(:contract_para_switchSeparatePositionMod)
+
+<p class="fake_header">t(:httprequest)</p>
+POST
+<code><span id=pSwitchSeparatePositionMod>/private/v1/account/switch-separate-position</span></code>
+<button class="clipboard_button" data-clipboard-action="copy" data-clipboard-target="#pSetLeverage"><img src="/images/copy_to_clipboard.png" height=15 width=15></img></button>
+
+<p class="fake_header">t(:requestparameters)</p>
+|t(:column_parameter)|t(:column_required)|t(:column_type)|t(:column_comments)|
+|:----- |:-------|:-----|----- |
+|t(:row_parameter_symbol) |<b>true</b> |string |t(:row_comment_symbol)    |
+|coin |<b>true</b> |string |t(:contract_comment_coin)  |
+|isSeparatePz |<b>true</b> |string |t(:contract_comment_isSeparatePz)  |
 
 <p class="fake_header">t(:responseparameters)</p>
 |t(:column_parameter)|t(:column_type)|t(:column_comments)|

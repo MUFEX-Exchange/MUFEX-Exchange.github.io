@@ -459,6 +459,7 @@ en:
   row_comment_reduceOnly: <a > What is a reduce-only order?</a> True means your position can only reduce in size if this order is triggered
   row_comment_closeOnTrigger: <a >  What is a close on trigger order?</a> For a closing order. It can only reduce your position, not increase it. If the account has insufficient available balance when the closing order is triggered, then other active orders of similar contracts will be cancelled or reduced. It can be used to ensure your stop loss reduces your position regardless of current available margin.
   row_comment_orderLinkId: Unique user-set order ID. Maximum length of 36 characters
+  row_comment_pzLinkId: Unique separate position link ID.
   row_comment_page: Page. By default, gets first page of data.
   row_comment_page_max50: Page. By default, gets first page of data. Maximum of 50 pages
   row_comment_linear_page: Page. By default, gets first page of data. If you want to get second page of data, you need to take the page_token returned by the first page as the input parameter.
@@ -3217,7 +3218,7 @@ en:
   setautoaddmargin: Set Auto Add Margin
   linear_account_para_setAutoAddMargin: Set auto add margin, or <a href="https://help.mufex.finance/hc/en-us/articles/900000394403-Introduction-to-Auto-Margin-Replenishment-USDT-Contract-">Auto-Margin Replenishment</a>.
   linear_row_comment_set_auto_margin: Auto add margin button
-
+  linear_account_para_switchSeparatePositionMod: Switch Separate Position Mode
   linear_account_para_setLeverage: Set Leverage
   linear_row_comment_leverage: Must be greater than 0 and less than the risk limit leverage .
   queryfeerate: Query Trading Fee Rate
@@ -5707,6 +5708,9 @@ en:
   contract_para_switchIsolated: Switch cross margin mode/isolated margin mode
   contract_comment_buyLeverage: (0, max leverage of corresponding risk limit]. For one-way mode, make sure that <code>buyLeverage</code> is equal to <code>sellLeverage</code>
   contract_comment_sellLeverage: (0, max leverage of corresponding risk limit]. For one-way mode, make sure that <code>buyLeverage</code> is equal to <code>sellLeverage</code>
+  contract_para_switchSeparatePositionMod: Switch Separate Position Mode
+  contract_comment_coin: COIN (USDT)
+  contract_comment_isSeparatePz: Is Separate Position Mode
   contract_comment_mode: |
     Position mode. <code>0</code>: One-Way mode. <code>3</code>: Hedge mode
   contract_comment_tpSlMode: |
